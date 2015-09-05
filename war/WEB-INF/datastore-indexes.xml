@@ -1,0 +1,102 @@
+<datastore-indexes autoGenerate="false">
+
+  	<!-- WEB全在庫一覧 -->
+    <datastore-index kind="InventoryRecord" ancestor="false" source="manual">
+        <property name="DATA_FLG" direction="asc"/>
+        <property name="WEB_DISP" direction="asc"/>
+        <property name="TYPE" direction="asc"/>
+    </datastore-index>
+    
+  	<!-- WEB在庫一覧 -->
+    <datastore-index kind="InventoryRecord" ancestor="false" source="manual">
+        <property name="DATA_FLG" direction="asc"/>
+        <property name="TYPE" direction="asc"/>
+        <property name="WEB_DISP" direction="asc"/>
+        <property name="__key__" direction="desc"/>
+    </datastore-index>
+ 
+     <datastore-index kind="InventoryRecord" ancestor="false" source="manual">
+        <property name="DATA_FLG" direction="asc"/>
+        <property name="MANUFACTURER" direction="asc"/>
+        <property name="WEB_DISP" direction="asc"/>
+        <property name="__key__" direction="desc"/>
+    </datastore-index>
+
+  	<!-- トップ5 -->
+    <datastore-index kind="InventoryRecord" ancestor="false" source="manual">
+        <property name="DATA_FLG" direction="asc"/>
+        <property name="WEB_DISP" direction="asc"/>
+        <property name="WEB_DISP_DATE" direction="desc"/>
+    </datastore-index>
+       
+ 	<!-- 在庫管理一覧 -->
+ 	<datastore-index kind="InventoryRecord" ancestor="false" source="manual">
+        <property name="DATA_FLG" direction="asc"/>
+        <property name="SELL_MONTH" direction="desc"/>
+        <property name="SELL_PAY_DATE" direction="asc"/>
+    </datastore-index>
+    
+     <datastore-index kind="InventoryRecord" ancestor="false" source="manual">
+        <property name="DATA_FLG" direction="asc"/>
+        <property name="TYPE" direction="asc"/>
+        <property name="MANUFACTURER" direction="asc"/>
+        <property name="__key__" direction="desc"/>
+    </datastore-index>
+
+    <datastore-index kind="InventoryRecord" ancestor="false" source="manual">
+        <property name="DATA_FLG" direction="asc"/>
+        <property name="TYPE" direction="asc"/>
+        <property name="__key__" direction="desc"/>
+    </datastore-index>
+
+    <datastore-index kind="InventoryRecord" ancestor="false" source="manual">
+        <property name="DATA_FLG" direction="asc"/>
+        <property name="MANUFACTURER" direction="asc"/>
+        <property name="TYPE" direction="asc"/>
+        <property name="__key__" direction="desc"/>
+    </datastore-index>
+
+    <datastore-index kind="InventoryRecord" ancestor="false" source="manual">
+        <property name="DATA_FLG" direction="asc"/>
+        <property name="WEB_DISP" direction="asc"/>
+        <property name="TYPE" direction="asc"/>
+        <property name="__key__" direction="desc"/>
+    </datastore-index>
+    
+    <datastore-index kind="InventoryRecord" ancestor="false" source="manual">
+        <property name="DATA_FLG" direction="asc"/>
+        <property name="__key__" direction="desc"/>
+    </datastore-index>
+
+    <datastore-index kind="InventoryRecord" ancestor="false" source="manual">
+        <property name="DATA_FLG" direction="asc"/>
+        <property name="WEB_DISP" direction="asc"/>
+        <property name="WEB_DISP_DATE" direction="desc"/>
+        <property name="TYPE" direction="asc"/>
+    </datastore-index>
+    
+ 	<!--  販売用在庫一覧出力-->
+    <datastore-index kind="InventoryRecord" ancestor="false" source="manual">
+        <property name="BUYER" direction="asc"/>
+        <property name="DATA_FLG" direction="asc"/>
+        <property name="TYPE" direction="asc"/>
+    </datastore-index>
+
+ 	<!--  販売用在庫一覧出力-->
+    <datastore-index kind="InventoryRecord" ancestor="false" source="manual">
+        <property name="DATA_FLG" direction="asc"/>
+        <property name="SELL_MONTH" direction="asc"/>
+        <property name="SELL_PAY_DATE" direction="asc"/>
+        <property name="ORDER_PAY_DATE" direction="asc"/>
+        <property name="TYPE" direction="asc"/>
+    </datastore-index>
+    
+    <datastore-index kind="Esatei" ancestor="false" source="manual">
+        <property name="__key__" direction="desc"/>
+    </datastore-index>
+    
+    <datastore-index kind="Signup" ancestor="false" source="manual">
+        <property name="__key__" direction="desc"/>
+    </datastore-index>
+
+</datastore-indexes>

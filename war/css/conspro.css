@@ -1,0 +1,128 @@
+@CHARSET "UTF-8";
+
+#page{
+	font-style: normal;
+	font-weight: normal;
+	font-size: 10pt;
+	font-family: "Verdana";
+}
+
+#msg{
+	color: #ff0000;
+}
+
+#cond{
+	font-weight: bold; 
+}
+
+#count{
+	font-weight: bold; 
+}
+
+#menuhead{
+	font-weight: bold; 
+}
+
+#menucat{
+	font-weight: bold; 
+}
+
+#menu{
+	font-weight: bold; 
+}
+
+#category{
+	font-weight: bold; 
+}
+
+#editmenu{
+	font-weight: bold; 
+}
+
+#dialogattr{
+	font-weight: bold; 
+}
+
+/*
+#tinybox {
+	position:absolute;
+	display:none;  
+	border:1px solid #c0c0c0; 
+}
+	
+#tinymask {
+	position:absolute; 
+	display:none; 
+	top:0; 
+	left:0; 
+	height:100%; 
+	width:100%; 
+	background:#000; 
+}
+
+#tinycontent {
+	background:#e6e6e6
+}
+*/
+
+.tbox {
+		position:absolute; 
+		display:none; 
+		padding:14px 17px; 
+		z-index:900
+}
+
+.tinner {
+		padding:15px; 
+		-moz-border-radius:5px; 
+		border-radius:5px; 
+		background:#fff; 
+		border-right:1px solid #333; 
+		border-bottom:1px solid #333
+}
+
+.tmask {
+		position:absolute; 
+		display:none; 
+		top:0px; 
+		left:0px; 
+		height:100%; 
+		width:100%; 
+		background:#000; 
+		z-index:800
+}
+
+.tclose {
+		position:absolute; 
+		top:0px; 
+		right:0px; 
+		width:30px; 
+		height:30px; 
+		cursor:pointer; 
+}
+
+.tclose:hover {
+	background-position:0 -30px
+}
+
+h1 {
+	margin: 0px 5px 0px 0px;
+	padding: 3px 0px 3px 10px;
+	background: #008000 left top;
+	font-style: normal;
+	font-size: 12pt;
+	font-family: "メイリオ";
+	color: #ffffff;
+	text-decoration: none;
+	text-transform: none;
+}
+
+input[type="button"] {
+    background-color :#00ffff;
+	font-size: 8pt;
+	font-style: normal;
+	font-family: "メイリオ";
+	font-weight: bold;  
+    cursor: pointer;  
+}
+     

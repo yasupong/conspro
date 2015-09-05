@@ -1,0 +1,18 @@
+<!-- Indices written at Sat, 8 Jun 2013 19:24:32 JST -->
+
+<datastore-indexes>
+
+    <!-- Used 4 times in query history -->
+    <datastore-index kind="InventoryRecord" ancestor="false" source="auto">
+        <property name="TYPE" direction="asc"/>
+        <property name="MANUFACTURER" direction="asc"/>
+        <property name="__key__" direction="desc"/>
+    </datastore-index>
+
+    <!-- Used 1 time in query history -->
+    <datastore-index kind="InventoryRecord" ancestor="false" source="auto">
+        <property name="SELL_MONTH" direction="asc"/>
+        <property name="TYPE" direction="asc"/>
+    </datastore-index>
+
+</datastore-indexes>
