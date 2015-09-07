@@ -13,7 +13,7 @@
 <div id="page">
 <div align="center">THANKS FOR YOUR SIGN UP.</div>
 <div>&nbsp;</div>
-<div align="center"><a href="http://www.usedmachinery.co.jp/en/">BACK TO TOP PAGE</a></div>
+<div align="center"><a href="http://consprodemo.appspot.com/">BACK TO TOP PAGE</a></div>
 <div>&nbsp;</div>
 </div>
 </body>
