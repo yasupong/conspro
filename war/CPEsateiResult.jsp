@@ -12,7 +12,7 @@
 <div align="center">査定を受け付けました</div>
 <div align="center">ありがとうございました</div>
 <div>&nbsp;</div>
-<div align="center"><a href="http://www.usedmachinery.co.jp/">ホームページへ戻る</a></div>
+<div align="center"><a href="http://consprodemo.appspot.com/">ホームページへ戻る</a></div>
 <div>&nbsp;</div>
 </body>
 </html>
