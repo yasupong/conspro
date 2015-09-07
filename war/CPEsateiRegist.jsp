@@ -252,6 +252,7 @@
   <option value="" selected>選択</option>
 	<option value="5">新車もしくは、新車に近い状態</option>
 	<option value="4">高年式・メーターが少ない</option>
+	<option value="3.5">整備済み</option>
 	<option value="3">現状で使用可能な状態</option>
 	<option value="2">故障はしてないが、使用するには軽微な修理や整備が必要</option>
 	<option value="1">故障はしていないが、摩耗が激しく、使用するには相当の修理や整備が必要</option>

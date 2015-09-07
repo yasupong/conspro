@@ -96,14 +96,6 @@ if ("3".equals(authCode)) {
 }
 %>
 	<tr>
-		<td bgcolor="#ffd700" id="menu"><a href="CPEsateiRegist.jsp" target="esatei">査定受付</a></td>
-		<td bgcolor="#e6e6e6">査定受付を表示します</td>
-	</tr>
-	<tr>
-		<td bgcolor="#ffd700" id="menu"><a href="CPSignupRegist.jsp" target="esatei">SIGN UP</a></td>
-		<td bgcolor="#e6e6e6">SIGN UPを表示します</td>
-	</tr>
-	<tr>
 		<td colspan="2" bgcolor="#ffd700" id="menucat"><center>WEB公開参照</center></td>
 	</tr>
 	<tr>
@@ -125,6 +117,14 @@ if ("3".equals(authCode)) {
 	<tr>
 		<td bgcolor="#ffd700" id="menu"><a href="GetInventoryAllList?page=2" target="allja">全在庫一覧（日本語）</a></td>
 		<td bgcolor="#e6e6e6">日本語に表示する在庫全一覧を確認します</td>
+	</tr>
+	<tr>
+		<td bgcolor="#ffd700" id="menu"><a href="CPEsateiRegist.jsp" target="esatei">査定受付</a></td>
+		<td bgcolor="#e6e6e6">査定受付を表示します</td>
+	</tr>
+	<tr>
+		<td bgcolor="#ffd700" id="menu"><a href="CPSignupRegist.jsp" target="esatei">SIGN UP</a></td>
+		<td bgcolor="#e6e6e6">SIGN UPを表示します</td>
 	</tr>
 </table>
 </div>
