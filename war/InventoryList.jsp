@@ -209,12 +209,12 @@ if (!"1".equals(authCode)) {
 <td nowrap bgcolor="#ffd700">選択</td>
 <td nowrap bgcolor="#ffd700">No</td>
 <td nowrap bgcolor="#ffd700">WEB表示</td>
-<td nowrap bgcolor="#ffd700">WEB表示日時</td>
+<!--<td nowrap bgcolor="#ffd700">WEB表示日時</td>-->
 <td nowrap bgcolor="#ffd700">分類</td>
 <td nowrap bgcolor="#ffd700">メーカー</td>
 <td nowrap bgcolor="#ffd700">型式</td>
 <td nowrap bgcolor="#ffd700">号機</td>
-<td nowrap bgcolor="#ffd700">年式</td>
+<!--<td nowrap bgcolor="#ffd700">年式</td>-->
 <td nowrap bgcolor="#ffd700">表示価格</td>
 <td nowrap bgcolor="#ffd700">登録日</td>
 <td nowrap bgcolor="#ffd700">仕入担当</td>
@@ -224,8 +224,8 @@ if (!"1".equals(authCode)) {
 <td nowrap bgcolor="#ffd700">仕入支払日</td>
 <td nowrap bgcolor="#ffd700">販売先</td>
 <td nowrap bgcolor="#ffd700">販売原価</td>
-<td nowrap bgcolor="#ffd700">販売価格</td>
-<td nowrap bgcolor="#ffd700">利益</td>
+<!--<td nowrap bgcolor="#ffd700">販売価格</td>-->
+<!--<td nowrap bgcolor="#ffd700">利益</td>-->
 <td nowrap bgcolor="#ffd700">売上入金日</td>
 <td nowrap bgcolor="#ffd700">売上月</td>
 </tr>
@@ -240,12 +240,12 @@ int cnt = 1;
 		record = record + "<td nowrap bgcolor=\"#e6e6e6\"><input type=\"radio\" name=\"EDITID\" value=\""+ inventoryRecord.getDATE() +"\"></td>";
 		record = record + "<td nowrap bgcolor=\"#e6e6e6\">" + cnt + "</td>";
 		record = record + "<td nowrap bgcolor=\"#e6e6e6\">" + CodeUtil.getIsDisp(inventoryRecord.getWEB_DISP()) + "</td>";
-		record = record + "<td nowrap bgcolor=\"#e6e6e6\">" + CommonUtil.nullConv(inventoryRecord.getWEB_DISP_DATE()) + "</td>";
+//		record = record + "<td nowrap bgcolor=\"#e6e6e6\">" + CommonUtil.nullConv(inventoryRecord.getWEB_DISP_DATE()) + "</td>";
 		record = record + "<td nowrap bgcolor=\"#e6e6e6\">" + CodeUtil.getTypeJa(inventoryRecord.getTYPE()) + "</td>";
 		record = record + "<td nowrap bgcolor=\"#e6e6e6\">" + inventoryRecord.getMANUFACTURER() + "</td>";
 		record = record + "<td bgcolor=\"#e6e6e6\">" + inventoryRecord.getNAME() + "</td>";
 		record = record + "<td nowrap bgcolor=\"#e6e6e6\">" + inventoryRecord.getSERIALNO() + "</td>";
-		record = record + "<td nowrap bgcolor=\"#e6e6e6\">" + inventoryRecord.getYEAR() + "</td>";
+//		record = record + "<td nowrap bgcolor=\"#e6e6e6\">" + inventoryRecord.getYEAR() + "</td>";
 		record = record + "<td nowrap style=\"text-align:right;\" bgcolor=\"#e6e6e6\">" + CommonUtil.moneyFormat(inventoryRecord.getPRICE()) + "</td>";
 		record = record + "<td nowrap bgcolor=\"#e6e6e6\">" + sdf.format(date) + "</td>";
 		record = record + "<td nowrap bgcolor=\"#e6e6e6\">" + inventoryRecord.getACCOUNT() + "</td>";
@@ -255,8 +255,8 @@ int cnt = 1;
 		record = record + "<td nowrap bgcolor=\"#e6e6e6\">" + inventoryRecord.getORDER_PAY_DATE() + "</td>";
 		record = record + "<td nowrap bgcolor=\"#e6e6e6\">" + inventoryRecord.getBUYER() + "</td>";
 		record = record + "<td nowrap style=\"text-align:right;\" bgcolor=\"#e6e6e6\">" + CommonUtil.moneyFormat(inventoryRecord.getSELL_COST_PRICE()) + "</td>";
-		record = record + "<td nowrap style=\"text-align:right;\" bgcolor=\"#e6e6e6\">" + CommonUtil.moneyFormat(inventoryRecord.getSELL_PRICE()) + "</td>";
-		record = record + "<td nowrap style=\"text-align:right;\" bgcolor=\"#e6e6e6\">" + CommonUtil.moneyFormat(inventoryRecord.getPROFIT()) + "</td>";
+//		record = record + "<td nowrap style=\"text-align:right;\" bgcolor=\"#e6e6e6\">" + CommonUtil.moneyFormat(inventoryRecord.getSELL_PRICE()) + "</td>";
+//		record = record + "<td nowrap style=\"text-align:right;\" bgcolor=\"#e6e6e6\">" + CommonUtil.moneyFormat(inventoryRecord.getPROFIT()) + "</td>";
 		record = record + "<td nowrap bgcolor=\"#e6e6e6\">" + inventoryRecord.getSELL_PAY_DATE() + "</td>";
 		record = record + "<td nowrap bgcolor=\"#e6e6e6\">" + inventoryRecord.getSELL_MONTH() + "</td>";
 	  record = record + "</tr>";
@@ -269,12 +269,12 @@ String record = "<tr>";
 record = record + "<td>Total</td>";
 record = record + "<td>&nbsp;</td>";
 record = record + "<td>&nbsp;</td>";
+//record = record + "<td>&nbsp;</td>";
 record = record + "<td>&nbsp;</td>";
 record = record + "<td>&nbsp;</td>";
 record = record + "<td>&nbsp;</td>";
 record = record + "<td>&nbsp;</td>";
-record = record + "<td>&nbsp;</td>";
-record = record + "<td>&nbsp;</td>";
+//record = record + "<td>&nbsp;</td>";
 record = record + "<td>&nbsp;</td>";
 record = record + "<td>&nbsp;</td>";
 record = record + "<td>&nbsp;</td>";
@@ -284,8 +284,8 @@ record = record + "<td nowrap style=\"text-align:right;\">" + CommonUtil.moneyFo
 record = record + "<td>&nbsp;</td>";
 record = record + "<td>&nbsp;</td>";
 record = record + "<td nowrap style=\"text-align:right;\">" + CommonUtil.moneyFormat(sellCostPrice) + "</td>";
-record = record + "<td nowrap style=\"text-align:right;\">" + CommonUtil.moneyFormat(sellPrice) + "</td>";
-record = record + "<td nowrap style=\"text-align:right;\">" + CommonUtil.moneyFormat(profit) + "</td>";
+//record = record + "<td nowrap style=\"text-align:right;\">" + CommonUtil.moneyFormat(sellPrice) + "</td>";
+//record = record + "<td nowrap style=\"text-align:right;\">" + CommonUtil.moneyFormat(profit) + "</td>";
 record = record + "<td>&nbsp;</td>";
 record = record + "<td>&nbsp;</td>";
 record = record + "</tr>";
