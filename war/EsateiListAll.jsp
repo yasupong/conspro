@@ -7,15 +7,9 @@
 <html>
 <%
 	// 認証チェック
+	AuthUtil.isLogin(request, response);
+
 	String account = request.getParameter("ACCOUNT");
-	if (account == null || account.length() == 0) {
-		response.sendRedirect("LoginErr.jsp");
-	}
-
-	if (!account.equals(request.getSession().getAttribute("ACCOUNT"))) {
-		response.sendRedirect("LoginErr.jsp");
-	}
-
 	String authCode = (String)(request.getSession()).getAttribute("AUTH_CODE");
  %>
 <head>

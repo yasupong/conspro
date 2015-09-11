@@ -3,14 +3,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%
 	// 認証チェック
-	String account = request.getParameter("ACCOUNT");
-	if (account == null || account.length() == 0) {
-		response.sendRedirect("LoginErr.jsp");
-	}
+	AuthUtil.isLogin(request, response);
 
-	if (!account.equals(request.getSession().getAttribute("ACCOUNT"))) {
-		response.sendRedirect("LoginErr.jsp");
-	}
+	String account = request.getParameter("ACCOUNT");
 	String authCode = (String)(request.getSession()).getAttribute("AUTH_CODE");
 	String accName = (String)(request.getSession()).getAttribute("NAME");
  %>
