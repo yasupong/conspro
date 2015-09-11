@@ -17,16 +17,16 @@
 <div>
 <table border="1" cellpadding="1" cellspacing="0" bordercolor="#c0c0c0">
 <tr>
-<td bgcolor="#ffd700">メーカー</td>
-<td bgcolor="#e6e6e6"><%= request.getParameter("MANUFACTURER") %></td>
+<td class="th">メーカー</td>
+<td class="td"><%= request.getParameter("MANUFACTURER") %></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">型式</td>
-<td bgcolor="#e6e6e6"><%= request.getParameter("NAME") %></td>
+<td class="th">型式</td>
+<td class="td"><%= request.getParameter("NAME") %></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">画像</td>
-<td bgcolor="#e6e6e6"><input type="file" name="FILE1"></td>
+<td class="th">画像</td>
+<td class="td"><input type="file" name="FILE1"></td>
 </tr>
 </table>
 </div>

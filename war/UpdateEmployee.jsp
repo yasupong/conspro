@@ -51,24 +51,24 @@
 <div>
 <table border="1" cellpadding="1" cellspacing="0" bordercolor="#c0c0c0">
 <tr>
-<td bgcolor="#ffd700">アカウント</td>
-<td bgcolor="#e6e6e6"><%= employeeRecord.getACCOUNT() %></td>
+<td class="th">アカウント</td>
+<td class="td"><%= employeeRecord.getACCOUNT() %></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">パスワード</td>
-<td bgcolor="#e6e6e6"><input type="PASSWORD" name="PASSWORD" value="<%= employeeRecord.getPASSWORD() %>"></td>
+<td class="th">パスワード</td>
+<td class="td"><input type="PASSWORD" name="PASSWORD" value="<%= employeeRecord.getPASSWORD() %>"></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">パスワード（確認用）</td>
-<td bgcolor="#e6e6e6"><input type="PASSWORD" name="PASSWORD2" value="<%= employeeRecord.getPASSWORD() %>"></td>
+<td class="th">パスワード（確認用）</td>
+<td class="td"><input type="PASSWORD" name="PASSWORD2" value="<%= employeeRecord.getPASSWORD() %>"></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">ユーザー名</td>
-<td bgcolor="#e6e6e6"><input type="text" name="NAME" value="<%= employeeRecord.getNAME() %>"></td>
+<td class="th">ユーザー名</td>
+<td class="td"><input type="text" name="NAME" value="<%= employeeRecord.getNAME() %>"></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">権限</td>
-<td bgcolor="#e6e6e6">
+<td class="th">権限</td>
+<td class="td">
 <input type="hidden" name="LOADAUTH_CODE" value="<%= employeeRecord.getAUTH_CODE() %>">
 <select name="AUTH_CODE">
 	<option value="1">1：一般</option>

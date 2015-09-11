@@ -59,22 +59,22 @@ if ("3".equals(authCode) || "2".equals(authCode)) {
 <div>
 <table border="1" cellpadding="1" cellspacing="0" bordercolor="#c0c0c0">
 <tr>
-<td nowrap bgcolor="#ffd700">選択</td>
-<td nowrap bgcolor="#ffd700">DATE</td>
-<td nowrap bgcolor="#ffd700">NAME</td>
-<td nowrap bgcolor="#ffd700">YOU ARE</td>
-<td nowrap bgcolor="#ffd700">COMPANY</td>
-<td nowrap bgcolor="#ffd700">STREET</td>
-<td nowrap bgcolor="#ffd700">CITY</td>
-<td nowrap bgcolor="#ffd700">STATE</td>
-<td nowrap bgcolor="#ffd700">COUNTRY</td>
-<td nowrap bgcolor="#ffd700">ZIP</td>
-<td nowrap bgcolor="#ffd700">MAIL</td>
-<td nowrap bgcolor="#ffd700">TEL</td>
-<td nowrap bgcolor="#ffd700">FAX</td>
-<td nowrap bgcolor="#ffd700">MAIL</td>
-<td nowrap bgcolor="#ffd700">STOCK LIST</td>
-<td nowrap bgcolor="#ffd700">COMMENT</td>
+<td nowrap class="th">選択</td>
+<td nowrap class="th">DATE</td>
+<td nowrap class="th">NAME</td>
+<td nowrap class="th">YOU ARE</td>
+<td nowrap class="th">COMPANY</td>
+<td nowrap class="th">STREET</td>
+<td nowrap class="th">CITY</td>
+<td nowrap class="th">STATE</td>
+<td nowrap class="th">COUNTRY</td>
+<td nowrap class="th">ZIP</td>
+<td nowrap class="th">MAIL</td>
+<td nowrap class="th">TEL</td>
+<td nowrap class="th">FAX</td>
+<td nowrap class="th">MAIL</td>
+<td nowrap class="th">STOCK LIST</td>
+<td nowrap class="th">COMMENT</td>
 </tr>
 <%
 List listSignupRecord = (List)request.getAttribute("listSignupList");
@@ -84,22 +84,22 @@ if (listSignupRecord != null) {
 		Signup signupRecord = (Signup) iterator.next();
 	  Date date = new Date(Long.parseLong(signupRecord.getDATE()));
 		String record = "<tr>";
-		record = record + "<td nowrap bgcolor=\"#e6e6e6\"><input type=\"radio\" name=\"EDITID\" value=\""+ signupRecord.getDATE() +"\"></td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + sdf.format(date)  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + signupRecord.getNAME() + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + signupRecord.getYOUARE()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + signupRecord.getCOMPANY()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + signupRecord.getSTREET()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + signupRecord.getCITY()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + signupRecord.getSTATE()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + signupRecord.getCOUNTRY()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + signupRecord.getZIP()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + signupRecord.getMAIL()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + signupRecord.getTEL()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + signupRecord.getFAX()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + signupRecord.getMAIL()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + signupRecord.getRECEIVE()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + signupRecord.getCOMMENT()  + "</td>";
+		record = record + "<td nowrap class=\"td\"><input type=\"radio\" name=\"EDITID\" value=\""+ signupRecord.getDATE() +"\"></td>";
+		record = record + "<td class=\"td\">" + sdf.format(date)  + "</td>";
+		record = record + "<td class=\"td\">" + signupRecord.getNAME() + "</td>";
+		record = record + "<td class=\"td\">" + signupRecord.getYOUARE()  + "</td>";
+		record = record + "<td class=\"td\">" + signupRecord.getCOMPANY()  + "</td>";
+		record = record + "<td class=\"td\">" + signupRecord.getSTREET()  + "</td>";
+		record = record + "<td class=\"td\">" + signupRecord.getCITY()  + "</td>";
+		record = record + "<td class=\"td\">" + signupRecord.getSTATE()  + "</td>";
+		record = record + "<td class=\"td\">" + signupRecord.getCOUNTRY()  + "</td>";
+		record = record + "<td class=\"td\">" + signupRecord.getZIP()  + "</td>";
+		record = record + "<td class=\"td\">" + signupRecord.getMAIL()  + "</td>";
+		record = record + "<td class=\"td\">" + signupRecord.getTEL()  + "</td>";
+		record = record + "<td class=\"td\">" + signupRecord.getFAX()  + "</td>";
+		record = record + "<td class=\"td\">" + signupRecord.getMAIL()  + "</td>";
+		record = record + "<td class=\"td\">" + signupRecord.getRECEIVE()  + "</td>";
+		record = record + "<td class=\"td\">" + signupRecord.getCOMMENT()  + "</td>";
 	  record = record + "</tr>";
 	  out.println(record);
 	}

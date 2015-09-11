@@ -118,11 +118,27 @@ h1 {
 }
 
 input[type="button"] {
-    background-color :#00ffff;
+    background-color :#b0c4de;
 	font-size: 8pt;
 	font-style: normal;
 	font-family: "メイリオ";
 	font-weight: bold;  
     cursor: pointer;  
 }
-     
+
+input[type="submit"] {
+    background-color :#b0c4de;
+	font-size: 8pt;
+	font-style: normal;
+	font-family: "メイリオ";
+	font-weight: bold;  
+    cursor: pointer;  
+}
+
+.th {
+    background-color :#00ff00;	
+}
+
+.td {
+    background-color :#e6e6e6;	
+}

@@ -59,26 +59,25 @@ if ("3".equals(authCode) || "2".equals(authCode)) {
 <div>
 <table border="1" cellpadding="1" cellspacing="0" bordercolor="#c0c0c0">
 <tr>
-<td nowrap bgcolor="#ffd700">選択</td>
-<td nowrap bgcolor="#ffd700">日時</td>
-<td nowrap bgcolor="#ffd700">名前</td>
-<td nowrap bgcolor="#ffd700">〒</td>
-<td nowrap bgcolor="#ffd700">県名</td>
-<td nowrap bgcolor="#ffd700">住所</td>
-<td nowrap bgcolor="#ffd700">TEL</td>
-<td nowrap bgcolor="#ffd700">FAX</td>
-<td nowrap bgcolor="#ffd700">MAIL</td>
-<td nowrap bgcolor="#ffd700">状態</td>
-
-<td nowrap bgcolor="#ffd700">金額</td>
-<td nowrap bgcolor="#ffd700">分類</td>
-<td nowrap bgcolor="#ffd700">メーカー</td>
-<td nowrap bgcolor="#ffd700">型式</td>
-<td nowrap bgcolor="#ffd700">年式</td>
-<td nowrap bgcolor="#ffd700">号機</td>
-<td nowrap bgcolor="#ffd700">メーター</td>
-<td nowrap bgcolor="#ffd700">程度</td>
-<td nowrap bgcolor="#ffd700">詳細</td>
+<td nowrap class="th">選択</td>
+<td nowrap class="th">日時</td>
+<td nowrap class="th">名前</td>
+<td nowrap class="th">〒</td>
+<td nowrap class="th">県名</td>
+<td nowrap class="th">住所</td>
+<td nowrap class="th">TEL</td>
+<td nowrap class="th">FAX</td>
+<td nowrap class="th">MAIL</td>
+<td nowrap class="th">状態</td>
+<td nowrap class="th">金額</td>
+<td nowrap class="th">分類</td>
+<td nowrap class="th">メーカー</td>
+<td nowrap class="th">型式</td>
+<td nowrap class="th">年式</td>
+<td nowrap class="th">号機</td>
+<td nowrap class="th">メーター</td>
+<td nowrap class="th">程度</td>
+<td nowrap class="th">詳細</td>
 </tr>
 <%
 List listEsateiRecord = (List)request.getAttribute("listEsateiList");
@@ -88,26 +87,26 @@ if (listEsateiRecord != null) {
 		Esatei esateiRecord = (Esatei) iterator.next();
 	  Date date = new Date(Long.parseLong(esateiRecord.getDATE()));
 		String record = "<tr>";
-		record = record + "<td nowrap bgcolor=\"#e6e6e6\"><input type=\"radio\" name=\"EDITID\" value=\""+ esateiRecord.getDATE() +"\"></td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + sdf.format(date)  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + esateiRecord.getSELLER() + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + esateiRecord.getPOST()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + esateiRecord.getPNAME()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + esateiRecord.getADDRESS()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + esateiRecord.getTEL()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + esateiRecord.getFAX()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + esateiRecord.getEMAIL()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + CodeUtil.getSateiType(esateiRecord.getSOURCE())  + "</td>";
+		record = record + "<td nowrap class=\"td\"><input type=\"radio\" name=\"EDITID\" value=\""+ esateiRecord.getDATE() +"\"></td>";
+		record = record + "<td class=\"td\">" + sdf.format(date)  + "</td>";
+		record = record + "<td class=\"td\">" + esateiRecord.getSELLER() + "</td>";
+		record = record + "<td class=\"td\">" + esateiRecord.getPOST()  + "</td>";
+		record = record + "<td class=\"td\">" + esateiRecord.getPNAME()  + "</td>";
+		record = record + "<td class=\"td\">" + esateiRecord.getADDRESS()  + "</td>";
+		record = record + "<td class=\"td\">" + esateiRecord.getTEL()  + "</td>";
+		record = record + "<td class=\"td\">" + esateiRecord.getFAX()  + "</td>";
+		record = record + "<td class=\"td\">" + esateiRecord.getEMAIL()  + "</td>";
+		record = record + "<td class=\"td\">" + CodeUtil.getSateiType(esateiRecord.getSOURCE())  + "</td>";
 
-		record = record + "<td bgcolor=\"#e6e6e6\" style=\"text-align:right;\">" + CommonUtil.moneyFormat(esateiRecord.getORDER_PRICE())  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + CodeUtil.getTypeJa(esateiRecord.getTYPE())  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + esateiRecord.getMANUFACTURER()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + esateiRecord.getNAME()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + esateiRecord.getYEAR()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + esateiRecord.getSERIALNO()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + esateiRecord.getHOURS()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + esateiRecord.getCONDITION()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + esateiRecord.getMEMO()  + "</td>";
+		record = record + "<td class=\"td\" style=\"text-align:right;\">" + CommonUtil.moneyFormat(esateiRecord.getORDER_PRICE())  + "</td>";
+		record = record + "<td class=\"td\">" + CodeUtil.getTypeJa(esateiRecord.getTYPE())  + "</td>";
+		record = record + "<td class=\"td\">" + esateiRecord.getMANUFACTURER()  + "</td>";
+		record = record + "<td class=\"td\">" + esateiRecord.getNAME()  + "</td>";
+		record = record + "<td class=\"td\">" + esateiRecord.getYEAR()  + "</td>";
+		record = record + "<td class=\"td\">" + esateiRecord.getSERIALNO()  + "</td>";
+		record = record + "<td class=\"td\">" + esateiRecord.getHOURS()  + "</td>";
+		record = record + "<td class=\"td\">" + esateiRecord.getCONDITION()  + "</td>";
+		record = record + "<td class=\"td\">" + esateiRecord.getMEMO()  + "</td>";
 	  record = record + "</tr>";
 	  out.println(record);
 	}

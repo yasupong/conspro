@@ -41,24 +41,24 @@
 <div>
 <table border="1" cellpadding="1" cellspacing="0" bordercolor="#c0c0c0">
 <tr>
-<td bgcolor="#ffd700">アカウント</td>
-<td bgcolor="#e6e6e6"><input type="text" name="ACCOUNT" value=""></td>
+<td class="th">アカウント</td>
+<td class="td"><input type="text" name="ACCOUNT" value=""></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">パスワード</td>
-<td bgcolor="#e6e6e6"><input type="PASSWORD" name="PASSWORD" value=""></td>
+<td class="th">パスワード</td>
+<td class="td"><input type="PASSWORD" name="PASSWORD" value=""></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">パスワード（確認用）</td>
-<td bgcolor="#e6e6e6"><input type="PASSWORD" name="PASSWORD2" value=""></td>
+<td class="th">パスワード（確認用）</td>
+<td class="td"><input type="PASSWORD" name="PASSWORD2" value=""></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">ユーザー名</td>
-<td bgcolor="#e6e6e6"><input type="text" name="NAME" value=""></td>
+<td class="th">ユーザー名</td>
+<td class="td"><input type="text" name="NAME" value=""></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">権限コード</td>
-<td bgcolor="#e6e6e6">
+<td class="th">権限コード</td>
+<td class="td">
 <select name="AUTH_CODE">
 	<option value="1">1：一般</option>
 	<option value="2">2：経理</option>

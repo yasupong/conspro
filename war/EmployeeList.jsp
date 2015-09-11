@@ -54,10 +54,10 @@
 <table border="1" cellpadding="1" cellspacing="0" bordercolor="#c0c0c0">
 <div>
 <tr>
-<td bgcolor="#ffd700">選択</td>
-<td bgcolor="#ffd700">アカウント</td>
-<td bgcolor="#ffd700">ユーザー名</td>
-<td bgcolor="#ffd700">権限</td>
+<td class="th">選択</td>
+<td class="th">アカウント</td>
+<td class="th">ユーザー名</td>
+<td class="th">権限</td>
 </tr>
 <%
 List listEmployeeRecord = (List)request.getAttribute("EmployeeRecordList");
@@ -65,10 +65,10 @@ if (listEmployeeRecord != null) {
 	for (Iterator iterator = listEmployeeRecord.iterator(); iterator.hasNext();) {
 		Employee employeeRecord = (Employee) iterator.next();
 		String record = "<tr>";
-		record = record + "<td bgcolor=\"#e6e6e6\"><input type=\"radio\" name=\"EDITID\" value=\""+ employeeRecord.getACCOUNT() +"\"></td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + employeeRecord.getACCOUNT()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + employeeRecord.getNAME()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + CodeUtil.getAuthName(employeeRecord.getAUTH_CODE())  + "</td>";
+		record = record + "<td class=\"td\"><input type=\"radio\" name=\"EDITID\" value=\""+ employeeRecord.getACCOUNT() +"\"></td>";
+		record = record + "<td class=\"td\">" + employeeRecord.getACCOUNT()  + "</td>";
+		record = record + "<td class=\"td\">" + employeeRecord.getNAME()  + "</td>";
+		record = record + "<td class=\"td\">" + CodeUtil.getAuthName(employeeRecord.getAUTH_CODE())  + "</td>";
 	  record = record + "</tr>";
 	  out.println(record);
 	}

@@ -20,11 +20,11 @@
 <div align="center">
 <table border="1" cellpadding="1" cellspacing="0" bordercolor="#c0c0c0">
 <tr>
-<td bgcolor="#ffd700">アカウント</td>
+<td class="th">アカウント</td>
 <td><input type="text" name="ACCOUNT"></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">パスワード</td>
+<td class="th">パスワード</td>
 <td><input type="password" name="PASSWORD"></td>
 </tr>
 </table>

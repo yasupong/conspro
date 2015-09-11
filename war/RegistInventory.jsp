@@ -94,11 +94,11 @@
 <div>
 <table border="1" cellpadding="1" cellspacing="0" bordercolor="#c0c0c0">
 <tr>
-<td colspan="2" bgcolor="#ffd700" id="editmenu">WEB表示項目：ホームページに表示される項目です。外部に公開される情報です。</td>
+<td colspan="2" class="th" id="editmenu">WEB表示項目：ホームページに表示される項目です。外部に公開される情報です。</td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">分類</td>
-<td bgcolor="#e6e6e6">
+<td class="th">分類</td>
+<td class="td">
 <select name="TYPE">
 	<option value="1">1:Excavator (under 8 ton) - 油圧ショベル 8t未満</option>
 	<option value="2">2:Excavator (10 ton up) - 油圧ショベル 10t以上</option>
@@ -119,8 +119,8 @@
 </td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">メーカー/MANUFACTURER</td>
-<td bgcolor="#e6e6e6">
+<td class="th">メーカー/MANUFACTURER</td>
+<td class="td">
 <select name="MANUFACTURER">
 	<option value="AIRMAN">AIRMAN</option>
 	<option value="BOMAG">BOMAG</option>
@@ -153,32 +153,32 @@
 </td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">型式/MODEL</td>
-<td bgcolor="#e6e6e6"><input type="text" name="NAME" value="" size="50"></td>
+<td class="th">型式/MODEL</td>
+<td class="td"><input type="text" name="NAME" value="" size="50"></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">年式/YEAR</td>
-<td bgcolor="#e6e6e6"><input type="text" name="YEAR" value=""></td>
+<td class="th">年式/YEAR</td>
+<td class="td"><input type="text" name="YEAR" value=""></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">号機/SERIAL</td>
-<td bgcolor="#e6e6e6"><input type="text" name="SERIALNO" value=""></td>
+<td class="th">号機/SERIAL</td>
+<td class="td"><input type="text" name="SERIALNO" value=""></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">稼働時間/HOUR METER</td>
-<td bgcolor="#e6e6e6"><input type="text" name="HOURS" value=""></td>
+<td class="th">稼働時間/HOUR METER</td>
+<td class="td"><input type="text" name="HOURS" value=""></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">DESCRIPTION</td>
-<td bgcolor="#e6e6e6"><input type="text" name="OTHER" value="" size="100"></td>
+<td class="th">DESCRIPTION</td>
+<td class="td"><input type="text" name="OTHER" value="" size="100"></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">詳細</td>
-<td bgcolor="#e6e6e6"><input type="text" name="OTHER_JA" value="" size="100"></td>
+<td class="th">詳細</td>
+<td class="td"><input type="text" name="OTHER_JA" value="" size="100"></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">程度/CONDITION RANK</td>
-<td bgcolor="#e6e6e6">
+<td class="th">程度/CONDITION RANK</td>
+<td class="td">
 <select name="CONDITION">
 	<option value="5">5：新車もしくは、新車に近い状態</option>
 	<option value="4">4：高年式・メーターの少ない極上品</option>
@@ -191,27 +191,27 @@
 </td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">表示価格/LIST PRICE</td>
-<td bgcolor="#e6e6e6"><input type="text" name="PRICE" value="0" style="text-align:right;">（数字のみ入力可能）</td>
+<td class="th">表示価格/LIST PRICE</td>
+<td class="td"><input type="text" name="PRICE" value="0" style="text-align:right;">（数字のみ入力可能）</td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">写真/PHOTO</td>
-<td bgcolor="#e6e6e6"><input type="text" name="PIC_URL" value="" size="100">（入力形式:アドレス）</td>
+<td class="th">写真/PHOTO</td>
+<td class="td"><input type="text" name="PIC_URL" value="" size="100">（入力形式:アドレス）</td>
 </tr>
 <tr>
-<td colspan="2" bgcolor="#ffd700" id="editmenu">内部業務項目：内部業務で利用する項目です。非公開情報です。</td>
+<td colspan="2" class="th" id="editmenu">内部業務項目：内部業務で利用する項目です。非公開情報です。</td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">仕入担当</td>
-<td bgcolor="#e6e6e6"><input type="text" name="INACCOUNT" value="<%= account %>"></td>
+<td class="th">仕入担当</td>
+<td class="td"><input type="text" name="INACCOUNT" value="<%= account %>"></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">発注日</td>
-<td bgcolor="#e6e6e6"><input type="text" name="ORDER_DATE" value="">（入力形式:YYYY/MM/DD）</td>
+<td class="th">発注日</td>
+<td class="td"><input type="text" name="ORDER_DATE" value="">（入力形式:YYYY/MM/DD）</td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">WEB表示</td>
-<td bgcolor="#e6e6e6">
+<td class="th">WEB表示</td>
+<td class="td">
 <select name="WEB_DISP">
 	<option value="0">0:WEBに表示しない</option>
 	<option value="1">1:WEBに表示する</option>
@@ -219,88 +219,88 @@
 </td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">仕入先</td>
-<td bgcolor="#e6e6e6"><input type="text" name="SELLER" value="" size="100"></td>
+<td class="th">仕入先</td>
+<td class="td"><input type="text" name="SELLER" value="" size="100"></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">仕入価格</td>
-<td bgcolor="#e6e6e6"><input type="text" name="ORDER_PRICE" value="0" style="text-align:right;" onblur="autoSum(this.form)">（数字のみ入力可能）</td>
+<td class="th">仕入価格</td>
+<td class="td"><input type="text" name="ORDER_PRICE" value="0" style="text-align:right;" onblur="autoSum(this.form)">（数字のみ入力可能）</td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">仕入運賃</td>
-<td bgcolor="#e6e6e6"><input type="text" name="ORDER_TRANS_COST" value="0" style="text-align:right;" onblur="autoSum(this.form)">（数字のみ入力可能）</td>
+<td class="th">仕入運賃</td>
+<td class="td"><input type="text" name="ORDER_TRANS_COST" value="0" style="text-align:right;" onblur="autoSum(this.form)">（数字のみ入力可能）</td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">部品代</td>
-<td bgcolor="#e6e6e6"><input type="text" name="PARTS_COST" value="0" style="text-align:right;" onblur="autoSum(this.form)">（数字のみ入力可能）</td>
+<td class="th">部品代</td>
+<td class="td"><input type="text" name="PARTS_COST" value="0" style="text-align:right;" onblur="autoSum(this.form)">（数字のみ入力可能）</td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">整備費</td>
-<td bgcolor="#e6e6e6"><input type="text" name="MAINTENANCE_COST" value="0" style="text-align:right;" onblur="autoSum(this.form)">（数字のみ入力可能）</td>
+<td class="th">整備費</td>
+<td class="td"><input type="text" name="MAINTENANCE_COST" value="0" style="text-align:right;" onblur="autoSum(this.form)">（数字のみ入力可能）</td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">仕入外注費</td>
-<td bgcolor="#e6e6e6"><input type="text" name="ORDER_OUT_ORDER_COST" value="0" style="text-align:right;" onblur="autoSum(this.form)">（数字のみ入力可能）</td>
+<td class="th">仕入外注費</td>
+<td class="td"><input type="text" name="ORDER_OUT_ORDER_COST" value="0" style="text-align:right;" onblur="autoSum(this.form)">（数字のみ入力可能）</td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">仕入原価</td>
-<td bgcolor="#e6e6e6"><input type="text" name="ORDER_COST_PRICE" value="0" style="text-align:right;">（数字のみ入力可能）</td>
+<td class="th">仕入原価</td>
+<td class="td"><input type="text" name="ORDER_COST_PRICE" value="0" style="text-align:right;">（数字のみ入力可能）</td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">販売運賃</td>
-<td bgcolor="#e6e6e6"><input type="text" name="SELL_TRANCE_COST" value="0" style="text-align:right;" onblur="autoSum(this.form)">（数字のみ入力可能）</td>
+<td class="th">販売運賃</td>
+<td class="td"><input type="text" name="SELL_TRANCE_COST" value="0" style="text-align:right;" onblur="autoSum(this.form)">（数字のみ入力可能）</td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">船積費用</td>
-<td bgcolor="#e6e6e6"><input type="text" name="SHIP_COST" value="0" style="text-align:right;" onblur="autoSum(this.form)">（数字のみ入力可能）</td>
+<td class="th">船積費用</td>
+<td class="td"><input type="text" name="SHIP_COST" value="0" style="text-align:right;" onblur="autoSum(this.form)">（数字のみ入力可能）</td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">販売外注費</td>
-<td bgcolor="#e6e6e6"><input type="text" name="SELL_OUT_ORDER_COST" value="0" style="text-align:right;" onblur="autoSum(this.form)">（数字のみ入力可能）</td>
+<td class="th">販売外注費</td>
+<td class="td"><input type="text" name="SELL_OUT_ORDER_COST" value="0" style="text-align:right;" onblur="autoSum(this.form)">（数字のみ入力可能）</td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">保険料</td>
-<td bgcolor="#e6e6e6"><input type="text" name="INS_COST" value="0" style="text-align:right;" onblur="autoSum(this.form)">（数字のみ入力可能）</td>
+<td class="th">保険料</td>
+<td class="td"><input type="text" name="INS_COST" value="0" style="text-align:right;" onblur="autoSum(this.form)">（数字のみ入力可能）</td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">フレイト</td>
-<td bgcolor="#e6e6e6"><input type="text" name="FREIGHT_COST" value="0" style="text-align:right;" onblur="autoSum(this.form)">（数字のみ入力可能）</td>
+<td class="th">フレイト</td>
+<td class="td"><input type="text" name="FREIGHT_COST" value="0" style="text-align:right;" onblur="autoSum(this.form)">（数字のみ入力可能）</td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">販売原価</td>
-<td bgcolor="#e6e6e6"><input type="text" name="SELL_COST_PRICE" value="0" style="text-align:right;">（数字のみ入力可能）</td>
+<td class="th">販売原価</td>
+<td class="td"><input type="text" name="SELL_COST_PRICE" value="0" style="text-align:right;">（数字のみ入力可能）</td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">販売価格</td>
-<td bgcolor="#e6e6e6"><input type="text" name="SELL_PRICE" value="0" style="text-align:right;" onblur="autoSum(this.form)">（数字のみ入力可能）</td>
+<td class="th">販売価格</td>
+<td class="td"><input type="text" name="SELL_PRICE" value="0" style="text-align:right;" onblur="autoSum(this.form)">（数字のみ入力可能）</td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">利益</td>
-<td bgcolor="#e6e6e6"><input type="text" name="PROFIT" value="0" style="text-align:right;">（数字のみ入力可能）</td>
+<td class="th">利益</td>
+<td class="td"><input type="text" name="PROFIT" value="0" style="text-align:right;">（数字のみ入力可能）</td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">販売先</td>
-<td bgcolor="#e6e6e6"><input type="text" name="BUYER" value="" size="100"></td>
+<td class="th">販売先</td>
+<td class="td"><input type="text" name="BUYER" value="" size="100"></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">業販価格</td>
-<td bgcolor="#e6e6e6"><input type="text" name="WHOL_PRICE" value="0" style="text-align:right;">（数字のみ入力可能）</td>
+<td class="th">業販価格</td>
+<td class="td"><input type="text" name="WHOL_PRICE" value="0" style="text-align:right;">（数字のみ入力可能）</td>
 </tr>
 <%
 // 経理・管理者権限のみ表示
 if ("3".equals(authCode) || "2".equals(authCode)) {
 %>
 <tr>
-<td bgcolor="#ffd700">仕入代金支払日</td>
-<td bgcolor="#e6e6e6"><input type="text" name="ORDER_PAY_DATE" value="">（入力形式:YYYY/MM/DD）</td>
+<td class="th">仕入代金支払日</td>
+<td class="td"><input type="text" name="ORDER_PAY_DATE" value="">（入力形式:YYYY/MM/DD）</td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">売上入金日</td>
-<td bgcolor="#e6e6e6"><input type="text" name="SELL_PAY_DATE" value="">（入力形式:YYYY/MM/DD）</td>
+<td class="th">売上入金日</td>
+<td class="td"><input type="text" name="SELL_PAY_DATE" value="">（入力形式:YYYY/MM/DD）</td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">売上月</td>
-<td bgcolor="#e6e6e6"><input type="text" name="SELL_MONTH" value="">（入力形式:YYYY/MM）</td>
+<td class="th">売上月</td>
+<td class="td"><input type="text" name="SELL_MONTH" value="">（入力形式:YYYY/MM）</td>
 </tr>
 <tr>
 <%
@@ -312,8 +312,8 @@ if ("3".equals(authCode) || "2".equals(authCode)) {
 <%
 }
 %>
-<td bgcolor="#ffd700">在庫メモ</td>
-<td bgcolor="#e6e6e6"><textarea name="MEMO" cols="50" rows="5" maxlength="256"></textarea></td>
+<td class="th">在庫メモ</td>
+<td class="td"><textarea name="MEMO" cols="50" rows="5" maxlength="256"></textarea></td>
 </tr>
 </table>
 <div>
