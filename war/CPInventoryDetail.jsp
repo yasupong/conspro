@@ -33,44 +33,44 @@
 <td width="664" colspan="2"><img src="GetPicture?EDITID=<%= inventoryRecord.getDATE() %>"width="664" height="498"></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700" nowrap>TYPE</td>
-<td bgcolor="#e6e6e6"><%= CodeUtil.getTypeEng(inventoryRecord.getTYPE()) %></td>
+<td class="th" nowrap>TYPE</td>
+<td class="td"><%= CodeUtil.getTypeEng(inventoryRecord.getTYPE()) %></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700" nowrap>MAKER</td>
-<td bgcolor="#e6e6e6"><%= inventoryRecord.getMANUFACTURER() %></td>
+<td class="th" nowrap>MAKER</td>
+<td class="td"><%= inventoryRecord.getMANUFACTURER() %></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700" nowrap>MODEL</td>
-<td bgcolor="#e6e6e6"><%= inventoryRecord.getNAME() %></td>
+<td class="th" nowrap>MODEL</td>
+<td class="td"><%= inventoryRecord.getNAME() %></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700" nowrap>YEAR</td>
-<td bgcolor="#e6e6e6"><%= inventoryRecord.getYEAR() %></td>
+<td class="th" nowrap>YEAR</td>
+<td class="td"><%= inventoryRecord.getYEAR() %></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700" nowrap>SERIAL</td>
-<td bgcolor="#e6e6e6"><%= inventoryRecord.getSERIALNO() %></td>
+<td class="th" nowrap>SERIAL</td>
+<td class="td"><%= inventoryRecord.getSERIALNO() %></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700" nowrap>METER</td>
-<td bgcolor="#e6e6e6"><%= inventoryRecord.getHOURS() %></td>
+<td class="th" nowrap>METER</td>
+<td class="td"><%= inventoryRecord.getHOURS() %></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700" nowrap>RANK</td>
-<td bgcolor="#e6e6e6"><%= inventoryRecord.getCONDITION() %></td>
+<td class="th" nowrap>RANK</td>
+<td class="td"><%= inventoryRecord.getCONDITION() %></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700" nowrap>PRICE</td>
-<td bgcolor="#e6e6e6" style=\"text-align:right;\"><%= CommonUtil.checkEmptyOrZero(CommonUtil.moneyFormat(inventoryRecord.getPRICE())) %></td>
+<td class="th" nowrap>PRICE</td>
+<td class="td" style=\"text-align:right;\"><%= CommonUtil.checkEmptyOrZero(CommonUtil.moneyFormat(inventoryRecord.getPRICE())) %></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700" nowrap>DETAIL</td>
-<td bgcolor="#e6e6e6"><%= inventoryRecord.getOTHER() %></td>
+<td class="th" nowrap>DETAIL</td>
+<td class="td"><%= inventoryRecord.getOTHER() %></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700" nowrap>PHOTO</td>
-<td bgcolor="#e6e6e6">
+<td class="th" nowrap>PHOTO</td>
+<td class="td">
 <%
 if (inventoryRecord.getPIC_URL() != null && inventoryRecord.getPIC_URL().length() > 0) {
 %>

@@ -88,16 +88,16 @@ if (request.getParameter("MANUFACTURER") != null && request.getParameter("MANUFA
 <div>
 <table border="1" cellpadding="1" cellspacing="0" bordercolor="#c0c0c0" width="700" align="left">
 <tr>
-<td nowrap bgcolor="#ffd700">THUMBNAIL</td>
-<td nowrap bgcolor="#ffd700">MAKER</td>
-<td nowrap bgcolor="#ffd700">MODEL</td>
-<td nowrap bgcolor="#ffd700">YEAR</td>
-<!--<td nowrap bgcolor="#ffd700">SERIAL</td>-->
-<!--<td nowrap bgcolor="#ffd700">METER</td>-->
-<td nowrap bgcolor="#ffd700">RANK</td>
-<td nowrap bgcolor="#ffd700">PRICE</td>
-<td nowrap bgcolor="#ffd700">DETAIL</td>
-<td nowrap bgcolor="#ffd700">PHOTO</td>
+<td nowrap class="th">THUMBNAIL</td>
+<td nowrap class="th">MAKER</td>
+<td nowrap class="th">MODEL</td>
+<td nowrap class="th">YEAR</td>
+<!--<td nowrap class="th">SERIAL</td>-->
+<!--<td nowrap class="th">METER</td>-->
+<td nowrap class="th">RANK</td>
+<td nowrap class="th">PRICE</td>
+<td nowrap class="th">DETAIL</td>
+<td nowrap class="th">PHOTO</td>
 </tr>
 <%
 List listInventoryRecord = (List)request.getAttribute("InventoryRecordList");
@@ -106,22 +106,22 @@ if (listInventoryRecord != null) {
 		InventoryRecord inventoryRecord = (InventoryRecord) iterator.next();
 	  Date date = new Date(Long.parseLong(inventoryRecord.getDATE()));
 		String record = "<tr>";
-		record = record + "<td bgcolor=\"#e6e6e6\" width=\"112\"><img src=\"GetPicture?EDITID=" + inventoryRecord.getDATE() + "\" width=\"112\" height=\"84\"></td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + inventoryRecord.getMANUFACTURER()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + inventoryRecord.getNAME()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + inventoryRecord.getYEAR()  + "</td>";
-//		record = record + "<td bgcolor=\"#e6e6e6\">" + inventoryRecord.getSERIALNO()  + "</td>";
-//		record = record + "<td bgcolor=\"#e6e6e6\">" + inventoryRecord.getHOURS()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + inventoryRecord.getCONDITION()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\" style=\"text-align:right;\">" + CommonUtil.checkEmptyOrZero(CommonUtil.moneyFormat(inventoryRecord.getPRICE())) + "</td>";
-//		record = record + "<td bgcolor=\"#e6e6e6\"><a href=\"#\" onclick=\"showDetailInfoEn('"+ inventoryRecord.getMANUFACTURER()  + "','"+ inventoryRecord.getNAME() + "','"+ inventoryRecord.getOTHER() + "')\">SHOW</a></td>";
-		record = record + "<td bgcolor=\"#e6e6e6\"><input type=\"button\" value=\"DETAIL\" onClick=\"location.href='DetailInventory?page=1&EDITID=" + inventoryRecord.getDATE() + "'\"></td>";
+		record = record + "<td class=\"td\" width=\"112\"><img src=\"GetPicture?EDITID=" + inventoryRecord.getDATE() + "\" width=\"112\" height=\"84\"></td>";
+		record = record + "<td class=\"td\">" + inventoryRecord.getMANUFACTURER()  + "</td>";
+		record = record + "<td class=\"td\">" + inventoryRecord.getNAME()  + "</td>";
+		record = record + "<td class=\"td\">" + inventoryRecord.getYEAR()  + "</td>";
+//		record = record + "<td class=\"td\">" + inventoryRecord.getSERIALNO()  + "</td>";
+//		record = record + "<td class=\"td\">" + inventoryRecord.getHOURS()  + "</td>";
+		record = record + "<td class=\"td\">" + inventoryRecord.getCONDITION()  + "</td>";
+		record = record + "<td class=\"td\" style=\"text-align:right;\">" + CommonUtil.checkEmptyOrZero(CommonUtil.moneyFormat(inventoryRecord.getPRICE())) + "</td>";
+//		record = record + "<td class=\"td\"><a href=\"#\" onclick=\"showDetailInfoEn('"+ inventoryRecord.getMANUFACTURER()  + "','"+ inventoryRecord.getNAME() + "','"+ inventoryRecord.getOTHER() + "')\">SHOW</a></td>";
+		record = record + "<td class=\"td\"><input type=\"button\" value=\"DETAIL\" onClick=\"location.href='DetailInventory?page=1&EDITID=" + inventoryRecord.getDATE() + "'\"></td>";
 
 		if (inventoryRecord.getPIC_URL() != null && inventoryRecord.getPIC_URL().length() > 0) {
-			record = record + "<td bgcolor=\"#e6e6e6\"><a href=\"" + inventoryRecord.getPIC_URL() + "\" target=\"_blank\"><img src=\"img/piclink.gif\"></a></td>";
+			record = record + "<td class=\"td\"><a href=\"" + inventoryRecord.getPIC_URL() + "\" target=\"_blank\"><img src=\"img/piclink.gif\"></a></td>";
 		}
 		else {
-			record = record + "<td bgcolor=\"#e6e6e6\">&nbsp;</td>";
+			record = record + "<td class=\"td\">&nbsp;</td>";
 		}
 
 	  record = record + "</tr>";

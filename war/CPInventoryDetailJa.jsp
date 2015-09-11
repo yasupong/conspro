@@ -33,44 +33,44 @@
 <td width="664" colspan="2"><img src="GetPicture?EDITID=<%= inventoryRecord.getDATE() %>"width="664" height="498"></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700" nowrap>分類</td>
-<td bgcolor="#e6e6e6"><%= CodeUtil.getTypeJa(inventoryRecord.getTYPE()) %></td>
+<td class="th" nowrap>分類</td>
+<td class="td"><%= CodeUtil.getTypeJa(inventoryRecord.getTYPE()) %></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700" nowrap>メーカー</td>
-<td bgcolor="#e6e6e6"><%= inventoryRecord.getMANUFACTURER() %></td>
+<td class="th" nowrap>メーカー</td>
+<td class="td"><%= inventoryRecord.getMANUFACTURER() %></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700" nowrap>型式</td>
-<td bgcolor="#e6e6e6"><%= inventoryRecord.getNAME() %></td>
+<td class="th" nowrap>型式</td>
+<td class="td"><%= inventoryRecord.getNAME() %></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700" nowrap>年式</td>
-<td bgcolor="#e6e6e6"><%= inventoryRecord.getYEAR() %></td>
+<td class="th" nowrap>年式</td>
+<td class="td"><%= inventoryRecord.getYEAR() %></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700" nowrap>号機</td>
-<td bgcolor="#e6e6e6"><%= inventoryRecord.getSERIALNO() %></td>
+<td class="th" nowrap>号機</td>
+<td class="td"><%= inventoryRecord.getSERIALNO() %></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700" nowrap>メーター</td>
-<td bgcolor="#e6e6e6"><%= inventoryRecord.getHOURS() %></td>
+<td class="th" nowrap>メーター</td>
+<td class="td"><%= inventoryRecord.getHOURS() %></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700" nowrap>程度</td>
-<td bgcolor="#e6e6e6"><%= inventoryRecord.getCONDITION() %></td>
+<td class="th" nowrap>程度</td>
+<td class="td"><%= inventoryRecord.getCONDITION() %></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700" nowrap>価格</td>
-<td bgcolor="#e6e6e6" style=\"text-align:right;\"><%= CommonUtil.checkEmptyOrZero(CommonUtil.moneyFormat(inventoryRecord.getPRICE())) %></td>
+<td class="th" nowrap>価格</td>
+<td class="td" style=\"text-align:right;\"><%= CommonUtil.checkEmptyOrZero(CommonUtil.moneyFormat(inventoryRecord.getPRICE())) %></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700" nowrap>詳細</td>
-<td bgcolor="#e6e6e6"><%= inventoryRecord.getOTHER_JA() %></td>
+<td class="th" nowrap>詳細</td>
+<td class="td"><%= inventoryRecord.getOTHER_JA() %></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700" nowrap>写真</td>
-<td bgcolor="#e6e6e6">
+<td class="th" nowrap>写真</td>
+<td class="td">
 <%
 if (inventoryRecord.getPIC_URL() != null && inventoryRecord.getPIC_URL().length() > 0) {
 %>

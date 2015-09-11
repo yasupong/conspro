@@ -90,12 +90,12 @@ function callServer(obj) {
 <div>
 <table border="1" cellpadding="1" cellspacing="0" bordercolor="#c0c0c0" width="700">
 <tr>
-<td bgcolor="#ffd700">NAME</td>
-<td bgcolor="#e6e6e6"><input type="text" name="name" size="26"></td>
+<td class="th">NAME</td>
+<td class="td"><input type="text" name="name" size="26"></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">YOU ARE</td>
-<td bgcolor="#e6e6e6">
+<td class="th">YOU ARE</td>
+<td class="td">
 	<input type="radio" name="usertype" value="DEALER" checked> DEALER
 	<input type="radio" name="usertype" value="CONTRACTOR"> CONTRACTOR
 	<input type="radio" name="usertype" value="IMPORTER/EXPORTER">IMPORTER/EXPORTER
@@ -103,52 +103,52 @@ function callServer(obj) {
 </td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">COMPANY NAME</td>
-<td bgcolor="#e6e6e6"><input type="text" name="company" maxlength="100" size="45"></td>
+<td class="th">COMPANY NAME</td>
+<td class="td"><input type="text" name="company" maxlength="100" size="45"></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">STREET ADDRESS</td>
-<td bgcolor="#e6e6e6"><input type="text" name="street" maxlength="100" size="45"></td>
+<td class="th">STREET ADDRESS</td>
+<td class="td"><input type="text" name="street" maxlength="100" size="45"></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">CITY</td>
-<td bgcolor="#e6e6e6"><input type="text" name="city" maxlength="100" size="45"></td>
+<td class="th">CITY</td>
+<td class="td"><input type="text" name="city" maxlength="100" size="45"></td>
 </tr>
 </tr>
 <tr>
-<td bgcolor="#ffd700">STATE/ PROVINCE</td>
-<td bgcolor="#e6e6e6"><input type="text" name="state" maxlength="100" size="45"></td>
+<td class="th">STATE/ PROVINCE</td>
+<td class="td"><input type="text" name="state" maxlength="100" size="45"></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">COUNTRY</td>
-<td bgcolor="#e6e6e6"><input type="text" name="country" maxlength="100" size="26"></td>
+<td class="th">COUNTRY</td>
+<td class="td"><input type="text" name="country" maxlength="100" size="26"></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">ZIP CODE</td>
-<td bgcolor="#e6e6e6"><input type="text" name="zipcode" maxlength="8" size="10"></td>
+<td class="th">ZIP CODE</td>
+<td class="td"><input type="text" name="zipcode" maxlength="8" size="10"></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">TEL</td>
-<td bgcolor="#e6e6e6"><input type="text" name="tel" maxlength="100" size="30"></td>
+<td class="th">TEL</td>
+<td class="td"><input type="text" name="tel" maxlength="100" size="30"></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">FAX</td>
-<td bgcolor="#e6e6e6"><input type="text" name="fax" maxlength="100" size="30"></td>
+<td class="th">FAX</td>
+<td class="td"><input type="text" name="fax" maxlength="100" size="30"></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">E-MAIL</td>
-<td bgcolor="#e6e6e6"><input type="text" name="email" maxlength="100" size="40"></td>
+<td class="th">E-MAIL</td>
+<td class="td"><input type="text" name="email" maxlength="100" size="40"></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">DO YOU WANT TO RECEIVE OUR STOCK LIST WEEKLY?</td>
-<td bgcolor="#e6e6e6">
+<td class="th">DO YOU WANT TO RECEIVE OUR STOCK LIST WEEKLY?</td>
+<td class="td">
 	<input type="radio" name="stocklist" value="yes" checked>yes
 	<input type="radio" name="stocklist" value="no">no 
 </td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">COMMENT</td>
-<td bgcolor="#e6e6e6"><textarea name="comment" cols="45" rows="7" maxlength="256"></textarea></td>
+<td class="th">COMMENT</td>
+<td class="td"><textarea name="comment" cols="45" rows="7" maxlength="256"></textarea></td>
 </tr>
 </table>
 <div>

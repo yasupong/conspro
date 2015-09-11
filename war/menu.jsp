@@ -94,8 +94,12 @@ if ("3".equals(authCode)) {
 		<td colspan="2" class="th" id="menucat"><center>WEB公開参照</center></td>
 	</tr>
 	<tr>
-		<td class="th" id="menu"><a href="GetInventoryListSortByDate?page=2" target="latest">最新在庫情報</a></td>
-		<td class="td">最新在庫情報８件を確認します</td>
+		<td class="th" id="menu"><a href="GetInventoryListSortByDate?page=1" target="latest">最新在庫情報（英語）</a></td>
+		<td class="td">英語に表示する最新在庫情報８件を確認します</td>
+	</tr>
+	<tr>
+		<td class="th" id="menu"><a href="GetInventoryListSortByDate?page=2" target="latest">最新在庫情報（日本語）</a></td>
+		<td class="td">日本語に表示する最新在庫情報８件を確認します</td>
 	</tr>
 	<tr>
 		<td class="th" id="menu"><a href="GetInventoryList?page=1" target="eng">在庫一覧（英語）</a></td>

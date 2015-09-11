@@ -87,16 +87,16 @@ if (request.getParameter("MANUFACTURER") != null && request.getParameter("MANUFA
 <table border="1" cellpadding="1" cellspacing="0" bordercolor="#c0c0c0" width="700" align="left">
 <tbody>
 <tr>
-<td nowrap bgcolor="#ffd700">サムネイル</td>
-<td nowrap bgcolor="#ffd700">メーカー</td>
-<td nowrap bgcolor="#ffd700">型式</td>
-<td nowrap bgcolor="#ffd700">年式</td>
-<!--<td nowrap bgcolor="#ffd700">号機</td>-->
-<!--<td nowrap bgcolor="#ffd700">メーター</td>-->
-<td nowrap bgcolor="#ffd700">程度</td>
-<td nowrap bgcolor="#ffd700">価格</td>
-<td nowrap bgcolor="#ffd700">詳細</td>
-<td nowrap bgcolor="#ffd700">写真</td>
+<td nowrap class="th">サムネイル</td>
+<td nowrap class="th">メーカー</td>
+<td nowrap class="th">型式</td>
+<td nowrap class="th">年式</td>
+<!--<td nowrap class="th">号機</td>-->
+<!--<td nowrap class="th">メーター</td>-->
+<td nowrap class="th">程度</td>
+<td nowrap class="th">価格</td>
+<td nowrap class="th">詳細</td>
+<td nowrap class="th">写真</td>
 </tr>
 <%
 List listInventoryRecord = (List)request.getAttribute("InventoryRecordList");
@@ -105,22 +105,22 @@ if (listInventoryRecord != null) {
 		InventoryRecord inventoryRecord = (InventoryRecord) iterator.next();
 	  Date date = new Date(Long.parseLong(inventoryRecord.getDATE()));
 		String record = "<tr>";
-		record = record + "<td bgcolor=\"#e6e6e6\" width=\"112\"><img src=\"GetPicture?EDITID=" + inventoryRecord.getDATE() + "\" width=\"112\" height=\"84\"></td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + inventoryRecord.getMANUFACTURER()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + inventoryRecord.getNAME()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + inventoryRecord.getYEAR()  + "</td>";
-//		record = record + "<td bgcolor=\"#e6e6e6\">" + inventoryRecord.getSERIALNO()  + "</td>";
-//		record = record + "<td bgcolor=\"#e6e6e6\">" + inventoryRecord.getHOURS()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\">" + inventoryRecord.getCONDITION()  + "</td>";
-		record = record + "<td bgcolor=\"#e6e6e6\" style=\"text-align:right;\">" + CommonUtil.checkEmptyOrZero(CommonUtil.moneyFormat(inventoryRecord.getPRICE())) + "</td>";
-//		record = record + "<td bgcolor=\"#e6e6e6\"><a href=\"#\" onclick=\"showDetailInfo('"+ inventoryRecord.getMANUFACTURER()  + "','"+ inventoryRecord.getNAME() + "','"+ inventoryRecord.getOTHER_JA() + "')\">表示</a></td>";
-		record = record + "<td bgcolor=\"#e6e6e6\"><input type=\"button\" value=\"詳細\" onClick=\"location.href='DetailInventory?page=2&EDITID=" + inventoryRecord.getDATE() + "'\"></td>";
+		record = record + "<td class=\"td\" width=\"112\"><img src=\"GetPicture?EDITID=" + inventoryRecord.getDATE() + "\" width=\"112\" height=\"84\"></td>";
+		record = record + "<td class=\"td\">" + inventoryRecord.getMANUFACTURER()  + "</td>";
+		record = record + "<td class=\"td\">" + inventoryRecord.getNAME()  + "</td>";
+		record = record + "<td class=\"td\">" + inventoryRecord.getYEAR()  + "</td>";
+//		record = record + "<td class=\"td\">" + inventoryRecord.getSERIALNO()  + "</td>";
+//		record = record + "<td class=\"td\">" + inventoryRecord.getHOURS()  + "</td>";
+		record = record + "<td class=\"td\">" + inventoryRecord.getCONDITION()  + "</td>";
+		record = record + "<td class=\"td\" style=\"text-align:right;\">" + CommonUtil.checkEmptyOrZero(CommonUtil.moneyFormat(inventoryRecord.getPRICE())) + "</td>";
+//		record = record + "<td class=\"td\"><a href=\"#\" onclick=\"showDetailInfo('"+ inventoryRecord.getMANUFACTURER()  + "','"+ inventoryRecord.getNAME() + "','"+ inventoryRecord.getOTHER_JA() + "')\">表示</a></td>";
+		record = record + "<td class=\"td\"><input type=\"button\" value=\"詳細\" onClick=\"location.href='DetailInventory?page=2&EDITID=" + inventoryRecord.getDATE() + "'\"></td>";
 
 		if (inventoryRecord.getPIC_URL() != null && inventoryRecord.getPIC_URL().length() > 0) {
-			record = record + "<td bgcolor=\"#e6e6e6\"><a href=\"" + inventoryRecord.getPIC_URL() + "\" target=\"_blank\"><img src=\"img/piclink.gif\"></a></td>";
+			record = record + "<td class=\"td\"><a href=\"" + inventoryRecord.getPIC_URL() + "\" target=\"_blank\"><img src=\"img/piclink.gif\"></a></td>";
 		}
 		else {
-			record = record + "<td bgcolor=\"#e6e6e6\">&nbsp;</td>";
+			record = record + "<td class=\"td\">&nbsp;</td>";
 		}
 
 	  record = record + "</tr>";

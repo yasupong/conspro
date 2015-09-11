@@ -79,16 +79,16 @@
 <div>
 <table border="1" cellpadding="1" cellspacing="0" bordercolor="#c0c0c0" width="700">
 <tr>
-<td bgcolor="#ffd700">お名前*</td>
-<td bgcolor="#e6e6e6"><input type="text" name="name" size="20">（全角）</td>
+<td class="th">お名前*</td>
+<td class="td"><input type="text" name="name" size="20">（全角）</td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">郵便番号*</td>
-<td bgcolor="#e6e6e6"><input type="text" name="post" maxlength="8" size="10">（半角）</td>
+<td class="th">郵便番号*</td>
+<td class="td"><input type="text" name="post" maxlength="8" size="10">（半角）</td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">都道府県*</td>
-<td bgcolor="#e6e6e6">
+<td class="th">都道府県*</td>
+<td class="td">
 <select name="pname"> 
   <option value="" selected>選択</option>
   <option value="北海道">北海道</option>
@@ -143,37 +143,37 @@
 </td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">ご住所*</td>
-<td bgcolor="#e6e6e6"><textarea name="address" rows="3" cols="40"></textarea></td>
+<td class="th">ご住所*</td>
+<td class="td"><textarea name="address" rows="3" cols="40"></textarea></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">お電話番号*</td>
-<td bgcolor="#e6e6e6"><input type="text" name="tel" maxlength="30" size="30">（半角）</td>
+<td class="th">お電話番号*</td>
+<td class="td"><input type="text" name="tel" maxlength="30" size="30">（半角）</td>
 </tr>
 </tr>
 <tr>
-<td bgcolor="#ffd700">FAX番号</td>
-<td bgcolor="#e6e6e6"><input type="text" name="fax" maxlength="30" size="30">（半角）</td>
+<td class="th">FAX番号</td>
+<td class="td"><input type="text" name="fax" maxlength="30" size="30">（半角）</td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">メールアドレス*</td>
-<td bgcolor="#e6e6e6"><input type="text" name="email" maxlength="40" size="40">（半角）</td>
+<td class="th">メールアドレス*</td>
+<td class="td"><input type="text" name="email" maxlength="40" size="40">（半角）</td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">どちらを希望しますか?</td>
-<td bgcolor="#e6e6e6">
+<td class="th">どちらを希望しますか?</td>
+<td class="td">
 <input type="radio" name="source" value="1">とりあえず相場を知りたい 
 <input type="radio" name="source" value="2">今すぐ売りたい
 <input type="radio" name="source" value="3">金額が折り合えば売りたい
 </td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">希望金額</td>
-<td bgcolor="#e6e6e6"><input type="text" name="price" maxlength="17" size="17" style="text-align:right;">円</td>
+<td class="th">希望金額</td>
+<td class="td"><input type="text" name="price" maxlength="17" size="17" style="text-align:right;">円</td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">分類</td>
-<td bgcolor="#e6e6e6">
+<td class="th">分類</td>
+<td class="td">
 <select name="type">
   <option value="" selected>選択</option>
 	<option value="1">油圧ショベル 8t未満</option>
@@ -195,8 +195,8 @@
 </td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">メーカー</td>
-<td bgcolor="#e6e6e6">
+<td class="th">メーカー</td>
+<td class="td">
 <select name="maker" size="1">
   <option value="" selected>選択</option>
 	<option value="AIRMAN">AIRMAN</option>
@@ -230,24 +230,24 @@
 </td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">型式</td>
-<td bgcolor="#e6e6e6"><input type="text" name="model" size="20"></td>
+<td class="th">型式</td>
+<td class="td"><input type="text" name="model" size="20"></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">年式</td>
-<td bgcolor="#e6e6e6"><input type="text" name="year" size="4"></td>
+<td class="th">年式</td>
+<td class="td"><input type="text" name="year" size="4"></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">号機</td>
-<td bgcolor="#e6e6e6"><input type="text" name="serial" size="20"></td>
+<td class="th">号機</td>
+<td class="td"><input type="text" name="serial" size="20"></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">メーター</td>
-<td bgcolor="#e6e6e6"><input type="text" name="meter" size="10"></td>
+<td class="th">メーター</td>
+<td class="td"><input type="text" name="meter" size="10"></td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">程度</td>
-<td bgcolor="#e6e6e6">
+<td class="th">程度</td>
+<td class="td">
 <select name="cond">
   <option value="" selected>選択</option>
 	<option value="5">新車もしくは、新車に近い状態</option>
@@ -261,8 +261,8 @@
 </td>
 </tr>
 <tr>
-<td bgcolor="#ffd700">詳細</td>
-<td bgcolor="#e6e6e6"><textarea name="detail" cols="45" rows="7" maxlength="256"></textarea></td>
+<td class="th">詳細</td>
+<td class="td"><textarea name="detail" cols="45" rows="7" maxlength="256"></textarea></td>
 </tr>
 </table>
 <div>
