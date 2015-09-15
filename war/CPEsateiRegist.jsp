@@ -176,21 +176,7 @@
 <td class="td">
 <select name="type">
   <option value="" selected>選択</option>
-	<option value="1">油圧ショベル 8t未満</option>
-	<option value="2">油圧ショベル 10t以上</option>
-	<option value="3">ブルドーザー</option>
-	<option value="4">ショベルローダー</option>
-	<option value="5">タイヤショベル</option>
-	<option value="6">舗装機械</option>
-	<option value="7">クレーン</option>
-	<option value="8">キャリアダンプ</option>
-	<option value="9">アタッチメント</option>
-	<option value="10">部品</option>
-	<option value="11">発電機</option>
-	<option value="12">エアーコンプレッサー</option>
-	<option value="13">溶接機</option>
-	<option value="14">トラック</option>
-	<option value="99">その他</option>
+<%= Const.COMBO_TYPE %>
 </select>
 </td>
 </tr>
@@ -199,33 +185,7 @@
 <td class="td">
 <select name="maker" size="1">
   <option value="" selected>選択</option>
-	<option value="AIRMAN">AIRMAN</option>
-	<option value="BOMAG">BOMAG</option>
-	<option value="CAT">CAT</option>
-	<option value="DENYO">DENYO</option>
-	<option value="DYNAPAC">DYNAPAC</option>
-	<option value="FURUKAWA">FURUKAWA</option>
-	<option value="HANTA">HANTA</option>
-	<option value="HITACHI">HITACHI</option>
-	<option value="IHI">IHI</option>
-	<option value="KATO">KATO</option>
-	<option value="KAWASAKI">KAWASAKI</option>
-	<option value="KOBELCO">KOBELCO</option>
-	<option value="KOMATSU">KOMATSU</option>
-	<option value="KUBOTA">KUBOTA</option>
-	<option value="MEIWA">MEIWA</option>
-	<option value="MIKASA">MIKASA</option>
-	<option value="MITSUBISHI">MITSUBISHI</option>
-	<option value="MOROOKA">MOROOKA</option>
-	<option value="NISSHA">NISSHA</option>
-	<option value="OTHER">OTHER</option>
-	<option value="SAKAI">SAKAI</option>
-	<option value="SHINDAIWA">SHINDAIWA</option>
-	<option value="SUMITOMO">SUMITOMO</option>
-	<option value="TACOM">TACOM</option>
-	<option value="TADANO">TADANO</option>
-	<option value="TCM">TCM</option>
-	<option value="YANMAR">YANMAR</option>
+<%= Const.COMBO_MANUFACTURER %>
 </select>
 </td>
 </tr>
@@ -250,13 +210,7 @@
 <td class="td">
 <select name="cond">
   <option value="" selected>選択</option>
-	<option value="5">新車もしくは、新車に近い状態</option>
-	<option value="4">高年式・メーターが少ない</option>
-	<option value="3.5">整備済み</option>
-	<option value="3">現状で使用可能な状態</option>
-	<option value="2">故障はしてないが、使用するには軽微な修理や整備が必要</option>
-	<option value="1">故障はしていないが、摩耗が激しく、使用するには相当の修理や整備が必要</option>
-	<option value="B">エンジンや油圧系統など重要部品が故障している</option>
+<%= Const.COMBO_CONDITION %>
 </select>
 </td>
 </tr>

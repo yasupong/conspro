@@ -96,21 +96,7 @@
 <td class="th">分類</td>
 <td class="td">
 <select name="TYPE">
-	<option value="1">1:Excavator (under 8 ton) - 油圧ショベル 8t未満</option>
-	<option value="2">2:Excavator (10 ton up) - 油圧ショベル 10t以上</option>
-	<option value="3">3:Crawler Dozer (Bulldozer) - ブルドーザー</option>
-	<option value="4">4:Crawler Loader (Dozer shovel) - ショベルローダー</option>
-	<option value="5">5:Wheel Loader (Rubber Tired Loader) - タイヤショベル</option>
-	<option value="6">6:Road Equipment - 舗装機械</option>
-	<option value="7">7:Crane - クレーン</option>
-	<option value="8">8:Crawler Carrier - キャリアダンプ</option>
-	<option value="9">9:Attachment - アタッチメント</option>
-	<option value="10">10:Parts - 部品</option>
-	<option value="11">11:Generator - 発電機</option>
-	<option value="12">12:Air Compressor - エアーコンプレッサー</option>
-	<option value="13">13:Welder - 溶接機</option>
-	<option value="14">14:Truck - トラック</option>
-	<option value="99">99:Other - その他</option>
+<%= Const.COMBO_TYPE %>
 </select>
 </td>
 </tr>
@@ -118,33 +104,7 @@
 <td class="th">メーカー/MANUFACTURER</td>
 <td class="td">
 <select name="MANUFACTURER">
-	<option value="AIRMAN">AIRMAN</option>
-	<option value="BOMAG">BOMAG</option>
-	<option value="CAT">CAT</option>
-	<option value="DENYO">DENYO</option>
-	<option value="DYNAPAC">DYNAPAC</option>
-	<option value="FURUKAWA">FURUKAWA</option>
-	<option value="HANTA">HANTA</option>
-	<option value="HITACHI">HITACHI</option>
-	<option value="IHI">IHI</option>
-	<option value="KATO">KATO</option>
-	<option value="KAWASAKI">KAWASAKI</option>
-	<option value="KOBELCO">KOBELCO</option>
-	<option value="KOMATSU">KOMATSU</option>
-	<option value="KUBOTA">KUBOTA</option>
-	<option value="MEIWA">MEIWA</option>
-	<option value="MIKASA">MIKASA</option>
-	<option value="MITSUBISHI">MITSUBISHI</option>
-	<option value="MOROOKA">MOROOKA</option>
-	<option value="NISSHA">NISSHA</option>
-	<option value="OTHER">OTHER</option>
-	<option value="SAKAI">SAKAI</option>
-	<option value="SHINDAIWA">SHINDAIWA</option>
-	<option value="SUMITOMO">SUMITOMO</option>
-	<option value="TACOM">TACOM</option>
-	<option value="TADANO">TADANO</option>
-	<option value="TCM">TCM</option>
-	<option value="YANMAR">YANMAR</option>
+<%= Const.COMBO_MANUFACTURER %>
 </select>
 </td>
 </tr>
@@ -176,13 +136,7 @@
 <td class="th">程度/CONDITION RANK</td>
 <td class="td">
 <select name="CONDITION">
-	<option value="5">5：新車もしくは、新車に近い状態</option>
-	<option value="4">4：高年式・メーターの少ない極上品</option>
-	<option value="3.5">3.5：整備済み</option>
-	<option value="3">3：現状で使用可能な状態</option>
-	<option value="2">2：故障はしてないが、使用するには軽微な修理や整備が必要なもの</option>
-	<option value="1">1：故障はしていないが、摩耗が激しく、使用するには相当の修理や整備が必要なもの</option>
-	<option value="B">B：エンジンや油圧系統など重要部品が故障しているもの</option>
+<%= Const.COMBO_CONDITION %>
 </select>
 </td>
 </tr>
@@ -209,8 +163,7 @@
 <td class="th">WEB表示</td>
 <td class="td">
 <select name="WEB_DISP">
-	<option value="0">0:WEBに表示しない</option>
-	<option value="1">1:WEBに表示する</option>
+<%= Const.COMBO_WEB_DISP %>
 </select>
 </td>
 </tr>

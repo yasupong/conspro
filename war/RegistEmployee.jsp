@@ -56,9 +56,7 @@
 <td class="th">権限コード</td>
 <td class="td">
 <select name="AUTH_CODE">
-	<option value="1">1：一般</option>
-	<option value="2">2：経理</option>
-	<option value="3">3：管理</option>
+<%= Const.COMBO_AUTH_CODE %>
 </select>
 </td>
 </tr>
