@@ -254,7 +254,7 @@
 </tr>
 <%
 // 経理・管理者権限のみ表示
-if ("3".equals(authCode) || "2".equals(authCode)) {
+if (Const.AUTH_ADMIN.equals(authCode) || Const.AUTH_ACCT.equals(authCode)) {
 %>
 <tr>
 <td class="th">仕入代金支払日</td>

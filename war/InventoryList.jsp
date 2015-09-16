@@ -135,7 +135,7 @@
 	<td><input type="button" name="srch" value="検索" onclick="search(this.form);"></td>
 <%
 // 管理者権限・一般権限のみ表示
-if ("3".equals(authCode) || "1".equals(authCode)) {
+if (Const.AUTH_ADMIN.equals(authCode) || Const.AUTH_NORMAL.equals(authCode)) {
 %>
 	<td><input type="button" name="sellInv" value="販売用在庫検索" onclick="seachForSellInv(this.form);"></td>
 <%
@@ -143,7 +143,7 @@ if ("3".equals(authCode) || "1".equals(authCode)) {
 %>
 <%
 // 管理者権限・経理権限のみ表示のみ表示
-if ("3".equals(authCode) || "2".equals(authCode)) {
+if (Const.AUTH_ADMIN.equals(authCode) || Const.AUTH_ACCT.equals(authCode)) {
 %>
 	<td><input type="button" name="invCount" value="棚卸在庫検索" onclick="seachForInvCount(this.form);"></td>
 <%
@@ -182,7 +182,7 @@ out.println("<div id=\"count\">件数:" + listInventoryRecord.size() + "</div>")
 <input type="button" name="updatepic" value="写真更新" onclick="callServer(this.form,3);">
 <%
 // 管理者権限のみ表示
-if ("3".equals(authCode)) {
+if (Const.AUTH_ADMIN.equals(authCode)) {
 %>
 <input type="button" name="delete" value="在庫削除" onclick="callServer(this.form,2);">
 <input type="button" name="close" value="在庫締め" onclick="callServer(this.form,5);">
@@ -191,7 +191,7 @@ if ("3".equals(authCode)) {
 %>
 <%
 // 一般以外表示
-if (!"1".equals(authCode)) {
+if (!Const.AUTH_NORMAL.equals(authCode)) {
 %>
 <input type="button" name="createex" value="EXCEL出力" onclick="createExcel(this.form);">
 <%
@@ -295,7 +295,7 @@ out.println(record);
 <input type="button" name="updatepic2" value="写真更新" onclick="callServer(this.form,3);">
 <%
 // 管理者権限のみ表示
-if ("3".equals(authCode)) {
+if (Const.AUTH_ADMIN.equals(authCode)) {
 %>
 <input type="button" name="delete2" value="在庫削除" onclick="callServer(this.form,2);">
 <input type="button" name="close2" value="在庫締め" onclick="callServer(this.form,5);">
@@ -304,7 +304,7 @@ if ("3".equals(authCode)) {
 %>
 <%
 // 一般以外表示
-if (!"1".equals(authCode)) {
+if (!Const.AUTH_NORMAL.equals(authCode)) {
 %>
 <input type="button" name="createex" value="EXCEL出力" onclick="createExcel(this.form);">
 <%

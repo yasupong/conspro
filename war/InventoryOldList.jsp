@@ -139,7 +139,7 @@ out.println("<div id=\"count\">件数:" + listInventoryRecord.size() + "</div>")
 <input type="button" name="detail" value="在庫詳細" onclick="callServer(this.form,4);">
 <%
 // 管理者権限のみ表示
-if ("3".equals(authCode)) {
+if (Const.AUTH_ADMIN.equals(authCode)) {
 %>
 <input type="button" name="back" value="締め戻し" onclick="callServer(this.form,6);">
 <%
@@ -147,7 +147,7 @@ if ("3".equals(authCode)) {
 %>
 <%
 // 一般以外表示
-if (!"1".equals(authCode)) {
+if (!Const.AUTH_NORMAL.equals(authCode)) {
 %>
 <input type="button" name="createex" value="締め在庫EXCEL出力" onclick="createExcelForClosedInv(this.form);">
 <%
@@ -244,7 +244,7 @@ out.println(record);
 <input type="button" name="detail2" value="在庫詳細" onclick="callServer(this.form,4);">
 <%
 // 管理者権限のみ表示
-if ("3".equals(authCode)) {
+if (Const.AUTH_ADMIN.equals(authCode)) {
 %>
 <input type="button" name="back2" value="締め戻し" onclick="callServer(this.form,6);">
 <%
@@ -252,7 +252,7 @@ if ("3".equals(authCode)) {
 %>
 <%
 // 一般以外表示
-if (!"1".equals(authCode)) {
+if (!Const.AUTH_NORMAL.equals(authCode)) {
 %>
 <input type="button" name="createex" value="締め在庫EXCEL出力" onclick="createExcelForClosedInv(this.form);">
 <%

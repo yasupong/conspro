@@ -49,7 +49,7 @@
 <input type="hidden" name="ACCOUNT" value="<%= account %>">
 <%
 // 経理・管理者権限のみ表示
-if ("3".equals(authCode) || "2".equals(authCode)) {
+if (Const.AUTH_ADMIN.equals(authCode) || Const.AUTH_ACCT.equals(authCode)) {
 %>
 <input type="button" name="delete" value="削除" onclick="callServer(this.form,2);">
 <%

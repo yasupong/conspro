@@ -47,7 +47,7 @@
 	</tr>
 <%
 // 管理者権限・一般権限のみ表示
-if ("3".equals(authCode) || "1".equals(authCode)) {
+if (Const.AUTH_ADMIN.equals(authCode) || Const.AUTH_NORMAL.equals(authCode)) {
 %>
 	<tr>
 		<td class="th" id="menu"><a href="GetEsateiAllList?ACCOUNT=<%=account %>" target="esatei">査定受付一覧</a></td>
@@ -66,7 +66,7 @@ if ("3".equals(authCode) || "1".equals(authCode)) {
 %>
 <%
 // 管理者権限・経理権限のみ表示
-if ("3".equals(authCode) || "2".equals(authCode)) {
+if (Const.AUTH_ADMIN.equals(authCode) || Const.AUTH_ACCT.equals(authCode)) {
 %>
 	<tr>
 		<td class="th" id="menu"><a href="LoadExcelForInvCount">棚卸在庫一覧出力</a></td>
@@ -77,7 +77,7 @@ if ("3".equals(authCode) || "2".equals(authCode)) {
 %>
 <%
 // 管理者権限のみ表示
-if ("3".equals(authCode)) {
+if (Const.AUTH_ADMIN.equals(authCode)) {
 %>
 	<tr>
 		<td class="th" id="menu"><a href="RegistEmployee.jsp?ACCOUNT=<%=account %>" target="userlist">ユーザー情報登録</a></td>
