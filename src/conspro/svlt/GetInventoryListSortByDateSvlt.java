@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import conspro.storage.InventoryRecord;
 import conspro.storage.PMF;
+import conspro.util.Const;
 
 /**
  * 在庫一覧をTYPEで絞り込む
@@ -32,17 +33,13 @@ public class GetInventoryListSortByDateSvlt extends HttpServlet {
 	    String cond = null;
 	    
 	    // 絞り込み条件作成。ページ制御
-	    if ("1".equals(page)) {
+	    if (Const.PAGE_TYPE_EN.equals(page)) {
 	    	rd = sc.getRequestDispatcher("/CPSortInventoryList.jsp");
 	    	cond = "(WEB_DISP == '1' || WEB_DISP == '3') && DATA_FLG == '0'";
 	    }
-	    else if ("2".equals(page)) {
+	    else if (Const.PAGE_TYPE_JA.equals(page)) {
 	    	rd = sc.getRequestDispatcher("/CPSortInventoryListJa.jsp");
 	    	cond = "(WEB_DISP == '1' ||  WEB_DISP == '3') && DATA_FLG == '0'";
-	    }
-	    else if ("3".equals(page)) {
-	    	rd = sc.getRequestDispatcher("/CPSortInventoryListHzj.jsp");
-	    	cond = "(WEB_DISP == '2' || WEB_DISP == '3') && DATA_FLG == '0'";
 	    }
 	    
 	    // クエリー発行

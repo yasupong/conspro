@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import conspro.storage.InventoryRecord;
 import conspro.storage.PMF;
 import conspro.util.CommonUtil;
+import conspro.util.Const;
 
 /**
  * 在庫一覧
@@ -32,14 +33,11 @@ public class GetInventoryListSvlt extends HttpServlet {
 	    ServletContext sc = getServletContext();
 	    RequestDispatcher rd = null;
 	    // 遷移先制御
-	    if ("1".equals(page)) {
-	    	rd = sc.getRequestDispatcher("/GetInventoryListByType?TYPE=1&page=1");
+	    if (Const.PAGE_TYPE_EN.equals(page)) {
+	    	rd = sc.getRequestDispatcher("/GetInventoryListByType?TYPE=1&page=" + Const.PAGE_TYPE_EN);
 	    }
-	    else if ("2".equals(page)) {
-	    	rd = sc.getRequestDispatcher("/GetInventoryListByType?TYPE=1&page=2");
-	    }
-	    else if ("3".equals(page)) {
-	    	rd = sc.getRequestDispatcher("/GetInventoryListByType?TYPE=1&page=3");
+	    else if (Const.PAGE_TYPE_JA.equals(page)) {
+	    	rd = sc.getRequestDispatcher("/GetInventoryListByType?TYPE=1&page=" + Const.PAGE_TYPE_JA);
 	    }
 	    else {
 			String sortType = request.getParameter("sort");

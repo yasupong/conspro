@@ -148,4 +148,9 @@ public class Const {
 			"<option value=\"2\">2：経理</option>\n" + 
 			"<option value=\"3\">3：管理</option>\n" + 
 			"<option value=\"4\">4：事務</option>\n";
+	
+	/** ページ種類：英語*/
+	public final static String PAGE_TYPE_EN = "1";
+	/** ページ種類：日本語*/
+	public final static String PAGE_TYPE_JA = "2";
 }

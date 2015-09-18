@@ -15,6 +15,7 @@ import com.google.appengine.api.datastore.KeyFactory;
 
 import conspro.storage.InventoryRecord;
 import conspro.storage.PMF;
+import conspro.util.Const;
 
 /**
  * 在庫詳細
@@ -53,10 +54,10 @@ public class DetailInventorySvlt extends HttpServlet {
 		String page = arg0.getParameter("page");
 		
 	    // ページ制御
-	    if ("1".equals(page)) {
+	    if (Const.PAGE_TYPE_EN.equals(page)) {
 	    	rd = sc.getRequestDispatcher("/CPInventoryDetail.jsp");
 	    }
-	    else if ("2".equals(page)) {
+	    else if (Const.PAGE_TYPE_JA.equals(page)) {
 	    	rd = sc.getRequestDispatcher("/CPInventoryDetailJa.jsp");
 	    }
 	    

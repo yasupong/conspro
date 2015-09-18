@@ -133,6 +133,9 @@ public class CodeUtil {
 		else if ("3".equals(aCode)) {
 			return "3:管理";
 		}
+		else if ("4".equals(aCode)) {
+			return "4:事務";
+		}
 		else {
 			return "";
 		}
