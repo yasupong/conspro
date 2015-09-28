@@ -268,7 +268,6 @@ if (Const.AUTH_ADMIN.equals(authCode) || Const.AUTH_ACCT.equals(authCode)) {
 <td class="th">売上月</td>
 <td class="td"><input type="text" name="SELL_MONTH" value="<%= inventoryRecord.getSELL_MONTH() %>">（入力形式:YYYY/MM）</td>
 </tr>
-<tr>
 <%
 } else {
 %>

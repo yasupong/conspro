@@ -251,7 +251,6 @@ if (Const.AUTH_ADMIN.equals(authCode) || Const.AUTH_ACCT.equals(authCode)) {
 <td class="th">売上月</td>
 <td class="td"><input type="text" name="SELL_MONTH" value="">（入力形式:YYYY/MM）</td>
 </tr>
-<tr>
 <%
 } else {
 %>
@@ -261,6 +260,7 @@ if (Const.AUTH_ADMIN.equals(authCode) || Const.AUTH_ACCT.equals(authCode)) {
 <%
 }
 %>
+<tr>
 <td class="th">在庫メモ</td>
 <td class="td"><textarea name="MEMO" cols="50" rows="5" maxlength="256"></textarea></td>
 </tr>
