@@ -213,6 +213,10 @@ if (!Const.AUTH_NORMAL.equals(authCode)) {
 <td class="th">表示価格</td>
 <td class="th">登録日</td>
 <td class="th">仕入担当</td>
+<%
+// 事務以外は表示
+if (!Const.AUTH_OFFICE.equals(authCode)) {
+%>
 <td class="th">発注日</td>
 <td class="th">仕入先</td>
 <td class="th">仕入原価</td>
@@ -223,6 +227,9 @@ if (!Const.AUTH_NORMAL.equals(authCode)) {
 <!--<td class="th">利益</td>-->
 <td class="th">売上入金日</td>
 <td class="th">売上月</td>
+<%
+}
+%>
 </tr>
 <%
 if (listInventoryRecord != null) {
@@ -244,6 +251,8 @@ int cnt = 1;
 		record = record + "<td nowrap style=\"text-align:right;\" class=\"td\">" + CommonUtil.moneyFormat(inventoryRecord.getPRICE()) + "</td>";
 		record = record + "<td nowrap class=\"td\">" + sdf.format(date) + "</td>";
 		record = record + "<td nowrap class=\"td\">" + inventoryRecord.getACCOUNT() + "</td>";
+// 事務以外は表示
+if (!Const.AUTH_OFFICE.equals(authCode)) {
 		record = record + "<td nowrap class=\"td\">" + inventoryRecord.getORDER_DATE() + "</td>";
 		record = record + "<td nowrap class=\"td\">" + inventoryRecord.getSELLER() + "</td>";
 		record = record + "<td nowrap style=\"text-align:right;\" class=\"td\">" + CommonUtil.moneyFormat(inventoryRecord.getORDER_COST_PRICE()) + "</td>";
@@ -254,6 +263,7 @@ int cnt = 1;
 //		record = record + "<td nowrap style=\"text-align:right;\" class=\"td\">" + CommonUtil.moneyFormat(inventoryRecord.getPROFIT()) + "</td>";
 		record = record + "<td nowrap class=\"td\">" + inventoryRecord.getSELL_PAY_DATE() + "</td>";
 		record = record + "<td nowrap class=\"td\">" + inventoryRecord.getSELL_MONTH() + "</td>";
+}
 	  record = record + "</tr>";
 	  out.println(record);
 		cnt++;
@@ -273,6 +283,8 @@ record = record + "<td>&nbsp;</td>";
 record = record + "<td>&nbsp;</td>";
 record = record + "<td>&nbsp;</td>";
 record = record + "<td>&nbsp;</td>";
+// 事務以外は表示
+if (!Const.AUTH_OFFICE.equals(authCode)) {
 record = record + "<td>&nbsp;</td>";
 record = record + "<td>&nbsp;</td>";
 record = record + "<td nowrap style=\"text-align:right;\">" + CommonUtil.moneyFormat(orderCostPrice) + "</td>";
@@ -283,6 +295,7 @@ record = record + "<td nowrap style=\"text-align:right;\">" + CommonUtil.moneyFo
 //record = record + "<td nowrap style=\"text-align:right;\">" + CommonUtil.moneyFormat(profit) + "</td>";
 record = record + "<td>&nbsp;</td>";
 record = record + "<td>&nbsp;</td>";
+}
 record = record + "</tr>";
 out.println(record);
 

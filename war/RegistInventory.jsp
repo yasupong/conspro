@@ -167,6 +167,10 @@
 </select>
 </td>
 </tr>
+<%
+// 事務以外は表示
+if (!Const.AUTH_OFFICE.equals(authCode)) {
+%>
 <tr>
 <td class="th">仕入先</td>
 <td class="td"><input type="text" name="SELLER" value="" size="100"></td>
@@ -195,6 +199,19 @@
 <td class="th">仕入原価</td>
 <td class="td"><input type="text" name="ORDER_COST_PRICE" value="0" style="text-align:right;">（数字のみ入力可能）</td>
 </tr>
+<%
+} else {
+%>
+<input type="hidden" name="SELLER" value="">
+<input type="hidden" name="ORDER_PRICE" value="0">
+<input type="hidden" name="ORDER_TRANS_COST" value="0">
+<input type="hidden" name="PARTS_COST" value="0">
+<input type="hidden" name="MAINTENANCE_COST" value="0">
+<input type="hidden" name="ORDER_OUT_ORDER_COST" value="0">
+<input type="hidden" name="ORDER_COST_PRICE" value="0">
+<%
+}
+%>
 <tr>
 <td class="th">販売運賃</td>
 <td class="td"><input type="text" name="SELL_TRANCE_COST" value="0" style="text-align:right;" onblur="autoSum(this.form)">（数字のみ入力可能）</td>
@@ -215,6 +232,10 @@
 <td class="th">フレイト</td>
 <td class="td"><input type="text" name="FREIGHT_COST" value="0" style="text-align:right;" onblur="autoSum(this.form)">（数字のみ入力可能）</td>
 </tr>
+<%
+// 事務以外は表示
+if (!Const.AUTH_OFFICE.equals(authCode)) {
+%>
 <tr>
 <td class="th">販売原価</td>
 <td class="td"><input type="text" name="SELL_COST_PRICE" value="0" style="text-align:right;">（数字のみ入力可能）</td>
@@ -235,6 +256,17 @@
 <td class="th">業販価格</td>
 <td class="td"><input type="text" name="WHOL_PRICE" value="0" style="text-align:right;">（数字のみ入力可能）</td>
 </tr>
+<%
+} else {
+%>
+<input type="hidden" name="SELL_COST_PRICE" value="0">
+<input type="hidden" name="SELL_PRICE" value="0">
+<input type="hidden" name="PROFIT" value="0">
+<input type="hidden" name="BUYER" value="">
+<input type="hidden" name="WHOL_PRICE" value="0">
+<%
+}
+%>
 <%
 // 経理・管理者権限のみ表示
 if (Const.AUTH_ADMIN.equals(authCode) || Const.AUTH_ACCT.equals(authCode)) {
@@ -260,10 +292,21 @@ if (Const.AUTH_ADMIN.equals(authCode) || Const.AUTH_ACCT.equals(authCode)) {
 <%
 }
 %>
+<%
+// 事務以外は表示
+if (!Const.AUTH_OFFICE.equals(authCode)) {
+%>
 <tr>
 <td class="th">在庫メモ</td>
 <td class="td"><textarea name="MEMO" cols="50" rows="5" maxlength="256"></textarea></td>
 </tr>
+<%
+} else {
+%>
+<input type="hidden" name="MEMO" value="">
+<%
+}
+%>
 </table>
 <div>
 <input type="hidden" name="ACCOUNT" value="<%= account %>">

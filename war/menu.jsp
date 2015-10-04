@@ -37,6 +37,10 @@
 		<td class="th" id="menu"><a href="GetInventoryList?ACCOUNT=<%=account %>&MENU=1" target="invlist1">在庫一覧</a></td>
 		<td class="td">在庫の一覧を参照します</td>
 	</tr>
+<%
+// 事務以外は表示
+if (!Const.AUTH_OFFICE.equals(authCode)) {
+%>
 	<tr>
 		<td class="th" id="menu"><a href="GetOldInventoryList?ACCOUNT=<%=account %>&MENU=1" target="invlist2">締め在庫一覧</a></td>
 		<td class="td">締め在庫の一覧を参照します</td>
@@ -45,6 +49,9 @@
 		<td class="th" id="menu"><a href="GetInventoryHistoryList?ACCOUNT=<%=account %>" target="invlist3">在庫削除履歴一覧</a></td>
 		<td class="td">在庫の削除履歴一覧を参照します</td>
 	</tr>
+<%
+}
+%>
 <%
 // 管理者権限・一般権限のみ表示
 if (Const.AUTH_ADMIN.equals(authCode) || Const.AUTH_NORMAL.equals(authCode)) {

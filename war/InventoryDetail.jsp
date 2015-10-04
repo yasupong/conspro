@@ -98,6 +98,10 @@
 <td class="th">WEB表示日時</td>
 <td class="td"><%= CommonUtil.nullConv(inventoryRecord.getWEB_DISP_DATE()) %></td>
 </tr>
+<%
+// 事務以外は表示
+if (!Const.AUTH_OFFICE.equals(authCode)) {
+%>
 <tr>
 <td class="th">仕入先</td>
 <td class="td"><%= inventoryRecord.getSELLER() %></td>
@@ -126,6 +130,9 @@
 <td class="th">仕入原価</td>
 <td class="td" align="right"><%= CommonUtil.moneyFormat(inventoryRecord.getORDER_COST_PRICE()) %></td>
 </tr>
+<%
+}
+%>
 <tr>
 <td class="th">販売運賃</td>
 <td class="td" align="right"><%= CommonUtil.moneyFormat(inventoryRecord.getSELL_TRANCE_COST()) %></td>
@@ -146,6 +153,10 @@
 <td class="th">フレイト</td>
 <td class="td" align="right"><%= CommonUtil.moneyFormat(inventoryRecord.getFREIGHT_COST()) %></td>
 </tr>
+<%
+// 事務以外は表示
+if (!Const.AUTH_OFFICE.equals(authCode)) {
+%>
 <tr>
 <td class="th">販売原価</td>
 <td class="td" align="right"><%= CommonUtil.moneyFormat(inventoryRecord.getSELL_COST_PRICE()) %></td>
@@ -178,6 +189,9 @@
 <td class="th">在庫メモ</td>
 <td class="td"><%= inventoryRecord.getMEMO() %></td>
 </tr>
+<%
+}
+%>
 </table>
 </div>
 </form>
