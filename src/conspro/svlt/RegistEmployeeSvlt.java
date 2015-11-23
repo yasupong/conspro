@@ -33,11 +33,9 @@ public class RegistEmployeeSvlt extends HttpServlet {
         try {
         	// 従業員データを登録する
         	pm.makePersistent( emp );
-        }
-        catch (Throwable th) {
+        } catch (Throwable th) {
 	    	throw new ServletException(th);
-        }
-        finally {
+        } finally {
         	pm.close();
         }
 

@@ -51,11 +51,9 @@ public class RegistSignupSvlt extends HttpServlet {
         try {
         	// DB登録
         	pm.makePersistent( lcSignup );
-        }
-        catch (Throwable th) {
+        } catch (Throwable th) {
 	    	throw new ServletException(th);
-        }
-        finally {
+        } finally {
         	pm.close();
         }
 

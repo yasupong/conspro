@@ -41,8 +41,7 @@ public class GetInventoryListByTypeSvlt extends HttpServlet {
 	    if (Const.PAGE_TYPE_EN.equals(page)) {
 	    	rd = sc.getRequestDispatcher("/CPInventoryList.jsp");
 	    	cond = "　&& (WEB_DISP == '1' || WEB_DISP == '3')";
-	    }
-	    else if (Const.PAGE_TYPE_JA.equals(page)) {
+	    } else if (Const.PAGE_TYPE_JA.equals(page)) {
 	    	rd = sc.getRequestDispatcher("/CPInventoryListJa.jsp");
 	    	cond = " && (WEB_DISP == '1' ||  WEB_DISP == '3')";
 	    }
@@ -53,8 +52,7 @@ public class GetInventoryListByTypeSvlt extends HttpServlet {
 	    String query = null;
 	    if ("maker".equals(TYPE)) {
 	    	query = "select from " + InventoryRecord.class.getName() + " where MANUFACTURER == '" + arg0.getParameter("MANUFACTURER") + "' && DATA_FLG == '0'" + cond + " order by DATE desc";
-	    }
-	    else {
+	    } else {
 	    	query = "select from " + InventoryRecord.class.getName() + " where TYPE == '" + TYPE +"' && DATA_FLG == '0'" + cond + " order by DATE desc";
 	    }
 	    

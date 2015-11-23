@@ -65,17 +65,14 @@ public class EditInventorySvlt extends HttpServlet {
 
 	    try {
 			String type = arg0.getParameter("type");
-			// 更新
+
 			if (TYPE_EDIT.equals(type)) {
 				// 更新ページへ遷移
 			    arg0.setAttribute("InventoryRecord", inventoryRecord);
 			    ServletContext sc = getServletContext();
 			    RequestDispatcher rd = sc.getRequestDispatcher("/UpdateInventory.jsp");
 			    rd.forward(arg0, arg1);
-			}
-			// 更新確定
-			else if (TYPE_EDIT_COMMIT.equals(type)) {
-				
+			} else if (TYPE_EDIT_COMMIT.equals(type)) {
 				// 更新実行
 				inventoryRecord.setNAME(arg0.getParameter("NAME"));
 				inventoryRecord.setPRICE(arg0.getParameter("PRICE"));
@@ -117,8 +114,7 @@ public class EditInventorySvlt extends HttpServlet {
 				
 				if ("0".equals(inventoryRecord.getWEB_DISP())) {
 					inventoryRecord.setWEB_DISP_DATE("");
-				}
-				else if ("0".equals(arg0.getParameter("LOADWEB_DISP")) && !"0".equals(inventoryRecord.getWEB_DISP())) {
+				} else if ("0".equals(arg0.getParameter("LOADWEB_DISP")) && !"0".equals(inventoryRecord.getWEB_DISP())) {
 					// 非表示から変更された場合のみ書き換える
 					SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 					Date date = new Date(System.currentTimeMillis());
@@ -129,9 +125,7 @@ public class EditInventorySvlt extends HttpServlet {
 	        	
 				// 一覧画面へ
 				arg1.sendRedirect("GetInventoryList?ACCOUNT=" + arg0.getParameter("ACCOUNT"));
-			}
-			// 削除
-			else if (TYPE_DELETE.equals(type)) {
+			} else if (TYPE_DELETE.equals(type)) {
 	        	
 				// 削除フラグを立てるだけ
 				inventoryRecord.setDATA_FLG("9");
@@ -140,32 +134,26 @@ public class EditInventorySvlt extends HttpServlet {
 				
 				// 一覧画面へ
 				arg1.sendRedirect("GetInventoryList?ACCOUNT=" + arg0.getParameter("ACCOUNT"));
-			}
-			// 写真更新
-			else if (TYPE_PICUPDATE.equals(type)) {
+			} else if (TYPE_PICUPDATE.equals(type)) {
+				// 写真更新
 			    // セッションにつっこむ
 			    arg0.getSession().setAttribute("InventoryRecord", inventoryRecord.getDATE());
 			    arg0.getSession().setAttribute("AuthACCOUNT", arg0.getParameter("ACCOUNT"));
 			    ServletContext sc = getServletContext();
 			    RequestDispatcher rd = sc.getRequestDispatcher("/UpdatePicture.jsp?NAME=" + inventoryRecord.getNAME() + "&MANUFACTURER=" + inventoryRecord.getMANUFACTURER());
 			    rd.forward(arg0, arg1);
-			}
-			// 詳細
-			else if (TYPE_DETAIL.equals(type)) {
+			} else if (TYPE_DETAIL.equals(type)) {
 				// 詳細ページへ遷移
 			    arg0.setAttribute("InventoryRecord", inventoryRecord);
 			    ServletContext sc = getServletContext();
 			    RequestDispatcher rd = sc.getRequestDispatcher("/InventoryDetail.jsp");
 			    rd.forward(arg0, arg1);
-			}
-			// 在庫締め
-			else if (TYPE_CLOSE.equals(type)) {
+			} else if (TYPE_CLOSE.equals(type)) {
 	        	
 				String sellMonth = inventoryRecord.getSELL_MONTH();
 				if (sellMonth == null || sellMonth.length() == 0) {
 					arg0.getSession().setAttribute("MSG", "エラー：売上月が入力されていないため締めることができません");
-				}
-				else {
+				} else {
 					// データフラグを締めに更新
 					inventoryRecord.setDATA_FLG("1");
 		        	pm.makePersistent( inventoryRecord );
@@ -174,9 +162,7 @@ public class EditInventorySvlt extends HttpServlet {
 	        	
 				// 一覧画面へ
 				arg1.sendRedirect("GetInventoryList?ACCOUNT=" + arg0.getParameter("ACCOUNT"));
-			}
-			// 締め戻し
-			else if (TYPE_CLOSE_BACK.equals(type)) {
+			} else if (TYPE_CLOSE_BACK.equals(type)) {
 	        	
 				// データフラグを通常に戻す
 				inventoryRecord.setDATA_FLG("0");
@@ -185,16 +171,13 @@ public class EditInventorySvlt extends HttpServlet {
 				
 				// 一覧画面へ
 				arg1.sendRedirect("GetOldInventoryList?ACCOUNT=" + arg0.getParameter("ACCOUNT"));
-			}
-			else {
+			} else {
 				// エラーページへ
 				arg1.sendRedirect("Error.jsp");
 			}
-	    }
-	    catch ( Throwable th ) {
+	    } catch ( Throwable th ) {
 	    	throw new ServletException(th);
-		}
-	    finally {
+		} finally {
         	pm.close();
 	    }
 	}

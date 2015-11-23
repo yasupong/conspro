@@ -71,8 +71,7 @@ public class RegistInventorySvlt extends HttpServlet {
 		
 		if ("0".equals(lcInventoryRecord.getWEB_DISP())) {
 			lcInventoryRecord.setWEB_DISP_DATE("");
-		}
-		else {
+		} else {
 			SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 			Date date = new Date(System.currentTimeMillis());
 			lcInventoryRecord.setWEB_DISP_DATE(sdf.format(date));
@@ -83,11 +82,9 @@ public class RegistInventorySvlt extends HttpServlet {
         try {
         	// DB登録
         	pm.makePersistent( lcInventoryRecord );
-        }
-        catch (Throwable th) {
+        } catch (Throwable th) {
 	    	throw new ServletException(th);
-        }
-        finally {
+        } finally {
         	pm.close();
         }
 

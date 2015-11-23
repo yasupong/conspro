@@ -57,11 +57,9 @@ public class RegistEsateiSvlt extends HttpServlet {
         try {
         	// DB登録
         	pmEsatei.makePersistent(lcEsatei);
-        }
-        catch (Throwable th) {
+        } catch (Throwable th) {
 	    	throw new ServletException(th);
-        }
-        finally {
+        } finally {
         	pmEsatei.close();
         }
 
@@ -118,11 +116,9 @@ public class RegistEsateiSvlt extends HttpServlet {
             try {
             	// DB登録
             	pmInv.makePersistent(lcInventoryRecord);
-            }
-            catch (Throwable th) {
+            } catch (Throwable th) {
     	    	throw new ServletException(th);
-            }
-            finally {
+            } finally {
             	pmInv.close();
             }
         }

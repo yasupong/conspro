@@ -36,13 +36,11 @@ public class SeachInventoryListSvlt extends HttpServlet {
 	    	// 販売用在庫検索
 			// 条件：販売先が空欄
 	    	queryBuf.append(" where DATA_FLG == '0' && BUYER == '' order by TYPE");
-	    }
-	    else if ("2".equals(searchType)) {
+	    } else if ("2".equals(searchType)) {
 	    	// 棚卸在庫検索
 			// 条件：仕入支払日が入力ありかつ売上入金日・売上月が空欄
 	    	queryBuf.append(" where DATA_FLG == '0' && ORDER_PAY_DATE != '' && SELL_MONTH == '' && SELL_PAY_DATE == '' order by ORDER_PAY_DATE, TYPE");
-	    }
-	    else {
+	    } else {
 	    	
 	    	queryBuf.append(" where DATA_FLG == '0'");
 	    	

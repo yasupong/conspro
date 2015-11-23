@@ -76,8 +76,7 @@ public class GetPictureSvlt extends HttpServlet {
 			if (picData != null) {
 				// 写真データをバイナリーとしてストリームへ書き込む
 				objSos.write(picData);
-	    	}
-			else {
+	    	} else {
 				// 写真データが取れなかった場合は代替画像を出力
 		        in = new FileInputStream("img/nopic.gif");
 		        byte[] buff = new byte[1024];
@@ -88,16 +87,13 @@ public class GetPictureSvlt extends HttpServlet {
 			}
 
 			objSos.close();
-	    }
-	    catch ( Throwable th ) {
+	    } catch ( Throwable th ) {
 	    	throw new ServletException(th);
-		}
-	    finally {
+		} finally {
 	    	if (in != null) {
                 try {
                     in.close();
-                }
-                catch (IOException e) {
+                } catch (IOException e) {
         	    	throw new ServletException(e);
                 }
             }

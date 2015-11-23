@@ -36,8 +36,7 @@ public class GetInventoryAllListSvlt extends HttpServlet {
 	    if (Const.PAGE_TYPE_EN.equals(page)) {
 	    	rd = sc.getRequestDispatcher("/CPInventoryListAll.jsp");
 	    	cond = "(WEB_DISP == '1' || WEB_DISP == '3') && DATA_FLG == '0'";
-	    }
-	    else if (Const.PAGE_TYPE_JA.equals(page)) {
+	    } else if (Const.PAGE_TYPE_JA.equals(page)) {
 	    	rd = sc.getRequestDispatcher("/CPInventoryListJaAll.jsp");	
 	    	cond = "(WEB_DISP == '1' ||  WEB_DISP == '3') && DATA_FLG == '0'";
 	    }

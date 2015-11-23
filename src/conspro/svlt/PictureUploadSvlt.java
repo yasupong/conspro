@@ -74,11 +74,9 @@ public class PictureUploadSvlt extends HttpServlet {
         	pm.makePersistent(inventoryRecord);
 			// 一覧画面へ
 			arg1.sendRedirect("GetInventoryList?ACCOUNT=" + (String)arg0.getSession().getAttribute("AuthACCOUNT"));
-        }
-        catch (Throwable th) {
+        } catch (Throwable th) {
 	    	throw new ServletException(th);
-        }
-        finally {
+        } finally {
         	pm.close();
         }
    }

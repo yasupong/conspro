@@ -55,16 +55,13 @@ public class EditSignupSvlt extends HttpServlet {
 		    	pm.deletePersistent(signup);
 				// 一覧画面へ
 				arg1.sendRedirect("GetSignupAllList?ACCOUNT=" + arg0.getParameter("ACCOUNT"));
-			}
-			else {
+			} else {
 				// エラーページへ
 				arg1.sendRedirect("Error.jsp");
 			}
-	    }
-	    catch ( Throwable th ) {
+	    } catch ( Throwable th ) {
 	    	throw new ServletException(th);
-		}
-	    finally {
+		} finally {
         	pm.close();
 	    }
 	}

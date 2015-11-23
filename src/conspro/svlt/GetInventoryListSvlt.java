@@ -35,40 +35,32 @@ public class GetInventoryListSvlt extends HttpServlet {
 	    // 遷移先制御
 	    if (Const.PAGE_TYPE_EN.equals(page)) {
 	    	rd = sc.getRequestDispatcher("/GetInventoryListByType?TYPE=1&page=" + Const.PAGE_TYPE_EN);
-	    }
-	    else if (Const.PAGE_TYPE_JA.equals(page)) {
+	    } else if (Const.PAGE_TYPE_JA.equals(page)) {
 	    	rd = sc.getRequestDispatcher("/GetInventoryListByType?TYPE=1&page=" + Const.PAGE_TYPE_JA);
-	    }
-	    else {
+	    } else {
 			String sortType = request.getParameter("sort");
 			String sortOrder = " order by TYPE,　MANUFACTURER, DATE desc";
 			
-			// 種類
 		    if ("1".equals(sortType)) {
+				// 種類
 		    	sortOrder = " order by TYPE, MANUFACTURER, DATE desc";
-		    }
-			// 日付
-		    else if ("2".equals(sortType)) {
+		    } else if ("2".equals(sortType)) {
+				// 日付
 		    	sortOrder = " order by DATE desc";
-		    }
-		    // 値段
-		    else if ("3".equals(sortType)) {
+		    } else if ("3".equals(sortType)) {
+			    // 値段
 		    	sortOrder = " order by PRICE asc";
-		    }
-		    // 状態
-		    else if ("4".equals(sortType)) {
+		    } else if ("4".equals(sortType)) {
+			    // 状態
 		    	sortOrder = " order by CONDITION desc";
-		    }
-		    // 稼動時間
-		    else if ("5".equals(sortType)) {
+		    } else if ("5".equals(sortType)) {
+		    	// 稼動時間
 		    	sortOrder = " order by HOURS desc";
-		    }
-		    // メーカー
-		    else if ("6".equals(sortType)) {
+		    } else if ("6".equals(sortType)) {
+		    	// メーカー
 		    	sortOrder = " order by MANUFACTURER, TYPE, DATE desc";
-		    }
-		    // WEB表示
-		    else if ("7".equals(sortType)) {
+		    } else if ("7".equals(sortType)) {
+		    	 // WEB表示
 		    	sortOrder = " order by WEB_DISP, WEB_DISP_DATE desc, TYPE";
 		    }
 		    

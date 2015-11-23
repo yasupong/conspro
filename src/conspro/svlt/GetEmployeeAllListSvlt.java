@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import conspro.storage.Employee;
-import conspro.storage.InventoryRecord;
 import conspro.storage.PMF;
 
 /**
@@ -29,9 +28,9 @@ public class GetEmployeeAllListSvlt extends HttpServlet {
 	    // クエリー発行
 	    PersistenceManager pm = PMF.getInstance().getPersistenceManager();
 	    String query = "select from " + Employee.class.getName();
-	    List<InventoryRecord> listInventoryRecord = (List<InventoryRecord>) pm.newQuery(query).execute();
+	    List<Employee> listEmployeeRecord = (List<Employee>) pm.newQuery(query).execute();
 
-	    arg0.setAttribute("EmployeeRecordList", listInventoryRecord);
+	    arg0.setAttribute("EmployeeRecordList", listEmployeeRecord);
 	    
 	    ServletContext sc = getServletContext();
 	    RequestDispatcher rd = sc.getRequestDispatcher("/EmployeeList.jsp");

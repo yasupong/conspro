@@ -62,9 +62,7 @@ public class EditEmployeeSvlt extends HttpServlet {
 			    ServletContext sc = getServletContext();
 			    RequestDispatcher rd = sc.getRequestDispatcher("/UpdateEmployee.jsp");
 			    rd.forward(arg0, arg1);
-			}
-			// 更新確定
-			else if (TYPE_EDIT_COMMIT.equals(type)) {
+			} else if (TYPE_EDIT_COMMIT.equals(type)) {
 				
 				// 更新実行
 				employeeRecord.setPASSWORD(arg0.getParameter("PASSWORD"));
@@ -75,24 +73,19 @@ public class EditEmployeeSvlt extends HttpServlet {
 	        	
 				// 一覧画面へ
 				arg1.sendRedirect("GetEmployeeAllList?ACCOUNT=" + arg0.getParameter("ACCOUNT"));
-			}
-			// 削除
-			else if (TYPE_DELETE.equals(type)) {
+			} else if (TYPE_DELETE.equals(type)) {
 				
 				// 在庫削除実行
 		    	pm.deletePersistent(employeeRecord);
 				// 一覧画面へ
 				arg1.sendRedirect("GetEmployeeAllList?ACCOUNT=" + arg0.getParameter("ACCOUNT"));
-			}
-			else {
+			} else {
 				// エラーページへ
 				arg1.sendRedirect("Error.jsp");
 			}
-	    }
-	    catch ( Throwable th ) {
+	    } catch ( Throwable th ) {
 	    	throw new ServletException(th);
-		}
-	    finally {
+		} finally {
         	pm.close();
 	    }
 	}

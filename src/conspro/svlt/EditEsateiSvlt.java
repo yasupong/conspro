@@ -55,16 +55,13 @@ public class EditEsateiSvlt extends HttpServlet {
 		    	pm.deletePersistent(esatei);
 				// 一覧画面へ
 				arg1.sendRedirect("GetEsateiAllList?ACCOUNT=" + arg0.getParameter("ACCOUNT"));
-			}
-			else {
+			} else {
 				// エラーページへ
 				arg1.sendRedirect("Error.jsp");
 			}
-	    }
-	    catch ( Throwable th ) {
+	    } catch ( Throwable th ) {
 	    	throw new ServletException(th);
-		}
-	    finally {
+		} finally {
         	pm.close();
 	    }
 	}

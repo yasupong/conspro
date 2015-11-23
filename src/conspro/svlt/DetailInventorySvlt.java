@@ -56,8 +56,7 @@ public class DetailInventorySvlt extends HttpServlet {
 	    // ページ制御
 	    if (Const.PAGE_TYPE_EN.equals(page)) {
 	    	rd = sc.getRequestDispatcher("/CPInventoryDetail.jsp");
-	    }
-	    else if (Const.PAGE_TYPE_JA.equals(page)) {
+	    } else if (Const.PAGE_TYPE_JA.equals(page)) {
 	    	rd = sc.getRequestDispatcher("/CPInventoryDetailJa.jsp");
 	    }
 	    
