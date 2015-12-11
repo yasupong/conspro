@@ -45,6 +45,7 @@ public class RegistInventorySvlt extends HttpServlet {
 		lcInventoryRecord.setACCOUNT(req.getParameter("INACCOUNT"));
 		lcInventoryRecord.setORDER_DATE(req.getParameter("ORDER_DATE"));
 		lcInventoryRecord.setWEB_DISP(req.getParameter("WEB_DISP"));
+		lcInventoryRecord.setSELLER_CODE(req.getParameter("SELLER_CODE"));
 		lcInventoryRecord.setSELLER(req.getParameter("SELLER"));
 		lcInventoryRecord.setORDER_PRICE(req.getParameter("ORDER_PRICE"));
 		lcInventoryRecord.setORDER_TRANS_COST(req.getParameter("ORDER_TRANS_COST"));
@@ -61,6 +62,7 @@ public class RegistInventorySvlt extends HttpServlet {
 		lcInventoryRecord.setSELL_PRICE(req.getParameter("SELL_PRICE"));
 		lcInventoryRecord.setWHOL_PRICE(req.getParameter("WHOL_PRICE"));
 		lcInventoryRecord.setPROFIT(req.getParameter("PROFIT"));
+		lcInventoryRecord.setBUYER_CODE(req.getParameter("BUYER_CODE"));
 		lcInventoryRecord.setBUYER(req.getParameter("BUYER"));
 		lcInventoryRecord.setORDER_PAY_DATE(req.getParameter("ORDER_PAY_DATE"));
 		lcInventoryRecord.setSELL_PAY_DATE(req.getParameter("SELL_PAY_DATE"));

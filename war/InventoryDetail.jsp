@@ -103,6 +103,10 @@
 if (!Const.AUTH_OFFICE.equals(authCode)) {
 %>
 <tr>
+<td class="th">仕入先コード</td>
+<td class="td"><%= CommonUtil.nullConv(inventoryRecord.getSELLER_CODE()) %></td>
+</tr>
+<tr>
 <td class="th">仕入先</td>
 <td class="td"><%= inventoryRecord.getSELLER() %></td>
 </tr>
@@ -168,6 +172,10 @@ if (!Const.AUTH_OFFICE.equals(authCode)) {
 <tr>
 <td class="th">利益</td>
 <td class="td" align="right"><%= CommonUtil.moneyFormat(inventoryRecord.getPROFIT()) %></td>
+</tr>
+<tr>
+<td class="th">販売先コード</td>
+<td class="td"><%= CommonUtil.nullConv(inventoryRecord.getBUYER_CODE()) %></td>
 </tr>
 <tr>
 <td class="th">販売先</td>

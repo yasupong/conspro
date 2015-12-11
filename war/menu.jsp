@@ -49,6 +49,14 @@ if (!Const.AUTH_OFFICE.equals(authCode)) {
 		<td class="th" id="menu"><a href="GetInventoryHistoryList?ACCOUNT=<%=account %>" target="invlist3">在庫削除履歴一覧</a></td>
 		<td class="td">在庫の削除履歴一覧を参照します</td>
 	</tr>
+	<tr>
+		<td class="th" id="menu"><a href="RegistClient.jsp?ACCOUNT=<%=account %>" target="clientreg">顧客情報登録</a></td>
+		<td class="td">顧客を登録します</td>
+	</tr>
+	<tr>
+		<td class="th" id="menu"><a href="ClientList.jsp?ACCOUNT=<%=account %>" target="clientlist">顧客一覧</a></td>
+		<td class="td">顧客一覧を参照します</td>
+	</tr>
 <%
 }
 %>

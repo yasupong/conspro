@@ -77,6 +77,11 @@
 		}
 		return true;
 	}
+
+	// 顧客ポップ
+	function clientPop(code,name){
+		window.open("/ClientListPopUp.jsp?type=0&code="+code+"&name="+name+"&ACCOUNT=<%=account %>", 'clientpop', 'width=800 height=600,menubar=no,toolbar=no,scrollbars=yes');
+	}
 -->
 </script>
 </head>
@@ -172,8 +177,12 @@
 if (!Const.AUTH_OFFICE.equals(authCode)) {
 %>
 <tr>
+<td class="th">仕入先コード</td>
+<td class="td"><input type="text" name="SELLER_CODE" id="SELLER_CODE" value="" size="50"><input type="button" value="仕入先選択" onclick="clientPop('SELLER_CODE','SELLER')"></td>
+</tr>
+<tr>
 <td class="th">仕入先</td>
-<td class="td"><input type="text" name="SELLER" value="" size="100"></td>
+<td class="td"><input type="text" name="SELLER" id="SELLER" value="" size="100"></td>
 </tr>
 <tr>
 <td class="th">仕入価格</td>
@@ -202,6 +211,7 @@ if (!Const.AUTH_OFFICE.equals(authCode)) {
 <%
 } else {
 %>
+<input type="hidden" name="SELLER_CODE" value="">
 <input type="hidden" name="SELLER" value="">
 <input type="hidden" name="ORDER_PRICE" value="0">
 <input type="hidden" name="ORDER_TRANS_COST" value="0">
@@ -249,8 +259,12 @@ if (!Const.AUTH_OFFICE.equals(authCode)) {
 <td class="td"><input type="text" name="PROFIT" value="0" style="text-align:right;">（数字のみ入力可能）</td>
 </tr>
 <tr>
+<tr>
+<td class="th">販売先コード</td>
+<td class="td"><input type="text" name="BUYER_CODE" id="BUYER_CODE" value="" size="50"><input type="button" value="販売先選択" onclick="clientPop('BUYER_CODE','BUYER')"></td>
+</tr>
 <td class="th">販売先</td>
-<td class="td"><input type="text" name="BUYER" value="" size="100"></td>
+<td class="td"><input type="text" name="BUYER" id="BUYER" value="" size="100"></td>
 </tr>
 <tr>
 <td class="th">業販価格</td>
@@ -262,6 +276,7 @@ if (!Const.AUTH_OFFICE.equals(authCode)) {
 <input type="hidden" name="SELL_COST_PRICE" value="0">
 <input type="hidden" name="SELL_PRICE" value="0">
 <input type="hidden" name="PROFIT" value="0">
+<input type="hidden" name="BUYER_CODE" value="">
 <input type="hidden" name="BUYER" value="">
 <input type="hidden" name="WHOL_PRICE" value="0">
 <%

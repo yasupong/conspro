@@ -52,8 +52,7 @@ public class GetPictureSvlt extends HttpServlet {
 				// ＤＢから取得する
 			    PersistenceManager pm = PMF.getInstance().getPersistenceManager();
 			    Key keyObj = KeyFactory.createKey( InventoryRecord.class.getSimpleName(), id );
-			    InventoryRecord inventoryRecord = null;
-		    	inventoryRecord = pm.getObjectById( InventoryRecord.class, keyObj );
+			    InventoryRecord inventoryRecord = pm.getObjectById( InventoryRecord.class, keyObj );
 	
 		    	// マスタにない場合エラー
 		    	if (inventoryRecord == null) {

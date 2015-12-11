@@ -73,32 +73,36 @@ public abstract class LoadExcelForBusinessCommonSvlt extends HttpServlet {
             HSSFCell cell23 = row1.createCell(22);
             HSSFCell cell24 = row1.createCell(23);
             HSSFCell cell25 = row1.createCell(24);
+            HSSFCell cell26 = row1.createCell(25);
+            HSSFCell cell27 = row1.createCell(26);
             
             cell01.setCellValue("仕入担当");
             cell02.setCellValue("発注日");
             cell03.setCellValue("型式"); 
             cell04.setCellValue("号機"); 
             cell05.setCellValue("WEB表示");
-            cell06.setCellValue("仕入先");
-            cell07.setCellValue("仕入価格");
-            cell08.setCellValue("仕入運賃");
-            cell09.setCellValue("部品代");
-            cell10.setCellValue("整備費");
-            cell11.setCellValue("仕入外注費");
-            cell12.setCellValue("仕入原価");
-            cell13.setCellValue("販売運賃");
-            cell14.setCellValue("船積費用");
-            cell15.setCellValue("販売外注費");
-            cell16.setCellValue("保険料");
-            cell17.setCellValue("フレイト");
-            cell18.setCellValue("販売原価");
-            cell19.setCellValue("販売価格");
-            cell20.setCellValue("利益");
-            cell21.setCellValue("販売先");
-            cell22.setCellValue("業販価格");
-            cell23.setCellValue("仕入代金支払日");
-            cell24.setCellValue("売上入金日");
-            cell25.setCellValue("売上月");
+            cell06.setCellValue("仕入先コード");
+            cell07.setCellValue("仕入先");
+            cell08.setCellValue("仕入価格");
+            cell09.setCellValue("仕入運賃");
+            cell10.setCellValue("部品代");
+            cell11.setCellValue("整備費");
+            cell12.setCellValue("仕入外注費");
+            cell13.setCellValue("仕入原価");
+            cell14.setCellValue("販売運賃");
+            cell15.setCellValue("船積費用");
+            cell16.setCellValue("販売外注費");
+            cell17.setCellValue("保険料");
+            cell18.setCellValue("フレイト");
+            cell19.setCellValue("販売原価");
+            cell20.setCellValue("販売価格");
+            cell21.setCellValue("利益");
+            cell22.setCellValue("販売先コード");
+            cell23.setCellValue("販売先");
+            cell24.setCellValue("業販価格");
+            cell25.setCellValue("仕入代金支払日");
+            cell26.setCellValue("売上入金日");
+            cell27.setCellValue("売上月");
             
             int count = 1;
 
@@ -132,6 +136,8 @@ public abstract class LoadExcelForBusinessCommonSvlt extends HttpServlet {
 	            HSSFCell cellData23 = row.createCell(22);
 	            HSSFCell cellData24 = row.createCell(23);
 	            HSSFCell cellData25 = row.createCell(24);
+	            HSSFCell cellData26 = row.createCell(25);
+	            HSSFCell cellData27 = row.createCell(26);
 	            
 	            // セルデータ設定            
 	            cellData01.setCellValue(inventoryRecord.getACCOUNT()); //仕入担当
@@ -139,28 +145,30 @@ public abstract class LoadExcelForBusinessCommonSvlt extends HttpServlet {
 	            cellData03.setCellValue(inventoryRecord.getNAME()); //型式  
 	            cellData04.setCellValue(inventoryRecord.getSERIALNO()); //号機
 	            cellData05.setCellValue(CodeUtil.getIsDisp(inventoryRecord.getWEB_DISP())); //WEB表示
-	            cellData06.setCellValue(inventoryRecord.getSELLER()); //仕入先
-	            cellData07.setCellValue(inventoryRecord.getORDER_PRICE()); //仕入価格
-	            cellData08.setCellValue(inventoryRecord.getORDER_TRANS_COST()); //仕入運賃
-	            cellData09.setCellValue(inventoryRecord.getPARTS_COST()); //部品代
-	            cellData10.setCellValue(inventoryRecord.getMAINTENANCE_COST()); //整備費
-	            cellData11.setCellValue(inventoryRecord.getORDER_OUT_ORDER_COST()); //仕入外注費
-	            cellData12.setCellValue(inventoryRecord.getORDER_COST_PRICE()); //仕入原価
+	            cellData06.setCellValue(inventoryRecord.getSELLER_CODE()); //仕入先コード
+	            cellData07.setCellValue(inventoryRecord.getSELLER()); //仕入先
+	            cellData08.setCellValue(inventoryRecord.getORDER_PRICE()); //仕入価格
+	            cellData09.setCellValue(inventoryRecord.getORDER_TRANS_COST()); //仕入運賃
+	            cellData10.setCellValue(inventoryRecord.getPARTS_COST()); //部品代
+	            cellData11.setCellValue(inventoryRecord.getMAINTENANCE_COST()); //整備費
+	            cellData12.setCellValue(inventoryRecord.getORDER_OUT_ORDER_COST()); //仕入外注費
+	            cellData13.setCellValue(inventoryRecord.getORDER_COST_PRICE()); //仕入原価
 	            
-	            cellData13.setCellValue(inventoryRecord.getSELL_TRANCE_COST()); //販売運賃
-	            cellData14.setCellValue(inventoryRecord.getSHIP_COST()); //船積費用
-	            cellData15.setCellValue(inventoryRecord.getSELL_OUT_ORDER_COST()); //販売外注費
-	            cellData16.setCellValue(inventoryRecord.getINS_COST()); //保険料
-	            cellData17.setCellValue(inventoryRecord.getFREIGHT_COST()); //フレイト
-	            cellData18.setCellValue(inventoryRecord.getSELL_COST_PRICE()); //販売原価
-	            cellData19.setCellValue(inventoryRecord.getSELL_PRICE()); //販売価格
-	            cellData20.setCellValue(inventoryRecord.getPROFIT()); //利益
-	            cellData21.setCellValue(inventoryRecord.getBUYER()); //販売先
-	            cellData22.setCellValue(inventoryRecord.getWHOL_PRICE()); //業販価格
+	            cellData14.setCellValue(inventoryRecord.getSELL_TRANCE_COST()); //販売運賃
+	            cellData15.setCellValue(inventoryRecord.getSHIP_COST()); //船積費用
+	            cellData16.setCellValue(inventoryRecord.getSELL_OUT_ORDER_COST()); //販売外注費
+	            cellData17.setCellValue(inventoryRecord.getINS_COST()); //保険料
+	            cellData18.setCellValue(inventoryRecord.getFREIGHT_COST()); //フレイト
+	            cellData19.setCellValue(inventoryRecord.getSELL_COST_PRICE()); //販売原価
+	            cellData20.setCellValue(inventoryRecord.getSELL_PRICE()); //販売価格
+	            cellData21.setCellValue(inventoryRecord.getPROFIT()); //利益
+	            cellData22.setCellValue(inventoryRecord.getBUYER_CODE()); //販売先コード
+	            cellData23.setCellValue(inventoryRecord.getBUYER()); //販売先
+	            cellData24.setCellValue(inventoryRecord.getWHOL_PRICE()); //業販価格
 	            
-	            cellData23.setCellValue(inventoryRecord.getORDER_PAY_DATE()); //仕入代金支払日
-	            cellData24.setCellValue(inventoryRecord.getSELL_PAY_DATE()); //売上入金日
-	            cellData25.setCellValue(inventoryRecord.getSELL_MONTH()); //売上月
+	            cellData25.setCellValue(inventoryRecord.getORDER_PAY_DATE()); //仕入代金支払日
+	            cellData26.setCellValue(inventoryRecord.getSELL_PAY_DATE()); //売上入金日
+	            cellData27.setCellValue(inventoryRecord.getSELL_MONTH()); //売上月
 	            
 		        count++;
 			}
@@ -168,6 +176,7 @@ public abstract class LoadExcelForBusinessCommonSvlt extends HttpServlet {
 			ServletOutputStream objSos = arg1.getOutputStream();
 	        workbook.write(objSos);
 			objSos.close();
+			workbook.close();
 	    } catch ( Throwable th ) {
 	    	throw new ServletException(th);
 		} finally {

@@ -112,7 +112,23 @@
     <servlet-name>DetailInventorySvlt</servlet-name>
     <servlet-class>conspro.svlt.DetailInventorySvlt</servlet-class>
   </servlet>
-    
+  <servlet>
+    <servlet-name>RegistClientSvlt</servlet-name>
+    <servlet-class>conspro.svlt.RegistClientSvlt</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>EditClientSvlt</servlet-name>
+    <servlet-class>conspro.svlt.EditClientSvlt</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SeachClientListSvlt</servlet-name>
+    <servlet-class>conspro.svlt.SeachClientListSvlt</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoadExcelClientAllSvlt</servlet-name>
+    <servlet-class>conspro.svlt.LoadExcelClientAllSvlt</servlet-class>
+  </servlet>
+      
   <servlet-mapping>
     <servlet-name>RegistInventorySvlt</servlet-name>
     <url-pattern>/RegistInventory</url-pattern>
@@ -221,7 +237,23 @@
     <servlet-name>DetailInventorySvlt</servlet-name>
     <url-pattern>/DetailInventory</url-pattern>
   </servlet-mapping>
-                
+  <servlet-mapping>
+    <servlet-name>RegistClientSvlt</servlet-name>
+    <url-pattern>/RegistClient</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EditClientSvlt</servlet-name>
+    <url-pattern>/EditClient</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SeachClientListSvlt</servlet-name>
+    <url-pattern>/SeachClientList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadExcelClientAllSvlt</servlet-name>
+    <url-pattern>/LoadExcelClientAll</url-pattern>
+  </servlet-mapping>
+            
   <!-- Default page to serve -->
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>

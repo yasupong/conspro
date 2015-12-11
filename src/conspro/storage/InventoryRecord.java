@@ -133,306 +133,542 @@ public class InventoryRecord
     @Persistent
     private String WEB_DISP_DATE;//WEB表示日時
     
+    // 201511 顧客コード対応
+    
+    @Persistent
+    private String SELLER_CODE;//仕入先コード
+    
+    @Persistent
+    private String BUYER_CODE;//販売先コード
+
+	/**
+	 * @return the dATE
+	 */
 	public String getDATE() {
 		return DATE;
 	}
 
+	/**
+	 * @param dATE the dATE to set
+	 */
 	public void setDATE(String dATE) {
 		DATE = dATE;
 	}
 
+	/**
+	 * @return the nAME
+	 */
 	public String getNAME() {
 		return NAME;
 	}
 
+	/**
+	 * @param nAME the nAME to set
+	 */
 	public void setNAME(String nAME) {
 		NAME = nAME;
 	}
 
+	/**
+	 * @return the pRICE
+	 */
 	public String getPRICE() {
 		return PRICE;
 	}
 
+	/**
+	 * @param pRICE the pRICE to set
+	 */
 	public void setPRICE(String pRICE) {
 		PRICE = pRICE;
 	}
 
+	/**
+	 * @return the cONDITION
+	 */
 	public String getCONDITION() {
 		return CONDITION;
 	}
 
+	/**
+	 * @param cONDITION the cONDITION to set
+	 */
 	public void setCONDITION(String cONDITION) {
 		CONDITION = cONDITION;
 	}
 
+	/**
+	 * @return the tYPE
+	 */
 	public String getTYPE() {
 		return TYPE;
 	}
 
+	/**
+	 * @param tYPE the tYPE to set
+	 */
 	public void setTYPE(String tYPE) {
 		TYPE = tYPE;
 	}
 
+	/**
+	 * @return the yEAR
+	 */
 	public String getYEAR() {
 		return YEAR;
 	}
 
+	/**
+	 * @param yEAR the yEAR to set
+	 */
 	public void setYEAR(String yEAR) {
 		YEAR = yEAR;
 	}
 
+	/**
+	 * @return the sERIALNO
+	 */
 	public String getSERIALNO() {
 		return SERIALNO;
 	}
 
+	/**
+	 * @param sERIALNO the sERIALNO to set
+	 */
 	public void setSERIALNO(String sERIALNO) {
 		SERIALNO = sERIALNO;
 	}
 
+	/**
+	 * @return the hOURS
+	 */
 	public String getHOURS() {
 		return HOURS;
 	}
 
+	/**
+	 * @param hOURS the hOURS to set
+	 */
 	public void setHOURS(String hOURS) {
 		HOURS = hOURS;
 	}
 
+	/**
+	 * @return the oTHER
+	 */
 	public String getOTHER() {
 		return OTHER;
 	}
 
+	/**
+	 * @param oTHER the oTHER to set
+	 */
 	public void setOTHER(String oTHER) {
 		OTHER = oTHER;
 	}
 
+	/**
+	 * @return the oTHER_JA
+	 */
 	public String getOTHER_JA() {
 		return OTHER_JA;
 	}
 
+	/**
+	 * @param oTHER_JA the oTHER_JA to set
+	 */
 	public void setOTHER_JA(String oTHER_JA) {
 		OTHER_JA = oTHER_JA;
 	}
 
+	/**
+	 * @return the mANUFACTURER
+	 */
 	public String getMANUFACTURER() {
 		return MANUFACTURER;
 	}
 
+	/**
+	 * @param mANUFACTURER the mANUFACTURER to set
+	 */
 	public void setMANUFACTURER(String mANUFACTURER) {
 		MANUFACTURER = mANUFACTURER;
 	}
 
+	/**
+	 * @return the pIC_URL
+	 */
 	public String getPIC_URL() {
 		return PIC_URL;
 	}
 
+	/**
+	 * @param pIC_URL the pIC_URL to set
+	 */
 	public void setPIC_URL(String pIC_URL) {
 		PIC_URL = pIC_URL;
 	}
 
+	/**
+	 * @return the pIC
+	 */
 	public Blob getPIC() {
 		return PIC;
 	}
 
+	/**
+	 * @param pIC the pIC to set
+	 */
 	public void setPIC(Blob pIC) {
 		PIC = pIC;
 	}
 
+	/**
+	 * @return the aCCOUNT
+	 */
 	public String getACCOUNT() {
 		return ACCOUNT;
 	}
 
+	/**
+	 * @param aCCOUNT the aCCOUNT to set
+	 */
 	public void setACCOUNT(String aCCOUNT) {
 		ACCOUNT = aCCOUNT;
 	}
 
+	/**
+	 * @return the oRDER_DATE
+	 */
 	public String getORDER_DATE() {
 		return ORDER_DATE;
 	}
 
+	/**
+	 * @param oRDER_DATE the oRDER_DATE to set
+	 */
 	public void setORDER_DATE(String oRDER_DATE) {
 		ORDER_DATE = oRDER_DATE;
 	}
 
+	/**
+	 * @return the wEB_DISP
+	 */
 	public String getWEB_DISP() {
 		return WEB_DISP;
 	}
 
+	/**
+	 * @param wEB_DISP the wEB_DISP to set
+	 */
 	public void setWEB_DISP(String wEB_DISP) {
 		WEB_DISP = wEB_DISP;
 	}
 
+	/**
+	 * @return the sELLER
+	 */
 	public String getSELLER() {
 		return SELLER;
 	}
 
+	/**
+	 * @param sELLER the sELLER to set
+	 */
 	public void setSELLER(String sELLER) {
 		SELLER = sELLER;
 	}
 
+	/**
+	 * @return the oRDER_PRICE
+	 */
 	public String getORDER_PRICE() {
 		return ORDER_PRICE;
 	}
 
+	/**
+	 * @param oRDER_PRICE the oRDER_PRICE to set
+	 */
 	public void setORDER_PRICE(String oRDER_PRICE) {
 		ORDER_PRICE = oRDER_PRICE;
 	}
 
+	/**
+	 * @return the oRDER_TRANS_COST
+	 */
 	public String getORDER_TRANS_COST() {
 		return ORDER_TRANS_COST;
 	}
 
+	/**
+	 * @param oRDER_TRANS_COST the oRDER_TRANS_COST to set
+	 */
 	public void setORDER_TRANS_COST(String oRDER_TRANS_COST) {
 		ORDER_TRANS_COST = oRDER_TRANS_COST;
 	}
 
+	/**
+	 * @return the pARTS_COST
+	 */
 	public String getPARTS_COST() {
 		return PARTS_COST;
 	}
 
+	/**
+	 * @param pARTS_COST the pARTS_COST to set
+	 */
 	public void setPARTS_COST(String pARTS_COST) {
 		PARTS_COST = pARTS_COST;
 	}
 
+	/**
+	 * @return the mAINTENANCE_COST
+	 */
 	public String getMAINTENANCE_COST() {
 		return MAINTENANCE_COST;
 	}
 
+	/**
+	 * @param mAINTENANCE_COST the mAINTENANCE_COST to set
+	 */
 	public void setMAINTENANCE_COST(String mAINTENANCE_COST) {
 		MAINTENANCE_COST = mAINTENANCE_COST;
 	}
 
+	/**
+	 * @return the oRDER_OUT_ORDER_COST
+	 */
 	public String getORDER_OUT_ORDER_COST() {
 		return ORDER_OUT_ORDER_COST;
 	}
 
+	/**
+	 * @param oRDER_OUT_ORDER_COST the oRDER_OUT_ORDER_COST to set
+	 */
 	public void setORDER_OUT_ORDER_COST(String oRDER_OUT_ORDER_COST) {
 		ORDER_OUT_ORDER_COST = oRDER_OUT_ORDER_COST;
 	}
 
+	/**
+	 * @return the oRDER_COST_PRICE
+	 */
 	public String getORDER_COST_PRICE() {
 		return ORDER_COST_PRICE;
 	}
 
+	/**
+	 * @param oRDER_COST_PRICE the oRDER_COST_PRICE to set
+	 */
 	public void setORDER_COST_PRICE(String oRDER_COST_PRICE) {
 		ORDER_COST_PRICE = oRDER_COST_PRICE;
 	}
 
+	/**
+	 * @return the sELL_TRANCE_COST
+	 */
 	public String getSELL_TRANCE_COST() {
 		return SELL_TRANCE_COST;
 	}
 
+	/**
+	 * @param sELL_TRANCE_COST the sELL_TRANCE_COST to set
+	 */
 	public void setSELL_TRANCE_COST(String sELL_TRANCE_COST) {
 		SELL_TRANCE_COST = sELL_TRANCE_COST;
 	}
 
+	/**
+	 * @return the sHIP_COST
+	 */
 	public String getSHIP_COST() {
 		return SHIP_COST;
 	}
 
+	/**
+	 * @param sHIP_COST the sHIP_COST to set
+	 */
 	public void setSHIP_COST(String sHIP_COST) {
 		SHIP_COST = sHIP_COST;
 	}
 
+	/**
+	 * @return the sELL_OUT_ORDER_COST
+	 */
 	public String getSELL_OUT_ORDER_COST() {
 		return SELL_OUT_ORDER_COST;
 	}
 
+	/**
+	 * @param sELL_OUT_ORDER_COST the sELL_OUT_ORDER_COST to set
+	 */
 	public void setSELL_OUT_ORDER_COST(String sELL_OUT_ORDER_COST) {
 		SELL_OUT_ORDER_COST = sELL_OUT_ORDER_COST;
 	}
 
+	/**
+	 * @return the iNS_COST
+	 */
 	public String getINS_COST() {
 		return INS_COST;
 	}
 
+	/**
+	 * @param iNS_COST the iNS_COST to set
+	 */
 	public void setINS_COST(String iNS_COST) {
 		INS_COST = iNS_COST;
 	}
 
+	/**
+	 * @return the fREIGHT_COST
+	 */
 	public String getFREIGHT_COST() {
 		return FREIGHT_COST;
 	}
 
+	/**
+	 * @param fREIGHT_COST the fREIGHT_COST to set
+	 */
 	public void setFREIGHT_COST(String fREIGHT_COST) {
 		FREIGHT_COST = fREIGHT_COST;
 	}
 
+	/**
+	 * @return the sELL_COST_PRICE
+	 */
 	public String getSELL_COST_PRICE() {
 		return SELL_COST_PRICE;
 	}
 
+	/**
+	 * @param sELL_COST_PRICE the sELL_COST_PRICE to set
+	 */
 	public void setSELL_COST_PRICE(String sELL_COST_PRICE) {
 		SELL_COST_PRICE = sELL_COST_PRICE;
 	}
 
+	/**
+	 * @return the sELL_PRICE
+	 */
 	public String getSELL_PRICE() {
 		return SELL_PRICE;
 	}
 
+	/**
+	 * @param sELL_PRICE the sELL_PRICE to set
+	 */
 	public void setSELL_PRICE(String sELL_PRICE) {
 		SELL_PRICE = sELL_PRICE;
 	}
 
+	/**
+	 * @return the wHOL_PRICE
+	 */
 	public String getWHOL_PRICE() {
 		return WHOL_PRICE;
 	}
 
+	/**
+	 * @param wHOL_PRICE the wHOL_PRICE to set
+	 */
 	public void setWHOL_PRICE(String wHOL_PRICE) {
 		WHOL_PRICE = wHOL_PRICE;
 	}
 
+	/**
+	 * @return the pROFIT
+	 */
 	public String getPROFIT() {
 		return PROFIT;
 	}
 
+	/**
+	 * @param pROFIT the pROFIT to set
+	 */
 	public void setPROFIT(String pROFIT) {
 		PROFIT = pROFIT;
 	}
 
+	/**
+	 * @return the bUYER
+	 */
 	public String getBUYER() {
 		return BUYER;
 	}
 
+	/**
+	 * @param bUYER the bUYER to set
+	 */
 	public void setBUYER(String bUYER) {
 		BUYER = bUYER;
 	}
 
+	/**
+	 * @return the oRDER_PAY_DATE
+	 */
 	public String getORDER_PAY_DATE() {
 		return ORDER_PAY_DATE;
 	}
 
+	/**
+	 * @param oRDER_PAY_DATE the oRDER_PAY_DATE to set
+	 */
 	public void setORDER_PAY_DATE(String oRDER_PAY_DATE) {
 		ORDER_PAY_DATE = oRDER_PAY_DATE;
 	}
 
+	/**
+	 * @return the sELL_PAY_DATE
+	 */
 	public String getSELL_PAY_DATE() {
 		return SELL_PAY_DATE;
 	}
 
+	/**
+	 * @param sELL_PAY_DATE the sELL_PAY_DATE to set
+	 */
 	public void setSELL_PAY_DATE(String sELL_PAY_DATE) {
 		SELL_PAY_DATE = sELL_PAY_DATE;
 	}
 
+	/**
+	 * @return the sELL_MONTH
+	 */
 	public String getSELL_MONTH() {
 		return SELL_MONTH;
 	}
 
+	/**
+	 * @param sELL_MONTH the sELL_MONTH to set
+	 */
 	public void setSELL_MONTH(String sELL_MONTH) {
 		SELL_MONTH = sELL_MONTH;
 	}
 
+	/**
+	 * @return the mEMO
+	 */
 	public String getMEMO() {
 		return MEMO;
 	}
 
+	/**
+	 * @param mEMO the mEMO to set
+	 */
 	public void setMEMO(String mEMO) {
 		MEMO = mEMO;
 	}
 
+	/**
+	 * @return the dATA_FLG
+	 */
 	public String getDATA_FLG() {
 		return DATA_FLG;
 	}
 
+	/**
+	 * @param dATA_FLG the dATA_FLG to set
+	 */
 	public void setDATA_FLG(String dATA_FLG) {
 		DATA_FLG = dATA_FLG;
 	}
@@ -450,4 +686,33 @@ public class InventoryRecord
 	public void setWEB_DISP_DATE(String wEB_DISP_DATE) {
 		WEB_DISP_DATE = wEB_DISP_DATE;
 	}
+
+	/**
+	 * @return the sELLER_CODE
+	 */
+	public String getSELLER_CODE() {
+		return SELLER_CODE;
+	}
+
+	/**
+	 * @param sELLER_CODE the sELLER_CODE to set
+	 */
+	public void setSELLER_CODE(String sELLER_CODE) {
+		SELLER_CODE = sELLER_CODE;
+	}
+
+	/**
+	 * @return the bUYER_CODE
+	 */
+	public String getBUYER_CODE() {
+		return BUYER_CODE;
+	}
+
+	/**
+	 * @param bUYER_CODE the bUYER_CODE to set
+	 */
+	public void setBUYER_CODE(String bUYER_CODE) {
+		BUYER_CODE = bUYER_CODE;
+	}
+    
 }

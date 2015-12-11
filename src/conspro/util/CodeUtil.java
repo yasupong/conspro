@@ -162,4 +162,50 @@ public class CodeUtil {
 			return "";
 		}
 	}
+	
+	/**
+	 * 業種を返す
+	 * @param type
+	 * @return
+	 */
+	public static String getClientType(String type) {
+		if ("1".equals(type)) {
+			return "貿易";
+		} else if ("2".equals(type)) {
+			return "オークション";
+		} else if ("3".equals(type)) {
+			return "個人ブローカー";
+		} else if ("4".equals(type)) {
+			return "新車ディーラー";
+		} else if ("5".equals(type)) {
+			return "中古車ディーラー";
+		} else if ("6".equals(type)) {
+			return "レンタル";
+		} else if ("7".equals(type)) {
+			return "修理";
+		} else if ("8".equals(type)) {
+			return "エンドユーザー";
+		} else if ("9".equals(type)) {
+			return "その他";
+		} else {
+			return "";
+		}
+	}
+	
+	/**
+	 * 与信管理を返す
+	 * @param type
+	 * @return
+	 */
+	public static String getCredit(String credit) {
+		if ("A".equals(credit)) {
+			return "入金前商品引渡OK";
+		} else if ("B".equals(credit)) {
+			return "入金後商品引渡";
+		} else if ("C".equals(credit)) {
+			return "問題あり";
+		} else {
+			return "";
+		}
+	}
 }

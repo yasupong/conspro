@@ -148,6 +148,24 @@ public class Const {
 			"<option value=\"2\">2：経理</option>\n" + 
 			"<option value=\"3\">3：管理</option>\n" + 
 			"<option value=\"4\">4：事務</option>\n";
+
+	/** コンボボックス：業種*/
+	public final static String COMBO_CLIENT_TYPE = 
+			"<option value=\"1\">1：貿易</option>\n" + 
+			"<option value=\"2\">2：オークション</option>\n" + 
+			"<option value=\"3\">3：個人ブローカー</option>\n" + 
+			"<option value=\"4\">4：新車ディーラー</option>\n" + 
+			"<option value=\"5\">5：中古車ディーラー</option>\n" + 
+			"<option value=\"6\">6：レンタル</option>\n" + 
+			"<option value=\"7\">7：修理</option>\n" + 
+			"<option value=\"8\">8：エンドユーザー</option>\n" + 
+			"<option value=\"9\">9：その他</option>\n";
+
+	/** コンボボックス：与信管理*/
+	public final static String COMBO_CREDIT = 
+			"<option value=\"A\">A：入金前商品引渡OK</option>\n" + 
+			"<option value=\"B\">B：入金後商品引渡</option>\n" + 
+			"<option value=\"C\">C：問題あり</option>\n";
 	
 	/** ページ種類：英語*/
 	public final static String PAGE_TYPE_EN = "1";

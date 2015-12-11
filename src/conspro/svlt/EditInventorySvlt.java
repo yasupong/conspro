@@ -90,6 +90,7 @@ public class EditInventorySvlt extends HttpServlet {
 				inventoryRecord.setACCOUNT(arg0.getParameter("INACCOUNT"));
 				inventoryRecord.setORDER_DATE(arg0.getParameter("ORDER_DATE"));
 				inventoryRecord.setWEB_DISP(arg0.getParameter("WEB_DISP"));
+				inventoryRecord.setSELLER_CODE(arg0.getParameter("SELLER_CODE"));
 				inventoryRecord.setSELLER(arg0.getParameter("SELLER"));
 				inventoryRecord.setORDER_PRICE(arg0.getParameter("ORDER_PRICE"));
 				inventoryRecord.setORDER_TRANS_COST(arg0.getParameter("ORDER_TRANS_COST"));
@@ -106,6 +107,7 @@ public class EditInventorySvlt extends HttpServlet {
 				inventoryRecord.setSELL_PRICE(arg0.getParameter("SELL_PRICE"));
 				inventoryRecord.setWHOL_PRICE(arg0.getParameter("WHOL_PRICE"));
 				inventoryRecord.setPROFIT(arg0.getParameter("PROFIT"));
+				inventoryRecord.setBUYER_CODE(arg0.getParameter("BUYER_CODE"));
 				inventoryRecord.setBUYER(arg0.getParameter("BUYER"));
 				inventoryRecord.setORDER_PAY_DATE(arg0.getParameter("ORDER_PAY_DATE"));
 				inventoryRecord.setSELL_PAY_DATE(arg0.getParameter("SELL_PAY_DATE"));
