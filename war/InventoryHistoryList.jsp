@@ -33,27 +33,27 @@ out.println("<div id=\"count\">在庫削除履歴数:" + listInventoryRecord.siz
 }
 %>
 <div>
-<table border="1" cellpadding="1" cellspacing="0" bordercolor="#c0c0c0">
+<table border="1" cellpadding="1" cellspacing="0" bordercolor="#c0c0c0" class="t-line">
 <tr>
-<td nowrap class="th">No</td>
-<td nowrap class="th">分類</td>
-<td nowrap class="th">メーカー</td>
-<td nowrap class="th">型式</td>
-<td nowrap class="th">号機</td>
-<td nowrap class="th">年式</td>
-<td nowrap class="th">表示価格</td>
-<td nowrap class="th">登録日</td>
-<td nowrap class="th">仕入担当</td>
-<td nowrap class="th">発注日</td>
-<td nowrap class="th">仕入先</td>
-<td nowrap class="th">仕入原価</td>
-<td nowrap class="th">仕入支払日</td>
-<td nowrap class="th">販売先</td>
-<td nowrap class="th">販売原価</td>
-<td nowrap class="th">販売価格</td>
-<td nowrap class="th">利益</td>
-<td nowrap class="th">売上入金日</td>
-<td nowrap class="th">売上月</td>
+<th nowrap class="th">No</td>
+<th nowrap class="th">分類</td>
+<th nowrap class="th">メーカー</td>
+<th nowrap class="th">型式</td>
+<th nowrap class="th">号機</td>
+<th nowrap class="th">年式</td>
+<th nowrap class="th">表示価格</td>
+<th nowrap class="th">登録日</td>
+<th nowrap class="th">仕入担当</td>
+<th nowrap class="th">発注日</td>
+<th nowrap class="th">仕入先</td>
+<th nowrap class="th">仕入原価</td>
+<th nowrap class="th">仕入支払日</td>
+<th nowrap class="th">販売先</td>
+<th nowrap class="th">販売原価</td>
+<th nowrap class="th">販売価格</td>
+<th nowrap class="th">利益</td>
+<th nowrap class="th">売上入金日</td>
+<th nowrap class="th">売上月</td>
 </tr>
 <%
 if (listInventoryRecord != null) {

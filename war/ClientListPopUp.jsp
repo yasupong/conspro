@@ -112,18 +112,18 @@
 <input type="button" name="select" value="選択" onclick="selectData(this.form);">
 </div>
 <div>
-<table border="1" cellpadding="1" cellspacing="0" bordercolor="#c0c0c0">
+<table border="1" cellpadding="1" cellspacing="0" bordercolor="#c0c0c0" class="t-line">
 <div>
 <tr>
-<td class="th">選択</td>
-<td class="th">顧客コード</td>
-<td class="th">業種</td>
-<td class="th">与信管理</td>
-<td class="th">国番号</td>
-<td class="th">顧客番号</td>
-<td class="th">会社名</td>
-<td class="th">支店営業所</td>
-<td class="th">担当者</td>
+<th nowrap class="th">選択</td>
+<th nowrap class="th">顧客コード</td>
+<th nowrap class="th">業種</td>
+<th nowrap class="th">与信管理</td>
+<th nowrap class="th">国番号</td>
+<th nowrap class="th">顧客番号</td>
+<th nowrap class="th">会社名</td>
+<th nowrap class="th">支店営業所</td>
+<th nowrap class="th">担当者</td>
 </tr>
 <%
 List listClientRecord = (List)request.getAttribute("ClientRecordList");
@@ -133,15 +133,15 @@ if (listClientRecord != null) {
 		Client clientRecord = (Client) iterator.next();
 		String record = "<tr>";
 		record = record + "<td class=\"td\"><input type=\"radio\" name=\"CNT\" value=\""+ index +"\"></td>";
-		record = record + "<td class=\"td\">" + clientRecord.getCLIENT_CODE() + "<input type=\"hidden\" id=\"CLIENT_CODE" + index + "\" value=\""+ clientRecord.getCLIENT_CODE() +"\"></td>";
-		record = record + "<td class=\"td\">" + CodeUtil.getClientType(clientRecord.getCLIENT_TYPE()) + "</td>";
-		record = record + "<td class=\"td\">" + CodeUtil.getCredit(clientRecord.getCREDIT()) + "</td>";
-		record = record + "<td class=\"td\">" + clientRecord.getCOUNTRY() + "</td>";
-		record = record + "<td class=\"td\">" + clientRecord.getSEQ() + "</td>";
+		record = record + "<td nowrap class=\"td\">" + clientRecord.getCLIENT_CODE() + "<input type=\"hidden\" id=\"CLIENT_CODE" + index + "\" value=\""+ clientRecord.getCLIENT_CODE() +"\"></td>";
+		record = record + "<td nowrap class=\"td\">" + CodeUtil.getClientType(clientRecord.getCLIENT_TYPE()) + "</td>";
+		record = record + "<td nowrap class=\"td\">" + CodeUtil.getCredit(clientRecord.getCREDIT()) + "</td>";
+		record = record + "<td nowrap class=\"td\">" + clientRecord.getCOUNTRY() + "</td>";
+		record = record + "<td nowrap class=\"td\">" + clientRecord.getSEQ() + "</td>";
 		String comanyOffice = clientRecord.getCOMPANY() + " " + clientRecord.getOFFICE();
-		record = record + "<td class=\"td\">" + clientRecord.getCOMPANY() + "<input type=\"hidden\" id=\"COMPANY_OFFICE" + index + "\" value=\""+ comanyOffice.trim() + "\"></td>";
-		record = record + "<td class=\"td\">" + clientRecord.getOFFICE() + "</td>";
-		record = record + "<td class=\"td\">" + clientRecord.getNAME() + "</td>";
+		record = record + "<td nowrap class=\"td\">" + clientRecord.getCOMPANY() + "<input type=\"hidden\" id=\"COMPANY_OFFICE" + index + "\" value=\""+ comanyOffice.trim() + "\"></td>";
+		record = record + "<td nowrap class=\"td\">" + clientRecord.getOFFICE() + "</td>";
+		record = record + "<td nowrap class=\"td\">" + clientRecord.getNAME() + "</td>";
 	  record = record + "</tr>";
 	  out.println(record);
 		index++;

@@ -57,24 +57,24 @@ if (Const.AUTH_ADMIN.equals(authCode) || Const.AUTH_ACCT.equals(authCode)) {
 %>
 </div>
 <div>
-<table border="1" cellpadding="1" cellspacing="0" bordercolor="#c0c0c0">
+<table border="1" cellpadding="1" cellspacing="0" bordercolor="#c0c0c0" class="t-line">
 <tr>
-<td nowrap class="th">選択</td>
-<td nowrap class="th">DATE</td>
-<td nowrap class="th">NAME</td>
-<td nowrap class="th">YOU ARE</td>
-<td nowrap class="th">COMPANY</td>
-<td nowrap class="th">STREET</td>
-<td nowrap class="th">CITY</td>
-<td nowrap class="th">STATE</td>
-<td nowrap class="th">COUNTRY</td>
-<td nowrap class="th">ZIP</td>
-<td nowrap class="th">MAIL</td>
-<td nowrap class="th">TEL</td>
-<td nowrap class="th">FAX</td>
-<td nowrap class="th">MAIL</td>
-<td nowrap class="th">STOCK LIST</td>
-<td nowrap class="th">COMMENT</td>
+<th nowrap class="th">選択</td>
+<th nowrap class="th">DATE</td>
+<th nowrap class="th">NAME</td>
+<th nowrap class="th">YOU ARE</td>
+<th nowrap class="th">COMPANY</td>
+<th nowrap class="th">STREET</td>
+<th nowrap class="th">CITY</td>
+<th nowrap class="th">STATE</td>
+<th nowrap class="th">COUNTRY</td>
+<th nowrap class="th">ZIP</td>
+<th nowrap class="th">MAIL</td>
+<th nowrap class="th">TEL</td>
+<th nowrap class="th">FAX</td>
+<th nowrap class="th">MAIL</td>
+<th nowrap class="th">STOCK LIST</td>
+<th nowrap class="th">COMMENT</td>
 </tr>
 <%
 List listSignupRecord = (List)request.getAttribute("listSignupList");

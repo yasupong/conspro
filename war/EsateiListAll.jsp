@@ -51,27 +51,27 @@ if (Const.AUTH_ADMIN.equals(authCode) || Const.AUTH_ACCT.equals(authCode)) {
 %>
 </div>
 <div>
-<table border="1" cellpadding="1" cellspacing="0" bordercolor="#c0c0c0">
+<table border="1" cellpadding="1" cellspacing="0" bordercolor="#c0c0c0" class="t-line">
 <tr>
-<td nowrap class="th">選択</td>
-<td nowrap class="th">日時</td>
-<td nowrap class="th">名前</td>
-<td nowrap class="th">〒</td>
-<td nowrap class="th">県名</td>
-<td nowrap class="th">住所</td>
-<td nowrap class="th">TEL</td>
-<td nowrap class="th">FAX</td>
-<td nowrap class="th">MAIL</td>
-<td nowrap class="th">状態</td>
-<td nowrap class="th">金額</td>
-<td nowrap class="th">分類</td>
-<td nowrap class="th">メーカー</td>
-<td nowrap class="th">型式</td>
-<td nowrap class="th">年式</td>
-<td nowrap class="th">号機</td>
-<td nowrap class="th">メーター</td>
-<td nowrap class="th">程度</td>
-<td nowrap class="th">詳細</td>
+<th nowrap class="th">選択</td>
+<th nowrap class="th">日時</td>
+<th nowrap class="th">名前</td>
+<th nowrap class="th">〒</td>
+<th nowrap class="th">県名</td>
+<th nowrap class="th">住所</td>
+<th nowrap class="th">TEL</td>
+<th nowrap class="th">FAX</td>
+<th nowrap class="th">MAIL</td>
+<th nowrap class="th">状態</td>
+<th nowrap class="th">金額</td>
+<th nowrap class="th">分類</td>
+<th nowrap class="th">メーカー</td>
+<th nowrap class="th">型式</td>
+<th nowrap class="th">年式</td>
+<th nowrap class="th">号機</td>
+<th nowrap class="th">メーター</td>
+<th nowrap class="th">程度</td>
+<th nowrap class="th">詳細</td>
 </tr>
 <%
 List listEsateiRecord = (List)request.getAttribute("listEsateiList");

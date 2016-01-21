@@ -142,3 +142,11 @@ input[type="submit"] {
 .td {
     background-color :#e6e6e6;	
 }
+
+.t-line tr:nth-child(odd) td {  
+  background-color: #e6e6e6;  
+}
+.t-line tr:nth-child(even) td {  
+  background-color: #ffffff;  
+}  
+

@@ -46,13 +46,13 @@
 <input type="button" name="delete" value="ユーザー削除" onclick="callServer(this.form,2);">
 </div>
 <div>
-<table border="1" cellpadding="1" cellspacing="0" bordercolor="#c0c0c0">
+<table border="1" cellpadding="1" cellspacing="0" bordercolor="#c0c0c0" class="t-line">
 <div>
 <tr>
-<td class="th">選択</td>
-<td class="th">アカウント</td>
-<td class="th">ユーザー名</td>
-<td class="th">権限</td>
+<th class="th">選択</td>
+<th class="th">アカウント</td>
+<th class="th">ユーザー名</td>
+<th class="th">権限</td>
 </tr>
 <%
 List listEmployeeRecord = (List)request.getAttribute("EmployeeRecordList");

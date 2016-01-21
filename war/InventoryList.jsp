@@ -199,34 +199,34 @@ if (!Const.AUTH_NORMAL.equals(authCode)) {
 %>
 </div>
 <div>
-<table border="1" cellpadding="1" cellspacing="0" bordercolor="#c0c0c0">
+<table border="1" cellpadding="1" cellspacing="0" bordercolor="#c0c0c0" class="t-line">
 <tr>
-<td class="th">選択</td>
-<td class="th">No</td>
-<td class="th">WEB表示</td>
-<!--<td class="th">WEB表示日時</td>-->
-<td class="th">分類</td>
-<td class="th">メーカー</td>
-<td class="th">型式</td>
-<td class="th">号機</td>
-<!--<td class="th">年式</td>-->
-<td class="th">表示価格</td>
-<td class="th">登録日</td>
-<td class="th">仕入担当</td>
+<th class="th">選択</td>
+<th class="th">No</td>
+<th class="th">WEB表示</td>
+<!--<th class="th">WEB表示日時</td>-->
+<th class="th">分類</td>
+<th class="th">メーカー</td>
+<th class="th">型式</td>
+<th class="th">号機</td>
+<!--<th class="th">年式</td>-->
+<th class="th">表示価格</td>
+<th class="th">登録日</td>
+<th class="th">仕入担当</td>
 <%
 // 事務以外は表示
 if (!Const.AUTH_OFFICE.equals(authCode)) {
 %>
-<td class="th">発注日</td>
-<td class="th">仕入先</td>
-<td class="th">仕入原価</td>
-<td class="th">仕入支払日</td>
-<td class="th">販売先</td>
-<td class="th">販売原価</td>
-<!--<td class="th">販売価格</td>-->
-<!--<td class="th">利益</td>-->
-<td class="th">売上入金日</td>
-<td class="th">売上月</td>
+<th class="th">発注日</td>
+<th class="th">仕入先</td>
+<th class="th">仕入原価</td>
+<th class="th">仕入支払日</td>
+<th class="th">販売先</td>
+<th class="th">販売原価</td>
+<!--<th class="th">販売価格</td>-->
+<!--<th class="th">利益</td>-->
+<th class="th">売上入金日</td>
+<th class="th">売上月</td>
 <%
 }
 %>
