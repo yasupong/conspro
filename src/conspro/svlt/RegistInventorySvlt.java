@@ -53,6 +53,7 @@ public class RegistInventorySvlt extends HttpServlet {
 		lcInventoryRecord.setMAINTENANCE_COST(req.getParameter("MAINTENANCE_COST"));
 		lcInventoryRecord.setORDER_OUT_ORDER_COST(req.getParameter("ORDER_OUT_ORDER_COST"));
 		lcInventoryRecord.setORDER_COST_PRICE(req.getParameter("ORDER_COST_PRICE"));
+		lcInventoryRecord.setTRAN_PLACE(req.getParameter("TRAN_PLACE"));
 		lcInventoryRecord.setSELL_TRANCE_COST(req.getParameter("SELL_TRANCE_COST"));
 		lcInventoryRecord.setSHIP_COST(req.getParameter("SHIP_COST"));
 		lcInventoryRecord.setSELL_OUT_ORDER_COST(req.getParameter("SELL_OUT_ORDER_COST"));

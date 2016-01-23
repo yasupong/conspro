@@ -141,6 +141,14 @@ public class InventoryRecord
     @Persistent
     private String BUYER_CODE;//販売先コード
 
+    // 201601 帳票対応
+    
+    @Persistent
+    private String TRAN_PLACE;//引渡場所
+    
+    @Persistent
+    private String INVOICE_NO;
+
 	/**
 	 * @return the dATE
 	 */
@@ -714,5 +722,32 @@ public class InventoryRecord
 	public void setBUYER_CODE(String bUYER_CODE) {
 		BUYER_CODE = bUYER_CODE;
 	}
-    
+
+	/**
+	 * @return the tRAN_PLACE
+	 */
+	public String getTRAN_PLACE() {
+		return TRAN_PLACE;
+	}
+
+	/**
+	 * @param tRAN_PLACE the tRAN_PLACE to set
+	 */
+	public void setTRAN_PLACE(String tRAN_PLACE) {
+		TRAN_PLACE = tRAN_PLACE;
+	}
+
+	/**
+	 * @return the iNVOICE_NO
+	 */
+	public String getINVOICE_NO() {
+		return INVOICE_NO;
+	}
+
+	/**
+	 * @param iNVOICE_NO the iNVOICE_NO to set
+	 */
+	public void setINVOICE_NO(String iNVOICE_NO) {
+		INVOICE_NO = iNVOICE_NO;
+	}
 }

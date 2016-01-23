@@ -14,6 +14,8 @@ import javax.jdo.annotations.PrimaryKey;
 public class Seq {
 	/** シーケンスID：顧客*/
 	public static final String SEQ_ID_CLIENT = "SEQ_ID_CLIENT";
+	/** シーケンスID：PI用請求番号*/
+	public static final String SEQ_ID_INVOICE_NO = "SEQ_ID_INVOICE_NO";
 	
     @PrimaryKey
     @Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)

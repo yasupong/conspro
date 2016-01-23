@@ -47,6 +47,24 @@
 		obj.submit();
 	}
 
+	function createOrderSheet(obj) {
+		obj.target='_self';
+		obj.action='LoadExcelOrderSheet';
+		obj.submit();
+	}
+
+	function createJpInvoice(obj) {
+		obj.target='_self';
+		obj.action='LoadExcelJpInvoice';
+		obj.submit();
+	}
+
+	function createProformaInvoice(obj) {
+		obj.target='_self';
+		obj.action='LoadExcelProformaInvoice';
+		obj.submit();
+	}
+
 	function createExcel(obj) {
 		obj.target='_self';
 		obj.action='LoadExcelInv';
@@ -190,8 +208,18 @@ if (Const.AUTH_ADMIN.equals(authCode)) {
 }
 %>
 <%
-// 一般以外表示
-if (!Const.AUTH_NORMAL.equals(authCode)) {
+// 事務以外表示
+if (!Const.AUTH_OFFICE.equals(authCode)) {
+%>
+<input type="button" name="createos" value="注文書出力" onclick="createOrderSheet(this.form);">
+<input type="button" name="createji" value="請求書出力" onclick="createJpInvoice(this.form);">
+<input type="button" name="createji" value="Proforma Invoice出力" onclick="createProformaInvoice(this.form);">
+<%
+}
+%>
+<%
+// 一般と事務以外表示
+if (!Const.AUTH_NORMAL.equals(authCode) && !Const.AUTH_OFFICE.equals(authCode)) {
 %>
 <input type="button" name="createex" value="EXCEL出力" onclick="createExcel(this.form);">
 <%
@@ -202,6 +230,7 @@ if (!Const.AUTH_NORMAL.equals(authCode)) {
 <table border="1" cellpadding="1" cellspacing="0" bordercolor="#c0c0c0" class="t-line">
 <tr>
 <th class="th">選択</td>
+<th class="th">出力</td>
 <th class="th">No</td>
 <th class="th">WEB表示</td>
 <!--<th class="th">WEB表示日時</td>-->
@@ -240,6 +269,7 @@ int cnt = 1;
 	  Date date = new Date(Long.parseLong(inventoryRecord.getDATE()));
 		String record = "<tr>";
 		record = record + "<td nowrap class=\"td\"><input type=\"radio\" name=\"EDITID\" value=\""+ inventoryRecord.getDATE() +"\"></td>";
+		record = record + "<td nowrap class=\"td\"><input type=\"checkbox\" name=\"REPID\" value=\""+ inventoryRecord.getDATE() +"\"></td>";
 		record = record + "<td nowrap class=\"td\">" + cnt + "</td>";
 		record = record + "<td nowrap class=\"td\">" + CodeUtil.getIsDisp(inventoryRecord.getWEB_DISP()) + "</td>";
 //		record = record + "<td nowrap class=\"td\">" + CommonUtil.nullConv(inventoryRecord.getWEB_DISP_DATE()) + "</td>";
@@ -275,6 +305,7 @@ record = record + "<td>Total</td>";
 record = record + "<td>&nbsp;</td>";
 record = record + "<td>&nbsp;</td>";
 //record = record + "<td>&nbsp;</td>";
+record = record + "<td>&nbsp;</td>";
 record = record + "<td>&nbsp;</td>";
 record = record + "<td>&nbsp;</td>";
 record = record + "<td>&nbsp;</td>";
@@ -316,8 +347,18 @@ if (Const.AUTH_ADMIN.equals(authCode)) {
 }
 %>
 <%
+// 事務以外表示
+if (!Const.AUTH_OFFICE.equals(authCode)) {
+%>
+<input type="button" name="createos" value="注文書出力" onclick="createOrderSheet(this.form);">
+<input type="button" name="createji" value="請求書出力" onclick="createJpInvoice(this.form);">
+<input type="button" name="createji" value="Proforma Invoice出力" onclick="createProformaInvoice(this.form);">
+<%
+}
+%>
+<%
 // 一般以外表示
-if (!Const.AUTH_NORMAL.equals(authCode)) {
+if (!Const.AUTH_NORMAL.equals(authCode) && !Const.AUTH_OFFICE.equals(authCode)) {
 %>
 <input type="button" name="createex" value="EXCEL出力" onclick="createExcel(this.form);">
 <%

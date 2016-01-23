@@ -26,6 +26,16 @@
 <div><h1>在庫詳細</h1></div>
 <div>&nbsp;</div>
 <div>
+<%
+// 事務以外は表示
+if (!Const.AUTH_OFFICE.equals(authCode)) {
+%>
+<input type="button" value="注文書出力" onclick="location.href='LoadExcelOrderSheet?EDITID=<%= inventoryRecord.getDATE() %>'">
+<input type="button" value="請求書出力" onclick="location.href='LoadExcelJpInvoice?EDITID=<%= inventoryRecord.getDATE() %>'">
+<input type="button" value="Proforma Invoice出力" onclick="location.href='LoadExcelProformaInvoice?EDITID=<%= inventoryRecord.getDATE() %>'">
+<%
+}
+%>
 <input type="button" value="戻る" onclick="history.back();">
 </div>
 <div>
@@ -134,6 +144,10 @@ if (!Const.AUTH_OFFICE.equals(authCode)) {
 <td class="th">仕入原価</td>
 <td class="td" align="right"><%= CommonUtil.moneyFormat(inventoryRecord.getORDER_COST_PRICE()) %></td>
 </tr>
+<tr>
+<td class="th">引渡場所</td>
+<td class="td" align="right"><%= CommonUtil.nullConv(inventoryRecord.getTRAN_PLACE()) %></td>
+</tr>
 <%
 }
 %>
@@ -180,6 +194,10 @@ if (!Const.AUTH_OFFICE.equals(authCode)) {
 <tr>
 <td class="th">販売先</td>
 <td class="td"><%= inventoryRecord.getBUYER() %></td>
+</tr>
+<tr>
+<td class="th">INVOICE NO</td>
+<td class="td"><%= CommonUtil.nullConv(inventoryRecord.getINVOICE_NO()) %></td>
 </tr>
 <tr>
 <td class="th">仕入代金支払日</td>

@@ -66,6 +66,7 @@ public class EditClientSvlt extends HttpServlet {
 			} else if (TYPE_EDIT_COMMIT.equals(type)) {
 				// 更新実行
 				clientRecord.setADDRESS(arg0.getParameter("ADDRESS"));
+				clientRecord.setZIP(arg0.getParameter("ZIP"));
 				clientRecord.setTEL(arg0.getParameter("TEL"));
 				clientRecord.setFAX(arg0.getParameter("FAX"));
 				clientRecord.setMAIL(arg0.getParameter("MAIL"));

@@ -128,7 +128,19 @@
     <servlet-name>LoadExcelClientAllSvlt</servlet-name>
     <servlet-class>conspro.svlt.LoadExcelClientAllSvlt</servlet-class>
   </servlet>
-      
+  <servlet>
+    <servlet-name>LoadExcelOrderSheetSvlt</servlet-name>
+    <servlet-class>conspro.svlt.LoadExcelOrderSheetSvlt</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoadExcelJpInvoiceSvlt</servlet-name>
+    <servlet-class>conspro.svlt.LoadExcelJpInvoiceSvlt</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoadExcelProformaInvoiceSvlt</servlet-name>
+    <servlet-class>conspro.svlt.LoadExcelProformaInvoiceSvlt</servlet-class>
+  </servlet>
+       
   <servlet-mapping>
     <servlet-name>RegistInventorySvlt</servlet-name>
     <url-pattern>/RegistInventory</url-pattern>
@@ -253,7 +265,19 @@
     <servlet-name>LoadExcelClientAllSvlt</servlet-name>
     <url-pattern>/LoadExcelClientAll</url-pattern>
   </servlet-mapping>
-            
+  <servlet-mapping>
+    <servlet-name>LoadExcelOrderSheetSvlt</servlet-name>
+    <url-pattern>/LoadExcelOrderSheet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadExcelJpInvoiceSvlt</servlet-name>
+    <url-pattern>/LoadExcelJpInvoice</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadExcelProformaInvoiceSvlt</servlet-name>
+    <url-pattern>/LoadExcelProformaInvoice</url-pattern>
+  </servlet-mapping>
+           
   <!-- Default page to serve -->
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>

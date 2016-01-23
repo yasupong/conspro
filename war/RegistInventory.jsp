@@ -208,6 +208,10 @@ if (!Const.AUTH_OFFICE.equals(authCode)) {
 <td class="th">仕入原価</td>
 <td class="td"><input type="text" name="ORDER_COST_PRICE" value="0" style="text-align:right;">（数字のみ入力可能）</td>
 </tr>
+<tr>
+<td class="th">引渡場所</td>
+<td class="td"><input type="text" name="TRAN_PLACE" value="" size="100"></td>
+</tr>
 <%
 } else {
 %>
@@ -219,6 +223,7 @@ if (!Const.AUTH_OFFICE.equals(authCode)) {
 <input type="hidden" name="MAINTENANCE_COST" value="0">
 <input type="hidden" name="ORDER_OUT_ORDER_COST" value="0">
 <input type="hidden" name="ORDER_COST_PRICE" value="0">
+<input type="hidden" name="TRAN_PLACE" value="">
 <%
 }
 %>

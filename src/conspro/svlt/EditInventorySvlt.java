@@ -98,6 +98,7 @@ public class EditInventorySvlt extends HttpServlet {
 				inventoryRecord.setMAINTENANCE_COST(arg0.getParameter("MAINTENANCE_COST"));
 				inventoryRecord.setORDER_OUT_ORDER_COST(arg0.getParameter("ORDER_OUT_ORDER_COST"));
 				inventoryRecord.setORDER_COST_PRICE(arg0.getParameter("ORDER_COST_PRICE"));
+				inventoryRecord.setTRAN_PLACE(arg0.getParameter("TRAN_PLACE"));
 				inventoryRecord.setSELL_TRANCE_COST(arg0.getParameter("SELL_TRANCE_COST"));
 				inventoryRecord.setSHIP_COST(arg0.getParameter("SHIP_COST"));
 				inventoryRecord.setSELL_OUT_ORDER_COST(arg0.getParameter("SELL_OUT_ORDER_COST"));
