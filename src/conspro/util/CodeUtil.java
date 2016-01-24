@@ -199,9 +199,9 @@ public class CodeUtil {
 	 */
 	public static String getCredit(String credit) {
 		if ("A".equals(credit)) {
-			return "入金前商品引渡OK";
+			return "入金前引渡OK";
 		} else if ("B".equals(credit)) {
-			return "入金後商品引渡";
+			return "入金後引渡";
 		} else if ("C".equals(credit)) {
 			return "問題あり";
 		} else {

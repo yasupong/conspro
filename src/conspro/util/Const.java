@@ -163,8 +163,8 @@ public class Const {
 
 	/** コンボボックス：与信管理*/
 	public final static String COMBO_CREDIT = 
-			"<option value=\"A\">A：入金前商品引渡OK</option>\n" + 
-			"<option value=\"B\">B：入金後商品引渡</option>\n" + 
+			"<option value=\"A\">A：入金前引渡OK</option>\n" + 
+			"<option value=\"B\">B：入金後引渡</option>\n" + 
 			"<option value=\"C\">C：問題あり</option>\n";
 	
 	/** ページ種類：英語*/

@@ -135,14 +135,14 @@
 <th nowrap class="th">与信管理</td>
 <th nowrap class="th">国番号</td>
 <th nowrap class="th">顧客番号</td>
+<th nowrap class="th">会社名</td>
+<th nowrap class="th">支店営業所</td>
+<th nowrap class="th">担当者</td>
 <th nowrap class="th">住所</td>
 <th nowrap class="th">郵便番号</td>
 <th nowrap class="th">電話番号</td>
 <th nowrap class="th">FAX番号</td>
 <th nowrap class="th">メール</td>
-<th nowrap class="th">会社名</td>
-<th nowrap class="th">支店営業所</td>
-<th nowrap class="th">担当者</td>
 <th nowrap class="th">備考</td>
 </tr>
 <%
@@ -157,14 +157,14 @@ if (listClientRecord != null) {
 		record = record + "<td nowrap class=\"td\">" + CodeUtil.getCredit(clientRecord.getCREDIT()) + "</td>";
 		record = record + "<td nowrap class=\"td\">" + clientRecord.getCOUNTRY() + "</td>";
 		record = record + "<td nowrap class=\"td\">" + clientRecord.getSEQ() + "</td>";
+		record = record + "<td nowrap class=\"td\">" + clientRecord.getCOMPANY() + "</td>";
+		record = record + "<td nowrap class=\"td\">" + clientRecord.getOFFICE() + "</td>";
+		record = record + "<td nowrap class=\"td\">" + clientRecord.getNAME() + "</td>";
 		record = record + "<td class=\"td\">" + clientRecord.getADDRESS() + "</td>";
 		record = record + "<td nowrap class=\"td\">" + clientRecord.getZIP() + "</td>";
 		record = record + "<td nowrap class=\"td\">" + clientRecord.getTEL() + "</td>";
 		record = record + "<td nowrap class=\"td\">" + clientRecord.getFAX() + "</td>";
 		record = record + "<td nowrap class=\"td\">" + clientRecord.getMAIL() + "</td>";
-		record = record + "<td nowrap class=\"td\">" + clientRecord.getCOMPANY() + "</td>";
-		record = record + "<td nowrap class=\"td\">" + clientRecord.getOFFICE() + "</td>";
-		record = record + "<td nowrap class=\"td\">" + clientRecord.getNAME() + "</td>";
 		record = record + "<td class=\"td\">" + clientRecord.getCOMMENT() + "</td>";
 	  record = record + "</tr>";
 	  out.println(record);
