@@ -81,15 +81,15 @@ public class Const {
 	
 	/** コンボボックス：分類*/
 	public final static String COMBO_TYPE = 
-			"<option value=\"1\">1:Excavator (under 8 ton) - 油圧ショベル 8t未満</option>\n" + 
-			"<option value=\"2\">2:Excavator (10 ton up) - 油圧ショベル 10t以上</option>\n" + 
-			"<option value=\"3\">3:Crawler Dozer (Bulldozer) - ブルドーザー</option>\n" + 
-			"<option value=\"4\">4:Crawler Loader (Dozer shovel) - ショベルローダー</option>\n" +
-			"<option value=\"5\">5:Wheel Loader (Rubber Tired Loader) - タイヤショベル</option>\n" + 
-			"<option value=\"6\">6:Road Equipment - 舗装機械</option>\n" + 
-			"<option value=\"7\">7:Crane - クレーン</option>\n" + 
-			"<option value=\"8\">8:Crawler Carrier - キャリアダンプ</option>\n" + 
-			"<option value=\"9\">9:Attachment - アタッチメント</option>\n" + 
+			"<option value=\"01\">1:Excavator (under 8 ton) - 油圧ショベル 8t未満</option>\n" + 
+			"<option value=\"02\">2:Excavator (10 ton up) - 油圧ショベル 10t以上</option>\n" + 
+			"<option value=\"03\">3:Crawler Dozer (Bulldozer) - ブルドーザー</option>\n" + 
+			"<option value=\"04\">4:Crawler Loader (Dozer shovel) - ショベルローダー</option>\n" +
+			"<option value=\"05\">5:Wheel Loader (Rubber Tired Loader) - タイヤショベル</option>\n" + 
+			"<option value=\"06\">6:Road Equipment - 舗装機械</option>\n" + 
+			"<option value=\"07\">7:Crane - クレーン</option>\n" + 
+			"<option value=\"08\">8:Crawler Carrier - キャリアダンプ</option>\n" + 
+			"<option value=\"09\">9:Attachment - アタッチメント</option>\n" + 
 			"<option value=\"10\">10:Parts - 部品</option>\n" + 
 			"<option value=\"11\">11:Generator - 発電機</option>\n" + 
 			"<option value=\"12\">12:Air Compressor - エアーコンプレッサー</option>\n" + 

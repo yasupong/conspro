@@ -53,7 +53,7 @@ public class GetInventoryListByTypeSvlt extends HttpServlet {
 	    if ("maker".equals(TYPE)) {
 	    	query = "select from " + InventoryRecord.class.getName() + " where MANUFACTURER == '" + arg0.getParameter("MANUFACTURER") + "' && DATA_FLG == '0'" + cond + " order by DATE desc";
 	    } else {
-	    	query = "select from " + InventoryRecord.class.getName() + " where TYPE == '" + TYPE +"' && DATA_FLG == '0'" + cond + " order by DATE desc";
+	    	query = "select from " + InventoryRecord.class.getName() + " where TYPE == '" + String.format("%02d", Integer.parseInt(TYPE)) +"' && DATA_FLG == '0'" + cond + " order by DATE desc";
 	    }
 	    
 	    List<InventoryRecord> listInventoryRecord = (List<InventoryRecord>)pm.newQuery(query).execute();

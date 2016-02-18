@@ -12,23 +12,23 @@ public class CodeUtil {
 	 * @return
 	 */
 	public static String getTypeEng(String type) {
-		if ("1".equals(type)) {
+		if ("01".equals(type)) {
 			return "Mini Excavator";
-		} else if ("2".equals(type)) {
+		} else if ("02".equals(type)) {
 			return "Excavator";
-		} else if ("3".equals(type)) {
+		} else if ("03".equals(type)) {
 			return "Crawler Dozer";
-		} else if ("4".equals(type)) {
+		} else if ("04".equals(type)) {
 			return "Crawler Loader";
-		} else if ("5".equals(type)) {
+		} else if ("05".equals(type)) {
 			return "Wheel Loader";
-		} else if ("6".equals(type)) {
+		} else if ("06".equals(type)) {
 			return "Road Equipment";
-		} else if ("7".equals(type)) {
+		} else if ("07".equals(type)) {
 			return "Crane";
-		} else if ("8".equals(type)) {
+		} else if ("08".equals(type)) {
 			return "Crawler Carrier";
-		} else if ("9".equals(type)) {
+		} else if ("09".equals(type)) {
 			return "Attachment";
 		} else if ("10".equals(type)) {
 			return "Parts";
@@ -53,23 +53,23 @@ public class CodeUtil {
 	 * @return
 	 */
 	public static String getTypeJa(String type) {
-		if ("1".equals(type)) {
+		if ("01".equals(type)) {
 			return "油圧ショベル 8t未満";
-		} else if ("2".equals(type)) {
+		} else if ("02".equals(type)) {
 			return "油圧ショベル 10t以上";
-		} else if ("3".equals(type)) {
+		} else if ("03".equals(type)) {
 			return "ブルドーザー";
-		} else if ("4".equals(type)) {
+		} else if ("04".equals(type)) {
 			return "ショベルローダー";
-		} else if ("5".equals(type)) {
+		} else if ("05".equals(type)) {
 			return "タイヤショベル";
-		} else if ("6".equals(type)) {
+		} else if ("06".equals(type)) {
 			return "舗装機械";
-		} else if ("7".equals(type)) {
+		} else if ("07".equals(type)) {
 			return "クレーン";
-		} else if ("8".equals(type)) {
+		} else if ("08".equals(type)) {
 			return "キャリアダンプ";
-		} else if ("9".equals(type)) {
+		} else if ("09".equals(type)) {
 			return "アタッチメント";
 		} else if ("10".equals(type)) {
 			return "部品";
