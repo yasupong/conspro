@@ -72,21 +72,6 @@ if (Const.AUTH_ADMIN.equals(authCode) || Const.AUTH_NORMAL.equals(authCode)) {
 		<td class="th" id="menu"><a href="GetSignupAllList?ACCOUNT=<%=account %>" target="signup">Sign Up一覧</a></td>
 		<td class="td">投稿されたSign Up一覧を参照します</td>
 	</tr>
-	<tr>
-		<td class="th" id="menu"><a href="LoadExcelForSellInv">販売用在庫一覧出力</a></td>
-		<td class="td">販売用在庫一覧を出力します</td>
-	</tr>
-<%
-}
-%>
-<%
-// 管理者権限・経理権限のみ表示
-if (Const.AUTH_ADMIN.equals(authCode) || Const.AUTH_ACCT.equals(authCode)) {
-%>
-	<tr>
-		<td class="th" id="menu"><a href="LoadExcelForInvCount">棚卸在庫一覧出力</a></td>
-		<td class="td">棚卸在庫一覧を出力します</td>
-	</tr>
 <%
 }
 %>

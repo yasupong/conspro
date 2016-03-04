@@ -156,6 +156,7 @@
 if (Const.AUTH_ADMIN.equals(authCode) || Const.AUTH_NORMAL.equals(authCode)) {
 %>
 	<td><input type="button" name="sellInv" value="販売用在庫検索" onclick="seachForSellInv(this.form);"></td>
+	<td><input type="button" name="sellInvOut" value="販売用在庫出力" onclick="location.href='LoadExcelForSellInv'"></td>
 <%
 }
 %>
@@ -164,6 +165,7 @@ if (Const.AUTH_ADMIN.equals(authCode) || Const.AUTH_NORMAL.equals(authCode)) {
 if (Const.AUTH_ADMIN.equals(authCode) || Const.AUTH_ACCT.equals(authCode)) {
 %>
 	<td><input type="button" name="invCount" value="棚卸在庫検索" onclick="seachForInvCount(this.form);"></td>
+	<td><input type="button" name="invCountOut" value="棚卸在庫出力" onclick="location.href='LoadExcelForInvCount'"></td>
 <%
 }
 %>
