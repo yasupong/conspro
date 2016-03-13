@@ -25,34 +25,8 @@
 <form name="main">
 <div>
 <select name="MANUFACTURER" size="1" onChange="callSearchByMaker()">
-        <option value="" selected>メーカー選択</option>
-				<option value="AIRMAN">AIRMAN</option>
-				<option value="BOMAG">BOMAG</option>
-				<option value="CAT">CAT</option>
-				<option value="DENYO">DENYO</option>
-				<option value="DYNAPAC">DYNAPAC</option>
-				<option value="FURUKAWA">FURUKAWA</option>
-				<option value="HANTA">HANTA</option>
-				<option value="HITACHI">HITACHI</option>
-				<option value="IHI">IHI</option>
-				<option value="KATO">KATO</option>
-				<option value="KAWASAKI">KAWASAKI</option>
-				<option value="KOBELCO">KOBELCO</option>
-				<option value="KOMATSU">KOMATSU</option>
-				<option value="KUBOTA">KUBOTA</option>
-				<option value="MEIWA">MEIWA</option>
-				<option value="MIKASA">MIKASA</option>
-				<option value="MITSUBISHI">MITSUBISHI</option>
-				<option value="MOROOKA">MOROOKA</option>
-				<option value="NISSHA">NISSHA</option>
-				<option value="OTHER">OTHER</option>
-				<option value="SAKAI">SAKAI</option>
-				<option value="SHINDAIWA">SHINDAIWA</option>
-				<option value="SUMITOMO">SUMITOMO</option>
-				<option value="TACOM">TACOM</option>
-				<option value="TADANO">TADANO</option>
-				<option value="TCM">TCM</option>
-				<option value="YANMAR">YANMAR</option>
+<option value="" selected>メーカー選択</option>
+<%= Const.COMBO_MANUFACTURER %>
 </select>
 &nbsp;
 <input type="button" value="油圧ショベル 8t未満" onClick="location.href='GetInventoryListByType?TYPE=1&page=2'">&nbsp;
@@ -69,18 +43,19 @@
 <input type="button" value="エアーコンプレッサー" onClick="location.href='GetInventoryListByType?TYPE=12&page=2'">&nbsp;
 <input type="button" value="溶接機" onClick="location.href='GetInventoryListByType?TYPE=13&page=2'">&nbsp;
 <input type="button" value="トラック" onClick="location.href='GetInventoryListByType?TYPE=14&page=2'">&nbsp;
+<input type="button" value="高所作業車" onClick="location.href='GetInventoryListByType?TYPE=15&page=2'">&nbsp;
 <input type="button" value="その他" onClick="location.href='GetInventoryListByType?TYPE=99&page=2'">&nbsp;
 <input type="button" value="全在庫一覧" onClick="location.href='GetInventoryAllList?page=2'">
 </div>
 <div>&nbsp;</div>
 <div id="category">現在のカテゴリー：
 <%
-if (request.getParameter("TYPE") != null && request.getParameter("TYPE").length() > 0) {
-	out.println(CodeUtil.getTypeJa(request.getParameter("TYPE")));
-}
 if (request.getParameter("MANUFACTURER") != null && request.getParameter("MANUFACTURER").length() > 0) {
 	out.println(request.getParameter("MANUFACTURER"));
+} else if (request.getParameter("TYPE") != null && request.getParameter("TYPE").length() > 0) {
+	out.println(CodeUtil.getTypeJa(String.format("%02d", Integer.parseInt(request.getParameter("TYPE")))));
 }
+
 %>
 </div>
 <div>

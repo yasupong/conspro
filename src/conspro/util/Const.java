@@ -95,16 +95,19 @@ public class Const {
 			"<option value=\"12\">12:Air Compressor - エアーコンプレッサー</option>\n" + 
 			"<option value=\"13\">13:Welder - 溶接機</option>\n" + 
 			"<option value=\"14\">14:Truck - トラック</option>\n" + 
+			"<option value=\"15\">15:Aerial Platform - 高所作業車</option>\n" + 
 			"<option value=\"99\">99:Other - その他</option>\n";
 	
 	/** コンボボックス：メーカー*/
 	public final static String COMBO_MANUFACTURER = 
+			"<option value=\"AICHI\">AICHI</option>\n" +
 			"<option value=\"AIRMAN\">AIRMAN</option>\n" +
 			"<option value=\"BOMAG\">BOMAG</option>\n" +
 			"<option value=\"CAT\">CAT</option>\n" +
 			"<option value=\"DENYO\">DENYO</option>\n" +
 			"<option value=\"DYNAPAC\">DYNAPAC</option>\n" +
 			"<option value=\"FURUKAWA\">FURUKAWA</option>\n" +
+			"<option value=\"HANIX\">HANIX</option>\n" +
 			"<option value=\"HANTA\">HANTA</option>\n" +
 			"<option value=\"HITACHI\">HITACHI</option>\n" +
 			"<option value=\"IHI\">IHI</option>\n" +
@@ -112,12 +115,15 @@ public class Const {
 			"<option value=\"KAWASAKI\">KAWASAKI</option>\n" +
 			"<option value=\"KOBELCO\">KOBELCO</option>\n" +
 			"<option value=\"KOMATSU\">KOMATSU</option>\n" +
+			"<option value=\"KONAN\">KONAN</option>\n" +
 			"<option value=\"KUBOTA\">KUBOTA</option>\n" +
 			"<option value=\"MEIWA\">MEIWA</option>\n" +
 			"<option value=\"MIKASA\">MIKASA</option>\n" +
 			"<option value=\"MITSUBISHI\">MITSUBISHI</option>\n" +
 			"<option value=\"MOROOKA\">MOROOKA</option>\n" +
 			"<option value=\"NISSHA\">NISSHA</option>\n" +
+			"<option value=\"NPK\">NPK</option>\n" +
+			"<option value=\"OKADA\">OKADA</option>\n" +
 			"<option value=\"OTHER\">OTHER</option>\n" +
 			"<option value=\"SAKAI\">SAKAI</option>\n" +
 			"<option value=\"SHINDAIWA\">SHINDAIWA</option>\n" +
@@ -125,6 +131,7 @@ public class Const {
 			"<option value=\"TACOM\">TACOM</option>\n" +
 			"<option value=\"TADANO\">TADANO</option>\n" +
 			"<option value=\"TCM\">TCM</option>\n" +
+			"<option value=\"TOKU\">TOKU</option>\n" +
 			"<option value=\"YANMAR\">YANMAR</option>\n";
 
 	/** コンボボックス：程度*/

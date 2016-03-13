@@ -27,34 +27,8 @@
 <form name="main">
 <div>
 <select name="MANUFACTURER" size="1" onChange="callSearchByMaker()">
-        <option value="" selected>MAKER</option>
-				<option value="AIRMAN">AIRMAN</option>
-				<option value="BOMAG">BOMAG</option>
-				<option value="CAT">CAT</option>
-				<option value="DENYO">DENYO</option>
-				<option value="DYNAPAC">DYNAPAC</option>
-				<option value="FURUKAWA">FURUKAWA</option>
-				<option value="HANTA">HANTA</option>
-				<option value="HITACHI">HITACHI</option>
-				<option value="IHI">IHI</option>
-				<option value="KATO">KATO</option>
-				<option value="KAWASAKI">KAWASAKI</option>
-				<option value="KOBELCO">KOBELCO</option>
-				<option value="KOMATSU">KOMATSU</option>
-				<option value="KUBOTA">KUBOTA</option>
-				<option value="MEIWA">MEIWA</option>
-				<option value="MIKASA">MIKASA</option>
-				<option value="MITSUBISHI">MITSUBISHI</option>
-				<option value="MOROOKA">MOROOKA</option>
-				<option value="NISSHA">NISSHA</option>
-				<option value="OTHER">OTHER</option>
-				<option value="SAKAI">SAKAI</option>
-				<option value="SHINDAIWA">SHINDAIWA</option>
-				<option value="SUMITOMO">SUMITOMO</option>
-				<option value="TACOM">TACOM</option>
-				<option value="TADANO">TADANO</option>
-				<option value="TCM">TCM</option>
-				<option value="YANMAR">YANMAR</option>
+<option value="" selected>MAKER</option>
+<%= Const.COMBO_MANUFACTURER %>
 </select>
 &nbsp;
 <input type="button" value="Mini Excavator" onClick="location.href='GetInventoryListByType?TYPE=1&page=1'">&nbsp;
@@ -71,18 +45,19 @@
 <input type="button" value="Air Compressor" onClick="location.href='GetInventoryListByType?TYPE=12&page=1'">&nbsp;
 <input type="button" value="Welder" onClick="location.href='GetInventoryListByType?TYPE=13&page=1'">&nbsp;
 <input type="button" value="Truck" onClick="location.href='GetInventoryListByType?TYPE=14&page=1'">&nbsp;
+<input type="button" value="Aerial Platform" onClick="location.href='GetInventoryListByType?TYPE=15&page=1'">&nbsp;
 <input type="button" value="Other" onClick="location.href='GetInventoryListByType?TYPE=99&page=1'">&nbsp;
 <input type="button" value="ALL LIST" onClick="location.href='GetInventoryAllList?page=1'">
 </div>
 <div>&nbsp;</div>
 <div id="category">Now Showing:
 <%
-if (request.getParameter("TYPE") != null && request.getParameter("TYPE").length() > 0) {
-	out.println(CodeUtil.getTypeEng(request.getParameter("TYPE")));
-}
 if (request.getParameter("MANUFACTURER") != null && request.getParameter("MANUFACTURER").length() > 0) {
 	out.println(request.getParameter("MANUFACTURER"));
+} else if (request.getParameter("TYPE") != null && request.getParameter("TYPE").length() > 0) {
+	out.println(CodeUtil.getTypeEng(String.format("%02d", Integer.parseInt(request.getParameter("TYPE")))));
 }
+
 %>
 </div>
 <div>

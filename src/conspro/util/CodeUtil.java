@@ -40,6 +40,8 @@ public class CodeUtil {
 			return "Welder";
 		} else if ("14".equals(type)) {
 			return "Truck";
+		} else if ("15".equals(type)) {
+			return "Aerial Platform";
 		} else if ("99".equals(type)) {
 			return "Other";
 		} else {
@@ -81,6 +83,8 @@ public class CodeUtil {
 			return "溶接機";
 		} else if ("14".equals(type)) {
 			return "トラック";
+		} else if ("15".equals(type)) {
+			return "高所作業車";
 		} else if ("99".equals(type)) {
 			return "その他";
 		} else {
