@@ -48,12 +48,12 @@
 <input type="button" value="全在庫一覧" onClick="location.href='GetInventoryAllList?page=2'">
 </div>
 <div>&nbsp;</div>
-<div id="category">現在のカテゴリー：
+<div id="category">
 <%
 if (request.getParameter("MANUFACTURER") != null && request.getParameter("MANUFACTURER").length() > 0) {
-	out.println(request.getParameter("MANUFACTURER"));
-} else if (request.getParameter("TYPE") != null && request.getParameter("TYPE").length() > 0) {
-	out.println(CodeUtil.getTypeJa(String.format("%02d", Integer.parseInt(request.getParameter("TYPE")))));
+	out.println("現在のカテゴリー：" + request.getParameter("MANUFACTURER"));
+} else if (request.getParameter("TYPE") != null && request.getParameter("TYPE").length() > 0 && !"all".equals(request.getParameter("TYPE"))) {
+	out.println("現在のカテゴリー：" + CodeUtil.getTypeJa(String.format("%02d", Integer.parseInt(request.getParameter("TYPE")))));
 }
 
 %>

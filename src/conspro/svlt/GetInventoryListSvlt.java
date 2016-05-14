@@ -34,9 +34,9 @@ public class GetInventoryListSvlt extends HttpServlet {
 	    RequestDispatcher rd = null;
 	    // 遷移先制御
 	    if (Const.PAGE_TYPE_EN.equals(page)) {
-	    	rd = sc.getRequestDispatcher("/GetInventoryListByType?TYPE=1&page=" + Const.PAGE_TYPE_EN);
+	    	rd = sc.getRequestDispatcher("/GetInventoryListByType?TYPE=all&page=" + Const.PAGE_TYPE_EN);
 	    } else if (Const.PAGE_TYPE_JA.equals(page)) {
-	    	rd = sc.getRequestDispatcher("/GetInventoryListByType?TYPE=1&page=" + Const.PAGE_TYPE_JA);
+	    	rd = sc.getRequestDispatcher("/GetInventoryListByType?TYPE=all&page=" + Const.PAGE_TYPE_JA);
 	    } else {
 			String sortType = request.getParameter("sort");
 			String sortOrder = " order by TYPE,　MANUFACTURER, DATE desc";

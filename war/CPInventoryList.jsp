@@ -50,12 +50,12 @@
 <input type="button" value="ALL LIST" onClick="location.href='GetInventoryAllList?page=1'">
 </div>
 <div>&nbsp;</div>
-<div id="category">Now Showing:
+<div id="category">
 <%
 if (request.getParameter("MANUFACTURER") != null && request.getParameter("MANUFACTURER").length() > 0) {
-	out.println(request.getParameter("MANUFACTURER"));
-} else if (request.getParameter("TYPE") != null && request.getParameter("TYPE").length() > 0) {
-	out.println(CodeUtil.getTypeEng(String.format("%02d", Integer.parseInt(request.getParameter("TYPE")))));
+	out.println("Now Showing:" + request.getParameter("MANUFACTURER"));
+} else if (request.getParameter("TYPE") != null && request.getParameter("TYPE").length() > 0 && !"all".equals(request.getParameter("TYPE"))) {
+	out.println("Now Showing:" + CodeUtil.getTypeEng(String.format("%02d", Integer.parseInt(request.getParameter("TYPE")))));
 }
 
 %>
