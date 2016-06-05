@@ -1,6 +1,8 @@
 package conspro.svlt;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
@@ -24,6 +26,8 @@ import conspro.util.CommonUtil;
 @SuppressWarnings("serial")
 public class GetOldInventoryListSvlt extends HttpServlet {
 
+	protected static SimpleDateFormat SDF = new SimpleDateFormat("yyyy/MM");
+	
 	@SuppressWarnings("unchecked")
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -31,9 +35,12 @@ public class GetOldInventoryListSvlt extends HttpServlet {
 	    ServletContext sc = getServletContext();
 	    RequestDispatcher rd = null;
 	    
+	    // 当月で絞り込む
+	    Date now = new Date(System.currentTimeMillis());
+	    
     	// データ検索
 	    PersistenceManager pm = PMF.getInstance().getPersistenceManager();
-	    String query = "select from " + InventoryRecord.class.getName() + " where DATA_FLG == '1' order by SELL_MONTH desc, SELL_PAY_DATE";
+	    String query = "select from " + InventoryRecord.class.getName() + " where DATA_FLG == '1' && SELL_MONTH == '" + SDF.format(now) + "' order by SELL_MONTH desc, SELL_PAY_DATE";
 	    List<InventoryRecord> listInventoryRecord = (List<InventoryRecord>) pm.newQuery(query).execute();
 	    
 	    Set<String> nameSet = new TreeSet<String>();
