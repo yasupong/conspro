@@ -82,38 +82,30 @@
 <div align="left">
 <table border="0">
 <tr>
-	<td>売上月</td>
 	<td>
 		<select name="SELL_MONTH">
-				<option value="">選択</option>
+				<option value="">売上月</option>
 				<%= CommonUtil.buildOptions(Const.SELL_MONTH_SET) %>
 		</select>
 	</td>
-
-	<td>型式</td>
 	<td>
 		<select name="NAME">
-				<option value="">選択</option>
+				<option value="">型式</option>
 				<%= CommonUtil.buildOptions(nameSet) %>
 		</select>
 	</td>
-
-	<td>仕入先</td>
 	<td>
 		<select name="SELLER">
-				<option value="">選択</option>
+				<option value="">仕入先</option>
 				<%= CommonUtil.buildOptions(sellerSet) %>
 		</select>
 	</td>
-
-	<td>担当者</td>
 	<td>
 		<select name="TANTO">
-				<option value="">選択</option>
+				<option value="">担当者</option>
 				<%= CommonUtil.buildOptions(tantoSet) %>
 		</select>
 	</td>
-
 	<td><input type="button" name="srch" value="検索" onclick="search(this.form);"></td>
 </tr>
 </table>

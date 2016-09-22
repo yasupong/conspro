@@ -2,8 +2,6 @@ package conspro.svlt;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
 
 import javax.jdo.PersistenceManager;
 import javax.servlet.RequestDispatcher;
@@ -51,6 +49,9 @@ public class SeachInventoryListSvlt extends HttpServlet {
 		    if (arg0.getParameter("SELLER") != null && arg0.getParameter("SELLER").length() > 0) {
 		    	queryBuf.append(" && SELLER == '" + arg0.getParameter("SELLER") + "'");
 		    }
+		    if (arg0.getParameter("BUYER") != null && arg0.getParameter("BUYER").length() > 0) {
+		    	queryBuf.append(" && BUYER == '" + arg0.getParameter("BUYER") + "'");
+		    }
 		    if (arg0.getParameter("TANTO") != null && arg0.getParameter("TANTO").length() > 0) {
 		    	queryBuf.append(" && ACCOUNT == '" + arg0.getParameter("TANTO") + "'");
 		    }
@@ -61,17 +62,11 @@ public class SeachInventoryListSvlt extends HttpServlet {
 
 	    List<InventoryRecord> listInventoryRecord = (List<InventoryRecord>) pm.newQuery(queryBuf.toString()).execute();
 	    
-	    Set<String> nameSet = new TreeSet<String>();
-	    Set<String> sellerSet = new TreeSet<String>();
-	    Set<String> tantoSet = new TreeSet<String>();
 	    Long orderCostPrice = 0L;
 	    Long sellCostPrice = 0L;
 	    Long sellPrice = 0L;
 	    Long profit = 0L;
 	    for (InventoryRecord inventoryRecord : listInventoryRecord) {
-	    	nameSet.add(inventoryRecord.getNAME());
-	    	sellerSet.add(inventoryRecord.getSELLER());
-	    	tantoSet.add(inventoryRecord.getACCOUNT());
 	    	orderCostPrice = orderCostPrice + CommonUtil.getLong(inventoryRecord.getORDER_COST_PRICE());
 	    	sellCostPrice = sellCostPrice + CommonUtil.getLong(inventoryRecord.getSELL_COST_PRICE());
 	    	sellPrice = sellPrice + CommonUtil.getLong(inventoryRecord.getSELL_PRICE());
@@ -80,9 +75,6 @@ public class SeachInventoryListSvlt extends HttpServlet {
 	    
 	    // 画面返却
 	    arg0.setAttribute("InventoryRecordList", listInventoryRecord);
-	    arg0.setAttribute("NameSet", nameSet);
-	    arg0.setAttribute("SellerSet", sellerSet);
-	    arg0.setAttribute("TantoSet", tantoSet);
 	    arg0.setAttribute("orderCostPrice", orderCostPrice);
 	    arg0.setAttribute("sellCostPrice", sellCostPrice);
 	    arg0.setAttribute("sellPrice", sellPrice);

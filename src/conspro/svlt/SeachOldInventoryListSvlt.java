@@ -71,13 +71,15 @@ public class SeachOldInventoryListSvlt extends HttpServlet {
 	    
 	    // 画面返却
 	    arg0.setAttribute("InventoryRecordList", listInventoryRecord);
-	    arg0.setAttribute("NameSet", nameSet);
-	    arg0.setAttribute("SellerSet", sellerSet);
-	    arg0.setAttribute("TantoSet", tantoSet);
 	    arg0.setAttribute("orderCostPrice", orderCostPrice);
 	    arg0.setAttribute("sellCostPrice", sellCostPrice);
 	    arg0.setAttribute("sellPrice", sellPrice);
 	    arg0.setAttribute("profit", profit);
+	    
+	    arg0.getSession().setAttribute("NameSet", nameSet);
+	    arg0.getSession().setAttribute("SellerSet", sellerSet);
+	    arg0.getSession().setAttribute("TantoSet", tantoSet);
+	    
 	    RequestDispatcher rd = getServletContext().getRequestDispatcher("/InventoryOldList.jsp");
 		rd.forward(arg0, arg1);
 	}

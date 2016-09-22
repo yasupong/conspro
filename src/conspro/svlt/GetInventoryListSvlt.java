@@ -71,6 +71,7 @@ public class GetInventoryListSvlt extends HttpServlet {
 		    
 		    Set<String> nameSet = new TreeSet<String>();
 		    Set<String> sellerSet = new TreeSet<String>();
+		    Set<String> buyerSet = new TreeSet<String>();
 		    Set<String> tantoSet = new TreeSet<String>();
 		    Long orderCostPrice = 0L;
 		    Long sellCostPrice = 0L;
@@ -80,6 +81,7 @@ public class GetInventoryListSvlt extends HttpServlet {
 		    	if("1".equals(request.getParameter("MENU"))) {
 			    	nameSet.add(inventoryRecord.getNAME());
 			    	sellerSet.add(inventoryRecord.getSELLER());
+			    	buyerSet.add(inventoryRecord.getBUYER());
 			    	tantoSet.add(inventoryRecord.getACCOUNT());
 		    	}
 		    	orderCostPrice = orderCostPrice + CommonUtil.getLong(inventoryRecord.getORDER_COST_PRICE());
@@ -93,6 +95,7 @@ public class GetInventoryListSvlt extends HttpServlet {
 	        if("1".equals(request.getParameter("MENU"))) {
 	            request.getSession().setAttribute("NameSet", nameSet);
 	            request.getSession().setAttribute("SellerSet", sellerSet);
+	            request.getSession().setAttribute("BuyerSet", buyerSet);
 	            request.getSession().setAttribute("TantoSet", tantoSet);
 	        }
 		    request.setAttribute("orderCostPrice", orderCostPrice);

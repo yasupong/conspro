@@ -13,6 +13,7 @@
 
 	Set<String> nameSet = (Set)request.getSession().getAttribute("NameSet");
 	Set<String> sellerSet = (Set)request.getSession().getAttribute("SellerSet");
+	Set<String> buyerSet = (Set)request.getSession().getAttribute("BuyerSet");
 	Set<String> tantoSet = (Set)request.getSession().getAttribute("TantoSet");
   Long orderCostPrice = (Long)request.getAttribute("orderCostPrice");
   Long sellCostPrice = (Long)request.getAttribute("sellCostPrice");
@@ -123,33 +124,30 @@
 <div align="left">
 <table border="0">
 <tr>
-	<td>型式</td>
-
 	<td>
 		<select name="NAME">
-				<option value="">選択</option>
+				<option value="">型式</option>
 				<%= CommonUtil.buildOptions(nameSet) %>
 		</select>
 	</td>
-
-
-	<td>仕入先</td>
 	<td>
 		<select name="SELLER">
-				<option value="">選択</option>
+				<option value="">仕入先</option>
 				<%= CommonUtil.buildOptions(sellerSet) %>
 		</select>
 	</td>
-
-	<td>担当者</td>
-
+	<td>
+		<select name="BUYER">
+				<option value="">販売先</option>
+				<%= CommonUtil.buildOptions(buyerSet) %>
+		</select>
+	</td>
 	<td>
 		<select name="TANTO">
-				<option value="">選択</option>
+				<option value="">担当者</option>
 				<%= CommonUtil.buildOptions(tantoSet) %>
 		</select>
 	</td>
-
 	<td><input type="button" name="srch" value="検索" onclick="search(this.form);"></td>
 <%
 // 管理者権限・一般権限のみ表示
