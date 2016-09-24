@@ -40,6 +40,9 @@ public class SeachOldInventoryListSvlt extends HttpServlet {
 	    if (arg0.getParameter("SELLER") != null && arg0.getParameter("SELLER").length() > 0) {
 	    	queryBuf.append(" && SELLER == '" + arg0.getParameter("SELLER") + "'");
 	    }
+	    if (arg0.getParameter("BUYER") != null && arg0.getParameter("BUYER").length() > 0) {
+	    	queryBuf.append(" && BUYER == '" + arg0.getParameter("BUYER") + "'");
+	    }
 	    if (arg0.getParameter("TANTO") != null && arg0.getParameter("TANTO").length() > 0) {
 	    	queryBuf.append(" && ACCOUNT == '" + arg0.getParameter("TANTO") + "'");
 	    }
@@ -54,6 +57,7 @@ public class SeachOldInventoryListSvlt extends HttpServlet {
 	    
 	    Set<String> nameSet = new TreeSet<String>();
 	    Set<String> sellerSet = new TreeSet<String>();
+	    Set<String> buyerSet = new TreeSet<String>();
 	    Set<String> tantoSet = new TreeSet<String>();
 	    Long orderCostPrice = 0L;
 	    Long sellCostPrice = 0L;
@@ -62,6 +66,7 @@ public class SeachOldInventoryListSvlt extends HttpServlet {
 	    for (InventoryRecord inventoryRecord : listInventoryRecord) {
 	    	nameSet.add(inventoryRecord.getNAME());
 	    	sellerSet.add(inventoryRecord.getSELLER());
+	    	buyerSet.add(inventoryRecord.getBUYER());
 	    	tantoSet.add(inventoryRecord.getACCOUNT());
 	    	orderCostPrice = orderCostPrice + CommonUtil.getLong(inventoryRecord.getORDER_COST_PRICE());
 	    	sellCostPrice = sellCostPrice + CommonUtil.getLong(inventoryRecord.getSELL_COST_PRICE());
@@ -78,6 +83,7 @@ public class SeachOldInventoryListSvlt extends HttpServlet {
 	    
 	    arg0.getSession().setAttribute("NameSet", nameSet);
 	    arg0.getSession().setAttribute("SellerSet", sellerSet);
+	    arg0.getSession().setAttribute("BuyerSet", buyerSet);
 	    arg0.getSession().setAttribute("TantoSet", tantoSet);
 	    
 	    RequestDispatcher rd = getServletContext().getRequestDispatcher("/InventoryOldList.jsp");

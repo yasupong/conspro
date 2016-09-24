@@ -13,6 +13,7 @@
 
 	Set<String> nameSet = (Set)request.getSession().getAttribute("NameSet");
 	Set<String> sellerSet = (Set)request.getSession().getAttribute("SellerSet");
+	Set<String> buyerSet = (Set)request.getSession().getAttribute("BuyerSet");
 	Set<String> tantoSet = (Set)request.getSession().getAttribute("TantoSet");
   Long orderCostPrice = (Long)request.getAttribute("orderCostPrice");
   Long sellCostPrice = (Long)request.getAttribute("sellCostPrice");
@@ -58,7 +59,7 @@
 	function search(obj) {
 
 		// 負荷軽減のため検索条件設定必須
-		if (obj.SELL_MONTH.value == '' && obj.NAME.value == '' && obj.SELLER.value == ''&& obj.TANTO.value == '') {
+		if (obj.SELL_MONTH.value == '' && obj.NAME.value == '' && obj.SELLER.value == '' && obj.BUYER.value == '' && obj.TANTO.value == '') {
 			alert('検索条件を必ず指定してください。');
 			return;
 		}
@@ -98,6 +99,12 @@
 		<select name="SELLER">
 				<option value="">仕入先</option>
 				<%= CommonUtil.buildOptions(sellerSet) %>
+		</select>
+	</td>
+	<td>
+		<select name="BUYER">
+				<option value="">販売先</option>
+				<%= CommonUtil.buildOptions(buyerSet) %>
 		</select>
 	</td>
 	<td>
