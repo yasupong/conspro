@@ -2,7 +2,7 @@
 <%@ page import="conspro.storage.*" %>
 <%@ page import="conspro.util.*" %>
 <%
-	// 在庫データ取得
+	// 顧客データ取得
 	Client clientRecord = (Client)request.getAttribute("ClientRecord");
 
 	// 認証チェック

@@ -2,7 +2,7 @@
 <%@ page import="conspro.storage.*" %>
 <%@ page import="conspro.util.*" %>
 <%
-	// 在庫データ取得
+	// ユーザーデータ取得
 	Employee employeeRecord = (Employee)request.getAttribute("EmployeeRecord");
 
 	// 認証チェック
